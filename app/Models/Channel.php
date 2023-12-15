@@ -15,4 +15,10 @@ class Channel extends Model
         "created_at",
     ];
 
+    // relationships
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
+
 }

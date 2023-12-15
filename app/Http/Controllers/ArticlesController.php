@@ -76,12 +76,10 @@ class ArticlesController extends Controller
             'type' => ['required'],
             'channel_id' => ['required'],
             'author_id' => ['required'],
-            'created_at' => ['required'],
         ], [
             'title.required' => 'عنوان المنشور مطلوب',
             'content.required' => 'المحتوى مطلوب',
             'thumbnail_path.required' => 'قم باختيار صورة مصغرة',
-            'created_at.required' => 'قم باختيار تاريخ نشر المنشور',
             'type.required' => 'اختر نوع المنشور',
             'channel_id.required' => 'من فضلك قم باختيار البرنامج',
             'author_id.required' => 'من فضلك قم باختيار الناشر'
@@ -99,7 +97,7 @@ class ArticlesController extends Controller
             'type' => $request->type,
             'author_id' => $request->author_id,
             'channel_id' => $request->channel_id,
-            'created_at' => $request->created_at,
+            'created_at' => now(),
         ]);
 
         if ($createArticle)
@@ -109,7 +107,9 @@ class ArticlesController extends Controller
 
     public function edit($id) {
         $article = Article::find($id);
-        return view('admin.dashboard.article_edit')->with(compact('article'));
+        $authors = Author::all();
+        $channels = Channel::all();
+        return view('admin.dashboard.article_edit')->with(compact(['authors', 'channels', 'article']));
     }
 
     public function update(Request $request) {
@@ -120,12 +120,10 @@ class ArticlesController extends Controller
             'type' => ['required'],
             'channel_id' => ['required'],
             'author_id' => ['required'],
-            'created_at' => ['required'],
         ], [
             'title.required' => 'عنوان المنشور مطلوب',
             'content.required' => 'المحتوى مطلوب',
             'thumbnail_path.required' => 'قم باختيار صورة مصغرة',
-            'created_at.required' => 'قم باختيار تاريخ نشر المنشور',
             'type.required' => 'اختر نوع المنشور',
             'channel_id.required' => 'من فضلك قم باختيار البرنامج',
             'author_id.required' => 'من فضلك قم باختيار الناشر'
@@ -135,21 +133,6 @@ class ArticlesController extends Controller
             return $this->jsondata(false, 'update failed', [$validator->errors()->first()], []);
         }
 
-        $articleUrl = Article::where('url', $request->url)->where('id', '!', $request->id)->get();
-        if ($articleUrl->count() > 0) {
-            return $this->jsondata(false, 'Add failed', ['هذا الرابط موجود بالفعل'], []);
-        }
-        
-        $pagesUrl = Page::where('url', $request->url)->get();
-        if ($pagesUrl->count() > 0) {
-            return $this->jsondata(false, 'Add failed', ['هذا الرابط موجود بالفعل'], []);
-        }
-
-        $destinationsUrl = Volunteering_destination::where('url', $request->url)->get();
-        if ($destinationsUrl->count() > 0) {
-            return $this->jsondata(false, 'Add failed', ['هذا الرابط موجود بالفعل'], []);
-        }
-
         $article = Article::find($request->id); 
         $article->title = $request->title;
         $article->content = $request->content;
@@ -157,7 +140,6 @@ class ArticlesController extends Controller
         $article->type = $request->type;
         $article->author_id = $request->author_id;
         $article->channel_id = $request->channel_id;
-        $article->created_at = $request->created_at;
 
         $article->save();
 

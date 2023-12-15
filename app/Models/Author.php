@@ -14,4 +14,11 @@ class Author extends Model
         "profile_path",
         "created_at",
     ];
+
+    // relationships
+    public function articles()
+    {
+        return $this->hasMany(Article::class);
+    }
+
 }

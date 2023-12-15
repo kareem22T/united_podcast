@@ -52,6 +52,7 @@ Route::middleware('auth:admin')->group(function () {
         Route::get('/', [ChannelsController::class, "index"])->name('channel.prev');
         Route::get('/add', [ChannelsController::class, "addIndex"])->name('channels.add');
         Route::get('/edit/{id}', [ChannelsController::class, "edit"])->name('channels.edit');
+        Route::get('/channel/{id}', [ChannelsController::class, "previewChannel"])->name('channel.show');
         Route::post('/update', [ChannelsController::class, "update"])->name('channel.update');
         Route::post('/get', [ChannelsController::class, "getChannels"])->name('channels.get');
         Route::post('/search', [ChannelsController::class, "search"])->name('channels.search');
@@ -64,6 +65,7 @@ Route::middleware('auth:admin')->group(function () {
         Route::get('/', [AuthorsController::class, "index"])->name('author.prev');
         Route::get('/add', [AuthorsController::class, "addIndex"])->name('authors.add');
         Route::get('/edit/{id}', [AuthorsController::class, "edit"])->name('authors.edit');
+        Route::get('/author/{id}', [AuthorsController::class, "privewAuthor"])->name('author.show');
         Route::post('/update', [AuthorsController::class, "update"])->name('author.update');
         Route::post('/get', [AuthorsController::class, "getAuthors"])->name('authors.get');
         Route::post('/search', [AuthorsController::class, "search"])->name('authors.search');

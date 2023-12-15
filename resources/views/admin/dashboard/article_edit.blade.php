@@ -1,13 +1,13 @@
+@if($article)
 @extends('admin.layouts.admin-layout')
 
-@section('title', 'اضافة مقالة')
+@section('title', 'تعديل منشور')
 
 @section('articles_add_active', 'active')
 
-@if ($article) 
 @section('content')
 <h3 class="mb-5">
-    اضافة مقالة
+    تعديل منشور
 </h3>
 <style>
     .toolbar button {
@@ -16,12 +16,14 @@
     }
 </style>
 <div class="card" id="add_article">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
     <div class="card-body" >
         <div>
             <div class="w-100 mb-4 pb-5 gap-2" style="display: grid; grid-template-columns: 1fr 1fr;">
                 <div class="w-100">
                     <div>
-                        <label for="term_title" class="form-label">عنوان المقالة *</label>
+                        <label for="term_title" class="form-label">عنوان المنشور *</label>
                         <input type="text" class="form-control" id="term_title" v-model="title">
                     </div>
                 </div>
@@ -30,7 +32,7 @@
             <div class="w-100 mb-4 pb-3">
                 <div class="w-100 p-3">
                     <div>
-                        <label for="lang_name" class="form-label">محتوى المقالة *</label>
+                        <label for="lang_name" class="form-label">محتوى المنشور *</label>
                         <div class="card">
                             <div class="card-header">
                                 <div class="toolbar d-flex gap-1 justify-content-center" style="flex-wrap: wrap">
@@ -55,9 +57,7 @@
                                 </div>
                             </div>
                             <div class="card-body">
-                                <div contenteditable="true" id="article-content" class="form-control" style="min-height: 300px">
-                                {!! $article->content !!}
-                                </div>
+                                <div contenteditable="true" id="article-content" class="form-control" style="min-height: 300px"> {!! $article->content !!} </div>
                             </div>
                         </div>
                     </div>
@@ -74,19 +74,36 @@
                 <br>
                 <div class="d-flex gap-2 justify-content-between mb-3">
                     <div class="form-group w-25">
-                        <label for="date" class="mb-2">تاريخ المقالة </label>
-                        <input type="date" name="date" id="date" class="form-control w-100" v-model="publish_date">
+                        <label for="date" class="mb-2">الناشر </label>
+                        <select id="select-state" name="author" id="text" class="form-control w-100" v-model="author_id" placeholder="author name ...">
+                            @if ($authors && $authors->count() > 0)
+                                @foreach ($authors as $author)
+                                    <option value="{{$author->id}}">{{$author->name}}</option>
+                                @endforeach
+                            @else
+                                <option value="">لا يوجد ناشرين مضافين</option>
+                            @endif
+                        </select>
                     </div>
                     <div class="form-group w-25">
-                        <label for="url" class="mb-2">رابط المقالة</label>
-                        <input type="text" name="url" id="url" class="form-control w-100" v-model="url">
+                        <label for="url" class="mb-2">البرنامج</label>
+                        <select id="select-state" name="channel" id="text" class="form-control w-100" v-model="channel_id" placeholder="author name ...">
+                            @if ($channels && $channels->count() > 0)
+                                @foreach ($channels as $channel)
+                                    <option value="{{$channel->id}}">{{$channel->title}}</option>
+                                @endforeach
+                            @else
+                                <option value="">لا يوجد برامج مضافة</option>
+                            @endif
+                        </select>
                     </div>
-                    <div class="form-group w-25">
-                        <label for="date" class="mb-2">نوع المقالة </label>
+                    <div class="form-group">
+                        <label for="date" class="mb-2">نوع المنشور </label>
                         <div class="btns d-flex gap-2 justify-content-between w-100">
-                            <button :class="this.type == 'article' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'article'">منشور</button>
+                            <button :class="this.type == 'article' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'article'">مقال</button>
                             <button :class="this.type == 'video' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'video'">فيديو</button>
-                            <button :class="this.type == 'photos' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'photos'">صور</button>
+                            <button :class="this.type == 'podcast' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'podcast'">بودكاست</button>
+                            <button :class="this.type == 'emails' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'emails'">نشرة بريدية</button>
                         </div>
                     </div>
                 </div>
@@ -151,7 +168,7 @@
             <br>
         </div>
         <div class="d-flex gap-2">
-            <button class="btn btn-light"  @click="this.showAlbumPopUp = false">Cancel</button>
+            <button class="btn btn-light"  @click="showAlbumPopUp = false">Cancel</button>
             <button class="btn btn-primary" @click="this.showImages = true; this.forAlbum = true;">Choose</button>
             <button class="btn btn-secondary" @click="insertAlbumContent('article-content')">insert</button>
         </div>
@@ -205,17 +222,15 @@
 @endsection
 
 @section('scripts')
-
 <script>
 const { createApp, ref } = Vue;
 
 createApp({
   data() {
     return {
-      article_id: '{{ $article->id }}',
       thumbnail: null,
       title: '{{ $article->title }}',
-      content: '',
+      content: '{{ $article->content }}',
       images: null,
       showImages: false,
       showUploadPopUp: false,
@@ -223,7 +238,7 @@ createApp({
       choosed_img: null,
       current_article_id: null,
       search_tags: null,
-      preview_img: '{{ $article->thumbnail_path }}',
+      preview_img:  '{{ $article->thumbnail_path }}',
       search: null,
       page: 1,
       total: 0,
@@ -236,8 +251,9 @@ createApp({
       album_imgs: [],
       forAlbum: false,
       type: '{{ $article->type }}',
-      publish_date: new Date('{{ $article->created_at }}').toISOString().split('T')[0],
-      url: '{{ $article->url }}'
+      showAlbumPopUp: false,
+      author_id:  '{{ $article->author_id }}',
+      channel_id:  '{{ $article->channel_id }}',
     }
   },
   methods: {
@@ -258,12 +274,12 @@ createApp({
       $('.loader').fadeIn().css('display', 'flex')
         try {
             const response = await axios.post(`{{ route('article.update') }}`, {
-                id: this.article_id,
+                id: '{{ $article->id }}',
                 title: this.title,
                 content: this.content,
                 type: this.type,
-                url: this.url,
-                created_at: this.publish_date,
+                channel_id: this.channel_id,
+                author_id: this.author_id,
                 thumbnail_path: this.preview_img
             },
             {
@@ -311,6 +327,48 @@ createApp({
 
             setTimeout(() => {
             $('#errors').fadeOut('slow')
+            }, 3500);
+
+            console.error(error);
+        }
+    },
+    async getTagSearch(search_words) {
+        try {
+            const response = await axios.post(`/Moheb/admin/tags/search`, {
+                search_words: search_words,
+            },
+            );
+            if (response.data.status === true) {
+                if (search_words != '')
+                    this.search_tags = response.data.data.data
+                else 
+                    this.search_tags = []
+            } else {
+                document.getElementById('errors').innerHTML = ''
+                $.each(response.data.errors, function (key, value) {
+                    let error = document.createElement('div')
+                    error.classList = 'error'
+                    error.innerHTML = value
+                    document.getElementById('errors').append(error)
+                });
+                $('#errors').fadeIn('slow')
+                setTimeout(() => {
+                    $('input').css('outline', 'none')
+                    $('#errors').fadeOut('slow')
+                }, 5000);
+            }
+
+        } catch (error) {
+            document.getElementById('errors').innerHTML = ''
+            let err = document.createElement('div')
+            err.classList = 'error'
+            err.innerHTML = 'server error try again later'
+            document.getElementById('errors').append(err)
+            $('#errors').fadeIn('slow')
+            $('.loader').fadeOut()
+            this.Tags_data = false
+            setTimeout(() => {
+                $('#errors').fadeOut('slow')
             }, 3500);
 
             console.error(error);

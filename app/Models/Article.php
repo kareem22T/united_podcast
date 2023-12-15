@@ -17,5 +17,15 @@ class Article extends Model
         "thumbnail_path",
         "created_at",
     ];
+    
+    // relationships
+    public function author()
+    {
+        return $this->hasMany(Author::class);
+    }
 
+    public function channel()
+    {
+        return $this->belongsTo(Channel::class);
+    }
 }

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Resala | dashboard</title>
+    <title>united podcast dashboard</title>
     <link rel="stylesheet" href="{{ asset('/dashboard/css/styles.min.css') }}" />
     <style>
         @import url("https://fonts.googleapis.com/css2?family=Russo+One&display=swap");
@@ -101,7 +101,7 @@
             <div class="col-md-8 col-lg-6 col-xxl-3">
                 <div class="card mb-0">
                 <div class="card-body" id="login">
-                    <h1 class="text-center">Resala</h1>
+                    <h1 class="text-center">United Podcast</h1>
                     <p class="text-center">Login | Dashboard</p>
                     <form @submit.prevent>
                     <div class="mb-3">

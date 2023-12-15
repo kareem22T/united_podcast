@@ -174,7 +174,7 @@
               <span class="hide-menu">الناشرين</span>
             </li>
             <li class="sidebar-item">
-              <a class="sidebar-link @yield('channels_preview_active')" href="{{ route('channel.prev') }}" aria-expanded="false">
+              <a class="sidebar-link @yield('authors_preview_active')" href="{{ route('author.prev') }}" aria-expanded="false">
                 <span>
                   <i class="ti ti-users"></i>
                 </span>

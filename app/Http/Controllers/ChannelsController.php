@@ -14,6 +14,10 @@ class ChannelsController extends Controller
 {
     use DataFormController;
 
+    public function previewChannel($id) {
+        $channel = Channel::with('articles')->find($id);
+        return view('admin.dashboard.channel')->with(compact('channel'));
+    }
 
     public function index() {
         return view('admin.dashboard.channel_prev');
@@ -72,7 +76,7 @@ class ChannelsController extends Controller
             'type' => ['required'],
         ], [
             'title.required' => 'عنوان البرنامج مطلوب',
-            'description.required' => 'المحتوى مطلوب',
+            'description.required' => 'الوصف مطلوب',
             'thumbnail_path.required' => 'قم باختيار صورة مصغرة',
             'type.required' => 'اختر نوع البرنامج',
         ]);
@@ -106,7 +110,7 @@ class ChannelsController extends Controller
             'type' => ['required'],
         ], [
             'title.required' => 'عنوان البرنامج مطلوب',
-            'description.required' => 'المحتوى مطلوب',
+            'description.required' => 'الوصف مطلوب',
             'thumbnail_path.required' => 'قم باختيار صورة مصغرة',
             'type.required' => 'اختر نوع البرنامج',
         ]);

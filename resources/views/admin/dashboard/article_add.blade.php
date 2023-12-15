@@ -89,7 +89,7 @@
                         <select id="select-state" name="channel" id="text" class="form-control w-100" v-model="channel_id" placeholder="author name ...">
                             @if ($channels && $channels->count() > 0)
                                 @foreach ($channels as $channel)
-                                    <option value="{{$channel->id}}">{{$channel->name}}</option>
+                                    <option value="{{$channel->id}}">{{$channel->title}}</option>
                                 @endforeach
                             @else
                                 <option value="">لا يوجد برامج مضافة</option>

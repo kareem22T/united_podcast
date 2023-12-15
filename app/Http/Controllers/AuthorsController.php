@@ -15,6 +15,11 @@ class AuthorsController extends Controller
     use DataFormController;
 
 
+    public function privewAuthor($id) {
+        $author = Author::with('articles')->find($id);
+        return view('admin.dashboard.author')->with(compact('author'));
+    }
+
     public function index() {
         return view('admin.dashboard.author_prev');
     }
