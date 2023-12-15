@@ -18,8 +18,8 @@ class RegisterController extends Controller
         $createAdmin = Admin::all()->count() > 0 ? '' : 
         Admin::create([
             'name' => 'admin', 
-            'email' => 'kotbekareem74@gmail.com', 
-            'password' => Hash::make('admin'), 
+            'email' => 'umspodcast@gmail.com', 
+            'password' => Hash::make('umspodcast'), 
         ]);
         return view('admin.login');
     }
