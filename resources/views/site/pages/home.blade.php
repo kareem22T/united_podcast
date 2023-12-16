@@ -44,7 +44,7 @@
                                                     style="margin-left:-8px;margin-right:-8px;row-gap:16px">
                                                     <div style="padding-left:8px;padding-right:8px"
                                                         class="ant-col ant-col-xs-24 ant-col-rtl ant-col-md-12 ant-col-xl-12 css-t2ij9r">
-                                                        <a href="/post/1jqpbkfn92_1jhggnmybp"><img
+                                                        <a href='{{ route("post.show", ["id" => $article->id]) }}'><img
                                                                 alt="{{ $article->title }}" loading="eager"
                                                                 decoding="async" data-nimg="1"
                                                                 class="rounded-lg max-w-full h-auto aspect-[572.5/291]"
@@ -55,7 +55,7 @@
                                                         class="ant-col ant-col-xs-24 ant-col-rtl ant-col-md-12 ant-col-xl-12 css-t2ij9r">
                                                         <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
                                                             <div class="ant-space-item"><a
-                                                                    href="/post/1jqpbkfn92_1jhggnmybp">
+                                                                    href="{{ route("post.show", ["id" => $article->id]) }}">
                                                                     <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[24px] mb-3 leading-[35px] css-t2ij9r"
                                                                         style="-webkit-line-clamp: 2;">{{ $article->title }}</h4>
                                                                     <div
@@ -69,7 +69,7 @@
                                                                         style="column-gap:16px;row-gap:16px">
                                                                         <div class="ant-space-item last-of-type:flex-1 "><a
                                                                                 class="font-bold"
-                                                                                href="/author/1jmjjmmp0b"><span
+                                                                                href="/author/{{$article->author->id}}"><span
                                                                                     class="flex items-center gap-2 font-bold undefined">
                                                                                         @if ($article->author->profile_path)
                                                                                         <img alt="" loading="lazy" decoding="async" data-nimg="1" class="rounded-full" style="color: transparent;" src="{{ $article->author->profile_path }}" width="18" height="18">
@@ -81,7 +81,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="text-sm mb-2"><span>في <!-- --> <a
-                                                                    class="text-black font-bold" href="/p/namat">{{ $article->channel->title }}</a><span
+                                                                    class="text-black font-bold" href="/channel/{{ $article->channel->id }}">{{ $article->channel->title }}</a><span
                                                                 class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
                                                                 title="16 ديسمبر 2023"><i
                                                                     class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>16
@@ -100,7 +100,7 @@
                                                     style="margin-left:-8px;margin-right:-8px;row-gap:16px">
                                                     <div style="padding-left:8px;padding-right:8px"
                                                         class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                        <a href="/post/1jqkb7mmtd_1jhggnmybp"><img
+                                                        <a href="{{ route("post.show", ["id" => $article->id]) }}"><img
                                                                 alt="{{ $article->title }}" loading="lazy"
                                                                 decoding="async" data-nimg="1"
                                                                 class="rounded-lg max-w-full h-auto aspect-[180/150]"
@@ -111,7 +111,7 @@
                                                         class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
                                                         <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
                                                             <div class="ant-space-item"><a
-                                                                    href="/post/1jqkb7mmtd_1jhggnmybp">
+                                                                    href="{{ route("post.show", ["id" => $article->id]) }}">
                                                                     <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
                                                                         style="-webkit-line-clamp: 2;">{{ $article->title }}</h4>
                                                                     <div
@@ -124,7 +124,7 @@
                                                                         style="column-gap:16px;row-gap:16px">
                                                                         <div class="ant-space-item last-of-type:flex-1 "><a
                                                                                 class="font-bold text-sm"
-                                                                                href="/author/hsnali"><span
+                                                                                href="/author/{{$article->author->id}}"><span
                                                                                     class="flex items-center gap-2 font-bold undefined">
                                                                                     @if ($article->author->profile_path)
                                                                                     <img alt="" loading="lazy" decoding="async" data-nimg="1" class="rounded-full" style="color: transparent;" src="{{ $article->author->profile_path }}" width="18" height="18">
@@ -137,7 +137,7 @@
                                                             </div>
                                                         </div>
                                                         <div class="text-sm mb-2"><span>في <!-- --> <a
-                                                                    class="text-black font-bold" href="/p/aha">{{ $article->channel->title }}</a>
+                                                                    class="text-black font-bold" href="/channel/{{ $article->channel->id }}">{{ $article->channel->title }}</a>
                                                                 <span
                                                                 class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
                                                                 title="14 ديسمبر 2023"><i
@@ -209,7 +209,7 @@
                                                                         style="margin-left: -8px; margin-right: -8px; row-gap: 16px;">
                                                                         <div style="padding-left: 8px; padding-right: 8px;"
                                                                             class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                                            <a href="/post/1jqm16xpw3_1jhggnmybp"><img alt="{{$podcast->title}}"
+                                                                            <a href="{{ route("post.show", ["id" => $podcast->id]) }}"><img alt="{{$podcast->title}}"
                                                                                     loading="lazy" decoding="async" data-nimg="1"
                                                                                     class="rounded-lg max-w-full h-auto aspect-[180/150]"
                                                                                     style="color: transparent; object-fit: cover;"
@@ -219,7 +219,7 @@
                                                                         <div style="padding-left: 8px; padding-right: 8px;"
                                                                             class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
                                                                             <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                                                <div class="ant-space-item"><a href="/post/1jqm16xpw3_1jhggnmybp">
+                                                                                <div class="ant-space-item"><a href="{{ route("post.show", ["id" => $podcast->id]) }}">
                                                                                         <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
                                                                                             style="-webkit-line-clamp: 2;">
                                                                                             {{$podcast->title}}</h4>
@@ -232,7 +232,7 @@
                                                                                         <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
                                                                                             style="gap: 16px;">
                                                                                             <div class="ant-space-item last-of-type:flex-1 ">
-                                                                                                <a class="font-bold text-sm" href="/author/alnajjar"><span
+                                                                                                <a class="font-bold text-sm" href="/author/{{$podcast->author->id}}"><span
                                                                                                         class="flex items-center gap-2 font-bold undefined">{{$podcast->author->name}}</span></a>
                                                                                             </div>
                                                                                             <div class="ant-space-item last-of-type:flex-1 ">
@@ -269,7 +269,7 @@
                                                 @foreach ($latest_programs as $program)
                                                     <div style="padding-left: 8px; padding-right: 8px;"
                                                         class="ant-col ant-col-xs-12 ant-col-rtl ant-col-sm-12 ant-col-md-12 ant-col-lg-8 ant-col-xl-8 css-t2ij9r">
-                                                        <div class="relative rounded-lg  shadow-custom "><a href="/p/morabbaa"><img alt="مربع"
+                                                        <div class="relative rounded-lg  shadow-custom "><a href="/channel/{{ $program->channel->id }}"><img alt="مربع"
                                                                     loading="lazy" decoding="async" data-nimg="1"
                                                                     class="w-full h-auto aspect-square bg-colorFillContentHover rounded-lg object-cover"
                                                                     style="color: transparent;"
@@ -327,7 +327,7 @@
                                     @foreach ($latest_mainls_programs as $porgram)
                                         <div style="padding-left: 8px; padding-right: 8px;"
                                             class="ant-col ant-col-xs-12 ant-col-rtl ant-col-sm-12 ant-col-md-6 ant-col-lg-4 ant-col-xl-4 css-t2ij9r">
-                                            <div class="relative rounded-lg  shadow-custom "><a href="/p/aha"><img
+                                            <div class="relative rounded-lg  shadow-custom "><a href="/channel/{{ $article->program->id }}"><img
                                                         alt="{{$porgram->title}}" loading="lazy" decoding="async" data-nimg="1"
                                                         class="w-full h-auto aspect-square bg-colorFillContentHover rounded-lg object-cover"
                                                         style="color: transparent;"
@@ -385,7 +385,7 @@
                                                         style="margin-left: -10.5px; margin-right: -10.5px; row-gap: 8px;">
                                                         <div style="padding-left: 10.5px; padding-right: 10.5px;"
                                                             class="ant-col ant-col-xs-24 ant-col-rtl ant-col-lg-24 ant-col-xl-24 css-t2ij9r">
-                                                            <a class="relative undefined" href="/post/1jpgyty35y_1jhggnmybp"><img
+                                                            <a class="relative undefined" href="{{ route("post.show", ["id" => $video->id]) }}"><img
                                                                     alt="{{$video->title}}" loading="lazy" decoding="async"
                                                                     data-nimg="1" class="rounded-lg w-full h-auto aspect-[386/211] "
                                                                     style="color: transparent; object-fit: cover;"
@@ -394,7 +394,7 @@
                                                         </div>
                                                         <div style="padding-left: 10.5px; padding-right: 10.5px;"
                                                             class="ant-col ant-col-xs-24 ant-col-rtl ant-col-lg-24 ant-col-xl-24 css-t2ij9r">
-                                                            <a class="relative undefined" href="/post/1jpgyty35y_1jhggnmybp">
+                                                            <a class="relative undefined" href="{{ route("post.show", ["id" => $video->id]) }}">
                                                                 <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
                                                                     <div class="ant-space-item">
                                                                         <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line mb-2 overflow-visible css-t2ij9r"
@@ -408,7 +408,7 @@
                                                                 <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
                                                                     style="gap: 16px;">
                                                                     <div class="ant-space-item last-of-type:flex-1 "><a
-                                                                            class="font-bold text-sm" href="/p/8-questions"><span
+                                                                            class="font-bold text-sm" href="/channel/{{ $video->channel->id }}"><span
                                                                                 class="flex items-center gap-2 font-bold undefined">
                                                                                 {{$video->channel->title}}
                                                                                 </span></a></div>
@@ -487,7 +487,7 @@
                                                 style="margin-left:-8px;margin-right:-8px;row-gap:16px">
                                                 <div style="padding-left:8px;padding-right:8px"
                                                     class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jqese4t41_1jhggnmybp"><img :alt="article.title"
+                                                    <a :href="`/post/${article.id}`"><img :alt="article.title"
                                                             loading="lazy" decoding="async" data-nimg="1"
                                                             class="rounded-lg max-w-full h-auto aspect-[180/150]"
                                                             style="color:transparent;object-fit:cover"
@@ -497,7 +497,7 @@
                                                 <div style="padding-left:8px;padding-right:8px"
                                                     class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
                                                     <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a href="/post/1jqese4t41_1jhggnmybp">
+                                                        <div class="ant-space-item"><a :href="`/post/${article.id}`">
                                                                 <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
                                                                     style="-webkit-line-clamp: 2;">@{{ article.title }}</h4>
                                                                 <div
@@ -510,7 +510,7 @@
                                                                 <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
                                                                     style="column-gap:16px;row-gap:16px">
                                                                     <div class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm" href="/author/adulkareem"><span
+                                                                        <a class="font-bold text-sm" :href="`/author/${article.author.id}`"><span
                                                                                 class="flex items-center gap-2 font-bold undefined">@{{ article.author.name }}</span></a>
                                                                     </div>
                                                                 </div>
@@ -518,7 +518,7 @@
                                                         </div>
                                                     </div>
                                                     <div class="text-sm mb-2"><span>في <!-- --> <a class="text-black font-bold"
-                                                                href="/p/elkh">@{{ article.channel.title }}</a></span><span
+                                                                :href="`/channel/${article.channel.id}`">@{{ article.channel.title }}</a></span><span
                                                             class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
                                                             title="13 ديسمبر 2023"><i
                                                                 class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>13
@@ -620,7 +620,7 @@ createApp({
         },
     },
     created() {
-        this.getArticles(2).then(() => {
+        this.getArticles().then(() => {
             $('.loader').fadeOut()
         })
         window.addEventListener('scroll', this.handleScroll);

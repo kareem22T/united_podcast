@@ -40,7 +40,7 @@
 </head>
 <body>
     <main>
-        <div class="ant-layout ant-layout-rtl layout min-h-screen  css-t2ij9r">
+        <div class="ant-layout ant-layout-rtl layout min-h-screen  css-t2ij9r" style="max-width: 100vw;">
             @include('site.includes.header')
             @yield('content')
             @include('site.includes.footer')

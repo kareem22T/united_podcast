@@ -146,4 +146,10 @@ class ChannelsController extends Controller
             return $this->jsonData(true, $request->file_name . 'تم حف البرنامج بنجاح', [], []);
     }
 
+    public function channelIndex($id) {
+        $channel = Channel::find($id);
+
+        return view('site.pages.channel')->with(compact('channel'));
+    }
+
 }

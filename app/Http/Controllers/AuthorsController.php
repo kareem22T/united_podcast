@@ -133,4 +133,11 @@ class AuthorsController extends Controller
             return $this->jsonData(true, $request->file_name . 'تم حف الناشر بنجاح', [], []);
     }
 
+
+    public function authorIndex($id) {
+        $author = Author::find($id);
+
+        return view('site.pages.author')->with(compact('author'));
+    }
+
 }

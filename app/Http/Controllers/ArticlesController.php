@@ -176,4 +176,22 @@ class ArticlesController extends Controller
             return $this->jsonData(true, '', [], ["articles" => $Articles, "isMore" => Article::all()->count() > ($request->num ? $request->num : 10)]);
     }
 
+    public function channelArticles(Request $request) {
+        $Articles = Article::where("channel_id", $request->id)->with(["author", "channel"])->latest()->take($request->num ? $request->num : 10)->get();
+        if ($Articles)
+            return $this->jsonData(true, '', [], ["articles" => $Articles, "isMore" => Article::all()->count() > ($request->num ? $request->num : 10)]);
+    }
+
+    public function authorArticles(Request $request) {
+        $Articles = Article::where("author_id", $request->id)->with(["author", "channel"])->latest()->take($request->num ? $request->num : 10)->get();
+        if ($Articles)
+            return $this->jsonData(true, '', [], ["articles" => $Articles, "isMore" => Article::all()->count() > ($request->num ? $request->num : 10)]);
+    }
+
+    public function postIndex($id) {
+        $article = Article::find($id);
+
+        return view('site.pages.article')->with(compact('article'));
+    }
+
 }
