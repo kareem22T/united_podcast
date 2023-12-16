@@ -21,7 +21,7 @@
                                 title="المقالات" role="menuitem" tabindex="-1"
                                 data-menu-id="rc-menu-uuid-70638-1-Articles"><a title="المقالات"
                                     class="ant-menu-item-icon" href="/articles"><span
-                                        class="anticon ant-menu-item-icon  false"><svg width="17" height="21"
+                                        class="anticon ant-menu-item-icon  false @yield('articles_active')"><svg width="17" height="21"
                                             viewBox="0 0 17 21" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M10.1641 1.94531C10.1641 3.39708 10.1641 5.40133 10.1641 5.90538C10.1641 6.40942 10.1641 7.34538 10.1641 7.34538C10.1641 7.34538 11.074 7.34538 11.5641 7.34538C11.5641 7.34538 14.0026 7.34538 15.4141 7.34538M10.1641 1.94531C10.1641 1.94531 9.06642 1.94531 8.42437 1.94531H5.61406C4.14392 1.94531 1.41406 1.94531 1.41406 1.94531V2.01991C1.41406 2.01991 1.41406 4.75317 1.41406 6.26531V15.6253C1.41406 17.1375 1.41406 19.9453 1.41406 19.9453C1.41406 19.9453 4.14392 19.9453 5.61406 19.9453H11.2141C12.6842 19.9453 15.3415 19.9453 15.3415 19.9453C15.3415 19.9453 15.4141 17.1375 15.4141 15.6253V9.13471C15.4141 8.47432 15.4141 7.34538 15.4141 7.34538M10.1641 1.94531C10.1641 1.94531 10.9402 2.74364 11.3942 3.21061L14.1839 6.08001C14.6379 6.54699 15.4141 7.34538 15.4141 7.34538M10.9141 15.4453H7.41406M10.9141 11.8453H5.91406"
@@ -33,7 +33,7 @@
                                 title="الإذاعة" role="menuitem" tabindex="-1"
                                 data-menu-id="rc-menu-uuid-70638-1-Podcast"><a title="الإذاعة"
                                     class="ant-menu-item-icon" href="/podcasts"><span
-                                        class="anticon ant-menu-item-icon  false"><svg width="17" height="21"
+                                        class="anticon ant-menu-item-icon  false @yield('podcasts_active')"><svg width="17" height="21"
                                             viewBox="0 0 17 16" fill="none" xmlns="http://www.w3.org/2000/svg"
                                             class="inline-block">
                                             <path
@@ -46,7 +46,7 @@
                                 title="الوثائقيات" role="menuitem" tabindex="-1"
                                 data-menu-id="rc-menu-uuid-70638-1-Video"><a title="الوثائقيات"
                                     class="ant-menu-item-icon" href="/videos"><span
-                                        class="anticon ant-menu-item-icon  false"><svg width="25" height="21"
+                                        class="anticon ant-menu-item-icon  false @yield('videos_active')"><svg width="25" height="21"
                                             viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                                             <path
                                                 d="M17.4141 12.0001L22.2435 7.9304L23.4141 7V8.339V15.6613V17L22.2435 16.0699L17.4141 12.0001Z"

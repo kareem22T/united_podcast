@@ -2851,17 +2851,17 @@ body.waiting * {
 }
 
 .ant-layout-header .ant-menu-overflow-item.ant-menu-item span.active {
-    background-color: #000 !important;
-    color: #fff
+    background-color: #e81747 !important;
+    color: #fff !important
 }
 
 .ant-layout-header ul:not(.text-menu) .ant-menu-overflow-item.ant-menu-item:hover span:not(.active) {
-    background-color: #efede8 !important;
-    color: #000 !important
+    background-color: #e81747 !important;
+    color: #fff !important
 }
 
 .ant-layout-header .text-menu .ant-menu-overflow-item.ant-menu-item span.active {
-    color: var(--main-bg-color) !important;
+    color: #fff !important;
     font-weight: 700
 }
 
@@ -54091,6 +54091,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     width: 95%;
 }
 
+
 :where(.css-t2ij9r).ant-divider-horizontal.ant-divider-with-text-right::before {
     width: 95%;
 }
@@ -54279,4 +54280,9 @@ div,
 section,
 article {
     font-family: 'Cairo', sans-serif ! important;
+}
+
+.nav_active span {
+    background: #e81747 !important;
+    color: #fff !important
 }

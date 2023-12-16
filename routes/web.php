@@ -20,6 +20,18 @@ Route::get('/', function () {
     return view('site.pages.home');
 });
 
+Route::get('/articles', function () {
+    return view('site.pages.articles');
+});
+
+Route::get('/videos', function () {
+    return view('site.pages.videos');
+});
+
+Route::get('/podcasts', function () {
+    return view('site.pages.podcasts');
+});
+
 Route::post('/latest-articles-per-num', [ArticlesController::class, "latest"])->name('articles.latest');
 Route::post('/channel-articles', [ArticlesController::class, "channelArticles"])->name('channel.articles');
 Route::post('/author-articles', [ArticlesController::class, "authorArticles"])->name('author.articles');

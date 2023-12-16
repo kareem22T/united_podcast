@@ -1,6 +1,7 @@
 @extends('site.layout.main-layout')
 
-@section('title', 'United Podcast')
+@section('title', 'United Podcast | المقالات')
+@section('articles_active', 'active')
 
 @section('content')
 <div class="ant-layout-header border-0 mb-10 sm:hidden block lg:py-7 pt-8 md:mb-0 mb-10 hidden">
@@ -22,13 +23,34 @@
     </ul>
     <div style="display:none" aria-hidden="true"></div>
 </div>
-<div class="container flex-1 h-full" id="home_wrapper">
-    <main class="ant-layout-content css-t2ij9r">
+        <div class="container flex-1 h-full" id="home_wrapper">
+            <main class="ant-layout-content css-t2ij9r">
+                <div class="ant-space-item">
+            <div
+                class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full justify-between -mb-2 ">
+                <div class="ant-space-item">
+                    <div
+                        class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full">
+                        <div class="ant-space-item"><svg class="h-[42px] w-auto" width="39" height="49" viewBox="0 0 39 49"
+                                fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path
+                                    d="M23.6562 3.49463C23.6562 6.94258 23.6562 11.7027 23.6562 12.8998C23.6562 14.0969 23.6562 16.3198 23.6562 16.3198C23.6562 16.3198 25.8173 16.3198 26.9813 16.3198C26.9813 16.3198 32.7729 16.3198 36.125 16.3198M23.6562 3.49463C23.6562 3.49463 21.0493 3.49463 19.5245 3.49463H12.85C9.35842 3.49463 2.875 3.49463 2.875 3.49463V3.67181C2.875 3.67181 2.875 10.1633 2.875 13.7546V35.9846C2.875 39.5761 2.875 46.2446 2.875 46.2446C2.875 46.2446 9.35842 46.2446 12.85 46.2446H26.15C29.6417 46.2446 35.9527 46.2446 35.9527 46.2446C35.9527 46.2446 36.125 39.5761 36.125 35.9846V20.5694C36.125 19.001 36.125 16.3198 36.125 16.3198M23.6562 3.49463C23.6562 3.49463 25.4995 5.39066 26.5779 6.49972L33.2034 13.3145C34.2817 14.4236 36.125 16.3198 36.125 16.3198M25.4375 35.5571H17.125M25.4375 27.0071H13.5625"
+                                    stroke="currentColor" stroke-width="5" stroke-linecap="square"></path>
+                            </svg></div>
+                        <div class="ant-space-item">
+                            <h1 class="ant-typography ant-typography-rtl !mb-0 css-t2ij9r">المقالات</h1>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <br>
+        <br>
         <div style="padding-bottom:34px;min-height:380px">
             <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl w-full"
                 style="column-gap:40px;row-gap:40px">
                 @php
-                    $latest_articles = App\Models\Article::latest()->take(3)->get();
+                    $latest_articles = App\Models\Article::where('type', 'article')->latest()->take(5)->get();
                 @endphp
                 @if ($latest_articles->count() > 0)
                     <div class="ant-space-item">
@@ -159,138 +181,6 @@
                 </div>
 
                 @php
-                    $latest_podcast = App\Models\Article::where('type', 'podcast')->latest()->take(2)->get();
-                    $latest_programs = App\Models\Channel::where('type', 'podcast')->latest()->take(6)->get();
-                @endphp
-                @if ($latest_podcast->count() > 0 && $latest_programs->count() > 0)
-                    <div class="ant-space-item">
-                        <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl w-full"
-                            style="gap: 40px;">
-                            <div class="ant-space-item">
-                                <div
-                                    class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full justify-between -mb-2 ">
-                                    <div class="ant-space-item">
-                                        <div
-                                            class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full">
-                                            <div class="ant-space-item"><svg width="23" height="30"
-                                                    viewBox="0 0 23 30" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M19.931 14.8096V18.0246C19.931 22.6506 16.167 26.4146 11.541 26.4146C6.91403 26.4146 3.15103 22.6506 3.15103 18.0246V14.9026H0.0820312V18.0246C0.0820312 24.3436 5.22203 29.4836 11.541 29.4836C17.86 29.4836 23 24.3436 23 18.0246V14.8096H19.931Z"
-                                                        fill="black"></path>
-                                                    <path
-                                                        d="M11.614 21.3696C9.33704 21.3696 7.48304 19.0776 7.48304 16.2606H4.41504C4.41504 20.7686 7.64404 24.4366 11.614 24.4366C15.586 24.4366 18.815 20.7686 18.815 16.2606V8.6956C18.815 4.1846 15.586 0.516602 11.614 0.516602C7.64404 0.516602 4.41504 4.1846 4.41504 8.7026L4.44404 15.0846L10.08 15.0956L10.086 12.0256L7.49804 12.0206L7.48304 8.6956C7.48304 5.8786 9.33704 3.5866 11.614 3.5866C13.893 3.5866 15.747 5.8786 15.747 8.6956V16.2606C15.747 19.0776 13.893 21.3696 11.614 21.3696Z"
-                                                        fill="black"></path>
-                                                </svg></div>
-                                            <div class="ant-space-item">
-                                                <h3 class="ant-typography ant-typography-rtl !mb-0 css-t2ij9r">
-                                                    الحلقات الجديدة</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ant-space-item">
-                                <div class="ant-row ant-row-rtl css-t2ij9r" style="margin-left: -8px; margin-right: -8px; row-gap: 24px;">
-                                    @if ($latest_podcast->count() > 0)
-                                        <div style="padding-left: 8px; padding-right: 8px;"
-                                            class="ant-col ant-col-xs-24 ant-col-rtl ant-col-sm-12 ant-col-md-14 ant-col-lg-12 ant-col-xl-12 css-t2ij9r">
-                                            <div class="flex justify-center items-start h-full w-full">
-                                                <div>
-                                                    <div class="ant-row ant-row-rtl css-t2ij9r"
-                                                        style="margin-left: -8px; margin-right: -8px; row-gap: 32px;">
-                                                        @foreach ($latest_podcast as $podcast)
-                                                            <div style="padding-left: 8px; padding-right: 8px;" class="ant-col 
-                                                                    
-                                                                    
-                                                                        ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-24 css-t2ij9r">
-                                                                <article class="relative">
-                                                                    <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                                        style="margin-left: -8px; margin-right: -8px; row-gap: 16px;">
-                                                                        <div style="padding-left: 8px; padding-right: 8px;"
-                                                                            class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                                            <a href="{{ route("post.show", ["id" => $podcast->id]) }}"><img alt="{{$podcast->title}}"
-                                                                                    loading="lazy" decoding="async" data-nimg="1"
-                                                                                    class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                                                    style="color: transparent; object-fit: cover;"
-                                                                                    src="{{$podcast->thumbnail_path}}"
-                                                                                    width="600" height="300"></a>
-                                                                        </div>
-                                                                        <div style="padding-left: 8px; padding-right: 8px;"
-                                                                            class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                                            <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                                                <div class="ant-space-item"><a href="{{ route("post.show", ["id" => $podcast->id]) }}">
-                                                                                        <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                                            style="-webkit-line-clamp: 2;">
-                                                                                            {{$podcast->title}}</h4>
-                                                                                        <div
-                                                                                            class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                                            {{$podcast->info}}</div>
-                                                                                    </a></div>
-                                                                                <div class="ant-space-item">
-                                                                                    <div class=" mb-2">
-                                                                                        <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                                            style="gap: 16px;">
-                                                                                            <div class="ant-space-item last-of-type:flex-1 ">
-                                                                                                <a class="font-bold text-sm" href="/author/{{$podcast->author->id}}"><span
-                                                                                                        class="flex items-center gap-2 font-bold undefined">{{$podcast->author->name}}</span></a>
-                                                                                            </div>
-                                                                                            <div class="ant-space-item last-of-type:flex-1 ">
-                                                                                                <span
-                                                                                                    class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"><i
-                                                                                                        class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] me-1 -ms-3 align-middle"></i>14
-                                                                                                    ديسمبر 2023</span>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                    </div><span
-                                                                        class="flex items-center justify-center text-white bg-black/25 w-6 h-6 rounded-full absolute top-1 right-1"><svg
-                                                                            class="w-3 h-3" width="16" height="17" viewBox="0 0 16 17" fill="none"
-                                                                            xmlns="http://www.w3.org/2000/svg">
-                                                                            <path
-                                                                                d="M15 13.3912V8.52163C15 4.48756 11.866 1.21729 8 1.21729C4.13401 1.21729 1 4.48756 1 8.52163V13.3912M2.94444 15.826H1V12.1738C1 11.0532 1 10.3477 1 10.3477H4.9375V15.826H2.94444ZM15 15.826H11.1111V12.1738C11.1111 11.6459 11.1111 10.1448 11.1111 10.1448H15C15 10.1448 15 11.0532 15 12.1738V13.797C15 14.9176 15 15.826 15 15.826Z"
-                                                                                stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
-                                                                        </svg></span>
-                                                                </article>
-                                                            </div>
-                                                        @endforeach
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    @endif
-                                    @if ($latest_programs->count() > 0)
-                                        <div style="padding-left: 8px; padding-right: 8px;"
-                                            class="ant-col ant-col-xs-24 ant-col-rtl ant-col-sm-12 ant-col-md-10 ant-col-lg-12 ant-col-xl-12 css-t2ij9r">
-                                            <div class="ant-row ant-row-rtl css-t2ij9r" style="margin-left: -8px; margin-right: -8px; row-gap: 16px;">
-                                                @foreach ($latest_programs as $program)
-                                                    <div style="padding-left: 8px; padding-right: 8px;"
-                                                        class="ant-col ant-col-xs-12 ant-col-rtl ant-col-sm-12 ant-col-md-12 ant-col-lg-8 ant-col-xl-8 css-t2ij9r">
-                                                        <div class="relative rounded-lg  shadow-custom "><a href="/channel/{{ $program->channel->id }}"><img alt="مربع"
-                                                                    loading="lazy" decoding="async" data-nimg="1"
-                                                                    class="w-full h-auto aspect-square bg-colorFillContentHover rounded-lg object-cover"
-                                                                    style="color: transparent;"
-                                                                    src="{{$program->thumbnail_path}}"
-                                                                    width="200" height="200"></a></div>
-                                                    </div>
-                                                @endforeach
-                                            </div>
-                                        </div>
-                                    @endif
-                                </div>
-                            </div>
-                            <div class="ant-space-item">
-                                <div class="ant-divider css-t2ij9r ant-divider-horizontal ant-divider-rtl  m-0"
-                                    role="separator"></div>
-                            </div>
-                        </div>
-                    </div>
-                @endif
-
-                @php
                     $latest_mainls_programs = App\Models\Channel::where('type', 'article')->latest()->take(6)->get();
                 @endphp
                 @if($latest_mainls_programs->count() > 0)
@@ -337,110 +227,9 @@
                                     @endforeach
                                 </div>
                             </div>
-                            <div class="ant-space-item">
+                            <div class="ant-space-item" v-if="latest_articles && latest_articles.length > 0" >
                                 <div class="ant-divider css-t2ij9r ant-divider-horizontal ant-divider-rtl  m-0"
                                     role="separator"></div>
-                            </div>
-                        </div>
-                    </div>
-                @endif
-
-                @php
-                    $latest_videos = App\Models\Article::where('type', 'video')->latest()->take(3)->get();
-                @endphp
-                @if($latest_videos->count() > 0)
-                    <div class="ant-space-item">
-                        <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl w-full" style="gap: 40px;">
-                            <div class="ant-space-item">
-                                <div
-                                    class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full justify-between -mb-2 ">
-                                    <div class="ant-space-item">
-                                        <div
-                                            class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full">
-                                            <div class="ant-space-item"><svg width="28" height="26" viewBox="0 0 28 26" fill="none"
-                                                    xmlns="http://www.w3.org/2000/svg">
-                                                    <path
-                                                        d="M3.89499 13.7796H19.111V3.77359H3.89499V13.7796ZM22.69 9.03458L24.931 10.3726V7.84958L22.69 8.71158V9.03458ZM0.825989 0.70459H22.18V5.62158L28 3.38159V15.7776L22.18 12.3026V16.8476H15.188L18.194 24.1256L15.359 25.2966L11.869 16.8476H11.016L7.817 25.2566L4.94899 24.1656L7.73199 16.8476H0.825989V0.70459Z"
-                                                        fill="black"></path>
-                                                </svg></div>
-                                            <div class="ant-space-item">
-                                                <h3 class="ant-typography ant-typography-rtl !mb-0 css-t2ij9r">
-                                                    الوثائقيات الجديدة</h3>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ant-space-item">
-                                <div>
-                                    <div class="ant-row ant-row-rtl css-t2ij9r"
-                                        style="margin-left: -8px; margin-right: -8px; row-gap: 32px;">
-                                        @foreach ($latest_videos as $video)                                            
-                                            <div style="padding-left: 8px; padding-right: 8px;" class="ant-col 
-                                                        max-lg:max-w-full max-lg:flex-[0_0_100%]
-                                                        
-                                                            ant-col-xs-24 ant-col-rtl ant-col-sm-12 ant-col-md-12 ant-col-lg-8 css-t2ij9r">
-                                                <article class="relative">
-                                                    <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                        style="margin-left: -10.5px; margin-right: -10.5px; row-gap: 8px;">
-                                                        <div style="padding-left: 10.5px; padding-right: 10.5px;"
-                                                            class="ant-col ant-col-xs-24 ant-col-rtl ant-col-lg-24 ant-col-xl-24 css-t2ij9r">
-                                                            <a class="relative undefined" href="{{ route("post.show", ["id" => $video->id]) }}"><img
-                                                                    alt="{{$video->title}}" loading="lazy" decoding="async"
-                                                                    data-nimg="1" class="rounded-lg w-full h-auto aspect-[386/211] "
-                                                                    style="color: transparent; object-fit: cover;"
-                                                                    src="{{$video->thumbnail_path}}"
-                                                                    width="640" height="350"></a>
-                                                        </div>
-                                                        <div style="padding-left: 10.5px; padding-right: 10.5px;"
-                                                            class="ant-col ant-col-xs-24 ant-col-rtl ant-col-lg-24 ant-col-xl-24 css-t2ij9r">
-                                                            <a class="relative undefined" href="{{ route("post.show", ["id" => $video->id]) }}">
-                                                                <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                                    <div class="ant-space-item">
-                                                                        <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line mb-2 overflow-visible css-t2ij9r"
-                                                                            style="-webkit-line-clamp: 2;">
-                                                                            {{$video->title}}
-                                                                        </h4>
-                                                                    </div>
-                                                                </div>
-                                                            </a>
-                                                            <div class="mb-2 text-sm">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="gap: 16px;">
-                                                                    <div class="ant-space-item last-of-type:flex-1 "><a
-                                                                            class="font-bold text-sm" href="/channel/{{ $video->channel->id }}"><span
-                                                                                class="flex items-center gap-2 font-bold undefined">
-                                                                                {{$video->channel->title}}
-                                                                                </span></a></div>
-                                                                    <div class="ant-space-item last-of-type:flex-1 ">
-                                                                        <span
-                                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r">15
-                                                                            ديسمبر 2023</span>
-                                                                    </div>
-                                                                    <div class="ant-space-item last-of-type:flex-1 ">
-                                                                    </div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div><span
-                                                        class="flex items-center justify-center text-white bg-black/25 w-6 h-6 rounded-full absolute top-1 right-1"><svg
-                                                            class="w-4 h-4" width="16" height="16" viewBox="0 0 16 16" fill="none"
-                                                            xmlns="http://www.w3.org/2000/svg">
-                                                            <path
-                                                                d="M10.6665 6.86163L12.9833 5.43353C13.189 5.30673 13.4472 5.30114 13.6581 5.41892C13.8691 5.5367 13.9998 5.75941 13.9998 6.00103V10.6656C13.9998 10.9072 13.8691 11.1299 13.6582 11.2477C13.4472 11.3654 13.189 11.3599 12.9834 11.2331L10.6665 9.80495"
-                                                                stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                                                stroke-linejoin="round"></path>
-                                                            <rect x="2" y="4" width="8.66667" height="8.66667" rx="3" stroke="currentColor"
-                                                                stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></rect>
-                                                        </svg></span>
-                                                </article>
-                                            </div>
-                                        @endforeach
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="ant-space-item">
-                                <div class="ant-divider css-t2ij9r ant-divider-horizontal ant-divider-rtl  m-0" role="separator"></div>
                             </div>
                         </div>
                     </div>
@@ -571,6 +360,7 @@ createApp({
             try {
                 const response = await axios.post(`{{ route('articles.latest') }}`, {
                     num: num,
+                    not_latest_five: true,
                     type: "article",
                 },
                 );
