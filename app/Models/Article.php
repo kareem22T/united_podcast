@@ -12,6 +12,7 @@ class Article extends Model
         "author_id",
         "channel_id",
         "title",
+        "intro",
         "content",
         "type",
         "thumbnail_path",
@@ -21,11 +22,11 @@ class Article extends Model
     // relationships
     public function author()
     {
-        return $this->hasMany(Author::class);
+        return $this->belongsTo('App\Models\Author', 'author_id');
     }
 
     public function channel()
     {
-        return $this->belongsTo(Channel::class);
+        return $this->belongsTo('App\Models\Channel', 'channel_id');
     }
 }

@@ -16,6 +16,7 @@ return new class extends Migration
             $table->integer('author_id');
             $table->integer('channel_id');
             $table->text('title');
+            $table->text('intro');
             $table->longText('content');
             $table->string('type', 100);
             $table->text('thumbnail_path');

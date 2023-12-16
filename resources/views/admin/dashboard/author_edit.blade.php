@@ -1,13 +1,13 @@
 @extends('admin.layouts.admin-layout')
 
-@section('name', 'اضافة ناشر')
+@section('name', 'تعديل بيانات الناشر')
 
 @section('authors_add_active', 'active')
 
 @if($Author)
 @section('content')
 <h3 class="mb-5">
-    اضافة ناشر
+    تعديل بيانات الناشر
 </h3>
 <style>
     .toolbar button {
@@ -48,7 +48,7 @@
                 <div class="w-25">
                     <!-- Swiper -->
                     <div class="w-100 mb-3 pb-5">
-                        <button type="submit" class="btn btn-primary w-50 form-control" style="height: fit-content" @click="this.getContentArticle().then(() => {this.update()})"><i class="ti ti-plus"></i> Add</button>
+                        <button type="submit" class="btn btn-primary w-50 form-control" style="height: fit-content" @click="this.getContentArticle().then(() => {this.update()})"><i class="ti ti-edit"></i> تحديث</button>
                     </div>
                 </div>
             </div>

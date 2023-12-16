@@ -19,11 +19,16 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
     <div class="card-body" >
         <div>
-            <div class="w-100 mb-4 pb-5 gap-2" style="display: grid; grid-template-columns: 1fr 1fr;">
+            <div class="w-100 mb-4 pb-5 gap-2" style="display: grid; grid-template-columns: 1fr">
                 <div class="w-100">
                     <div>
                         <label for="term_title" class="form-label">عنوان المنشور *</label>
                         <input type="text" class="form-control" id="term_title" v-model="title">
+                    </div>
+                    <div class="form-group w-100 mt-3">
+                        <label for="intro" class="form-label">مقدمة بسيطة *</label>
+                        <textarea name="intro" id="intro" cols="30" rows="10" class="form-control" v-model="intro">
+                        </textarea>
                     </div>
                 </div>
             </div>
@@ -254,6 +259,7 @@ createApp({
       publish_date: new Date().toISOString().split('T')[0],
       author_id: null,
       channel_id: null,
+      intro: null,
     }
   },
   methods: {
@@ -275,6 +281,7 @@ createApp({
         try {
             const response = await axios.post(`{{ route('article.put') }}`, {
                 title: this.title,
+                intro: this.intro,
                 content: this.content,
                 type: this.type,
                 channel_id: this.channel_id,

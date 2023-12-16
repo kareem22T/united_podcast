@@ -16,9 +16,10 @@ class Channel extends Model
     ];
 
     // relationships
-    public function articles()
+    public function  articles()
     {
-        return $this->hasMany(Article::class);
+        return $this->hasOne('App\Models\Article', 'channel_id');
     }
+
 
 }

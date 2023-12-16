@@ -16,9 +16,11 @@ class Author extends Model
     ];
 
     // relationships
-    public function articles()
+    public function  articles()
     {
-        return $this->hasMany(Article::class);
+        return $this->hasOne('App\Models\Article', 'author_id');
     }
+
+
 
 }

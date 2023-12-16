@@ -71,6 +71,7 @@ class ArticlesController extends Controller
     public function put(Request $request) {
         $validator = Validator::make($request->all(), [
             'title' => ['required'],
+            'intro' => ['required'],
             'content' => ['required'],
             'thumbnail_path' => ['required'],
             'type' => ['required'],
@@ -78,6 +79,7 @@ class ArticlesController extends Controller
             'author_id' => ['required'],
         ], [
             'title.required' => 'عنوان المنشور مطلوب',
+            'intro.required' => 'من فضلك اكتب مقدمة بسيطة',
             'content.required' => 'المحتوى مطلوب',
             'thumbnail_path.required' => 'قم باختيار صورة مصغرة',
             'type.required' => 'اختر نوع المنشور',
@@ -92,6 +94,7 @@ class ArticlesController extends Controller
         $createArticle = Article::create([
             'author_id' => Auth::guard('admin')->user()->id,
             'title' => $request->title,
+            'intro' => $request->intro,
             'content' => $request->content,
             'thumbnail_path' => $request->thumbnail_path,
             'type' => $request->type,
@@ -115,6 +118,7 @@ class ArticlesController extends Controller
     public function update(Request $request) {
         $validator = Validator::make($request->all(), [
             'title' => ['required'],
+            'intro' => ['required'],
             'content' => ['required'],
             'thumbnail_path' => ['required'],
             'type' => ['required'],
@@ -122,6 +126,7 @@ class ArticlesController extends Controller
             'author_id' => ['required'],
         ], [
             'title.required' => 'عنوان المنشور مطلوب',
+            'intro.required' => 'من فضلك اكتب مقدمة بسيطة',
             'content.required' => 'المحتوى مطلوب',
             'thumbnail_path.required' => 'قم باختيار صورة مصغرة',
             'type.required' => 'اختر نوع المنشور',
@@ -129,12 +134,14 @@ class ArticlesController extends Controller
             'author_id.required' => 'من فضلك قم باختيار الناشر'
         ]);
 
+
         if ($validator->fails()) {
             return $this->jsondata(false, 'update failed', [$validator->errors()->first()], []);
         }
 
         $article = Article::find($request->id); 
         $article->title = $request->title;
+        $article->intro = $request->intro;
         $article->content = $request->content;
         $article->thumbnail_path = $request->thumbnail_path;
         $article->type = $request->type;
