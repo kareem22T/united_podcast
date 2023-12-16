@@ -327,7 +327,7 @@
                                     @foreach ($latest_mainls_programs as $porgram)
                                         <div style="padding-left: 8px; padding-right: 8px;"
                                             class="ant-col ant-col-xs-12 ant-col-rtl ant-col-sm-12 ant-col-md-6 ant-col-lg-4 ant-col-xl-4 css-t2ij9r">
-                                            <div class="relative rounded-lg  shadow-custom "><a href="/channel/{{ $article->program->id }}"><img
+                                            <div class="relative rounded-lg  shadow-custom "><a href="/channel/{{ $porogram->channel->id }}"><img
                                                         alt="{{$porgram->title}}" loading="lazy" decoding="async" data-nimg="1"
                                                         class="w-full h-auto aspect-square bg-colorFillContentHover rounded-lg object-cover"
                                                         style="color: transparent;"
