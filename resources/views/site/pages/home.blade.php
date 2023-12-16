@@ -22,7 +22,7 @@
     </ul>
     <div style="display:none" aria-hidden="true"></div>
 </div>
-<div class="container flex-1 h-full">
+<div class="container flex-1 h-full" id="home_wrapper">
     <main class="ant-layout-content css-t2ij9r">
         <div style="padding-bottom:34px;min-height:380px">
             <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl w-full"
@@ -80,7 +80,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="text-sm mb-2"><span>في<!-- --> <a
+                                                        <div class="text-sm mb-2"><span>في <!-- --> <a
                                                                     class="text-black font-bold" href="/p/namat">{{ $article->channel->title }}</a><span
                                                                 class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
                                                                 title="16 ديسمبر 2023"><i
@@ -136,7 +136,7 @@
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        <div class="text-sm mb-2"><span>في<!-- --> <a
+                                                        <div class="text-sm mb-2"><span>في <!-- --> <a
                                                                     class="text-black font-bold" href="/p/aha">{{ $article->channel->title }}</a>
                                                                 <span
                                                                 class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
@@ -445,17 +445,16 @@
                         </div>
                     </div>
                 @endif
-                {{-- <div class="ant-space-item"><!--$-->
-                    <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl w-full"
-                        style="column-gap:40px;row-gap:40px">
+
+                <div class="ant-space-item" v-if="latest_articles && latest_articles.length > 0" style="display: none" :style='latest_articles && latest_articles.length > 0 ? "display: block" : "display: none"'><!--$-->
+                    <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl w-full" style="column-gap:40px;row-gap:40px">
                         <div class="ant-space-item">
                             <div
                                 class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full justify-between -mb-2 ">
                                 <div class="ant-space-item">
                                     <div
                                         class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full">
-                                        <div class="ant-space-item"><svg width="27" height="26"
-                                                viewBox="0 0 27 26" fill="none"
+                                        <div class="ant-space-item"><svg width="27" height="26" viewBox="0 0 27 26" fill="none"
                                                 xmlns="http://www.w3.org/2000/svg">
                                                 <path
                                                     d="M5.95732 2.68696C5.10032 2.68696 4.40132 3.39296 4.40132 4.25996C4.40132 5.12796 5.10032 5.83296 5.95732 5.83296C6.81532 5.83296 7.51532 5.12796 7.51532 4.25996C7.51532 3.39296 6.81532 2.68696 5.95732 2.68696ZM5.95732 8.45696C3.65232 8.45696 1.77832 6.57497 1.77832 4.25996C1.77832 1.94597 3.65232 0.0639648 5.95732 0.0639648C8.26332 0.0639648 10.1383 1.94597 10.1383 4.25996C10.1383 6.57497 8.26332 8.45696 5.95732 8.45696Z"
@@ -480,60 +479,46 @@
                         </div>
                         <div class="ant-space-item">
                             <div>
-                                <div class="ant-row ant-row-rtl css-t2ij9r"
-                                    style="margin-left:-8px;margin-right:-8px;row-gap:32px">
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
+                                <div class="ant-row ant-row-rtl css-t2ij9r" style="margin-left:-8px;margin-right:-8px;row-gap:32px">
+
+                                    <div style="padding-left:8px;padding-right:8px" v-for="article in latest_articles" :key="article.id" class="ant-col ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
                                         <article class="relative">
                                             <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
                                                 style="margin-left:-8px;margin-right:-8px;row-gap:16px">
                                                 <div style="padding-left:8px;padding-right:8px"
                                                     class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jqese4t41_1jhggnmybp"><img
-                                                            alt="دروس آلان دو بوتون في الحب والزواج "
+                                                    <a href="/post/1jqese4t41_1jhggnmybp"><img :alt="article.title"
                                                             loading="lazy" decoding="async" data-nimg="1"
                                                             class="rounded-lg max-w-full h-auto aspect-[180/150]"
                                                             style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-aafd5402-d3ca-49e4-8604-284bb39ecac1.jpeg&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-aafd5402-d3ca-49e4-8604-284bb39ecac1.jpeg&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-aafd5402-d3ca-49e4-8604-284bb39ecac1.jpeg&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
+                                                            :src="article.thumbnail_path"
+                                                            width="600" height="300"></a>
+                                                </div>
                                                 <div style="padding-left:8px;padding-right:8px"
                                                     class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jqese4t41_1jhggnmybp">
+                                                    <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
+                                                        <div class="ant-space-item"><a href="/post/1jqese4t41_1jhggnmybp">
                                                                 <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">دروس آلان دو
-                                                                    بوتون في الحب والزواج </h4>
+                                                                    style="-webkit-line-clamp: 2;">@{{ article.title }}</h4>
                                                                 <div
                                                                     class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    نبحثُ عن الكمال، من يفهم مشاعرنا وضعفنا
-                                                                    وعقدنا، مقتنعين بتلك الفكرة التي لا نعلم كيف
-                                                                    غُرست في عقولنا عن مثالية الحب والمحبوب.
+                                                                    @{{ article.intro }}
                                                                 </div>
                                                             </a></div>
                                                         <div class="ant-space-item">
                                                             <div class=" mb-2">
                                                                 <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
                                                                     style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/adulkareem"><span
-                                                                                class="flex items-center gap-2 font-bold undefined">عبدالكريم
-                                                                                العدواني</span></a></div>
+                                                                    <div class="ant-space-item last-of-type:flex-1 ">
+                                                                        <a class="font-bold text-sm" href="/author/adulkareem"><span
+                                                                                class="flex items-center gap-2 font-bold undefined">@{{ article.author.name }}</span></a>
+                                                                    </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                     </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold" href="/p/elkh">نشرة
-                                                                إلخ</a> <!-- -->من<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
+                                                    <div class="text-sm mb-2"><span>في <!-- --> <a class="text-black font-bold"
+                                                                href="/p/elkh">@{{ article.channel.title }}</a></span><span
                                                             class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
                                                             title="13 ديسمبر 2023"><i
                                                                 class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>13
@@ -542,596 +527,108 @@
                                             </div>
                                         </article>
                                     </div>
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
-                                        <article class="relative">
-                                            <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                style="margin-left:-8px;margin-right:-8px;row-gap:16px">
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jqdyhe5m0_1jhggnmybp"><img
-                                                            alt="أرفض مشاهدة الحلقة الأخيرة قبل الأولى"
-                                                            loading="lazy" decoding="async" data-nimg="1"
-                                                            class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                            style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-b80ed9ab-6625-46fc-98d0-6b9ab6831867.png&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-b80ed9ab-6625-46fc-98d0-6b9ab6831867.png&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-b80ed9ab-6625-46fc-98d0-6b9ab6831867.png&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jqdyhe5m0_1jhggnmybp">
-                                                                <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">أرفض مشاهدة
-                                                                    الحلقة الأخيرة قبل الأولى</h4>
-                                                                <div
-                                                                    class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    إن كنت حريصًا على ألا يحرق أحدهم أحداث مسلسل
-                                                                    كنت أنتظره على أحر من الجمر، فلا سبيل أمامي
-                                                                    سوى مشاهدة المسلسل فور نزوله دفعةً واحدة!
-                                                                </div>
-                                                            </a></div>
-                                                        <div class="ant-space-item">
-                                                            <div class=" mb-2">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/mahmoudessam"><span
-                                                                                class="flex items-center gap-2 font-bold undefined">محمود
-                                                                                عصام</span></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold" href="/p/aha">نشرة
-                                                                أها!</a> <!-- -->من<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
-                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
-                                                            title="12 ديسمبر 2023"><i
-                                                                class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>12
-                                                            ديسمبر 2023</span></div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
-                                        <article class="relative">
-                                            <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                style="margin-left:-8px;margin-right:-8px;row-gap:16px">
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jqb4a6hh7_1jhggnmybp"><img
-                                                            alt="لماذا تتجاهلون النهار؟!" loading="lazy"
-                                                            decoding="async" data-nimg="1"
-                                                            class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                            style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c5d5fd54-9e39-480f-a4d0-866c82114225.gif&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c5d5fd54-9e39-480f-a4d0-866c82114225.gif&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c5d5fd54-9e39-480f-a4d0-866c82114225.gif&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jqb4a6hh7_1jhggnmybp">
-                                                                <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">لماذا
-                                                                    تتجاهلون النهار؟!</h4>
-                                                                <div
-                                                                    class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    سيكون الأمر جميلًا حين تتخلى عزيزي السينمائي
-                                                                    أو المنتنمي إلى عالم الفن السعودي عن فكرة
-                                                                    أنك أستاذ ستعلّم الناس وتمرر أفكارك العظيمة
-                                                                    من خلال أفلامك.</div>
-                                                            </a></div>
-                                                        <div class="ant-space-item">
-                                                            <div class=" mb-2">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/agrni"><span
-                                                                                class="flex items-center gap-2 font-bold undefined"><img
-                                                                                    alt="" loading="lazy"
-                                                                                    decoding="async"
-                                                                                    data-nimg="1"
-                                                                                    class="rounded-full"
-                                                                                    style="color:transparent"
-                                                                                    srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.amazonaws.com%2Fpublic%2Fprofile%2FBAoeaHuwnKNaHW4vhLwgQAyeVvz2.jpg&amp;w=32&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.amazonaws.com%2Fpublic%2Fprofile%2FBAoeaHuwnKNaHW4vhLwgQAyeVvz2.jpg&amp;w=48&amp;q=75 2x"
-                                                                                    src="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.amazonaws.com%2Fpublic%2Fprofile%2FBAoeaHuwnKNaHW4vhLwgQAyeVvz2.jpg&amp;w=48&amp;q=75"
-                                                                                    width="18"
-                                                                                    height="18">عبدالله
-                                                                                المزهر</span></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/p/alsakher">نشرة الساخر</a>
-                                                            <!-- -->من<!-- --> <a class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
-                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
-                                                            title="12 ديسمبر 2023"><i
-                                                                class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>12
-                                                            ديسمبر 2023</span></div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
-                                        <article class="relative">
-                                            <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                style="margin-left:-8px;margin-right:-8px;row-gap:16px">
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jqbe3zzwq_1jhggnmybp"><img
-                                                            alt="لماذا لا أدفع إكرامية في تطبيق التوصيل؟"
-                                                            loading="lazy" decoding="async" data-nimg="1"
-                                                            class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                            style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-6fd2c0b7-7383-44a7-ab2a-3a5b21d28849.png&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-6fd2c0b7-7383-44a7-ab2a-3a5b21d28849.png&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-6fd2c0b7-7383-44a7-ab2a-3a5b21d28849.png&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jqbe3zzwq_1jhggnmybp">
-                                                                <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">لماذا لا أدفع
-                                                                    إكرامية في تطبيق التوصيل؟</h4>
-                                                                <div
-                                                                    class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    إن تركيزنا في جدل «البقشيش» يجب ألا يكون على
-                                                                    خيار الدفع من عدمه، بل في أهمية تحقيق توازن
-                                                                    عادل في علاقة العمل بين المندوب والشركة
-                                                                    لضمان استدامة رفاهية العمال والمستهلكين.
-                                                                </div>
-                                                            </a></div>
-                                                        <div class="ant-space-item">
-                                                            <div class=" mb-2">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/eilaf585"><span
-                                                                                class="flex items-center gap-2 font-bold undefined">إيلاف
-                                                                                محمد</span></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold" href="/p/aha">نشرة
-                                                                أها!</a> <!-- -->من<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
-                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
-                                                            title="11 ديسمبر 2023"><i
-                                                                class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>11
-                                                            ديسمبر 2023</span></div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
-                                        <article class="relative">
-                                            <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                style="margin-left:-8px;margin-right:-8px;row-gap:16px">
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jqbq8184n_1jhggnmybp"><img
-                                                            alt="«بايت دانس» تستحوذ على نفسها" loading="lazy"
-                                                            decoding="async" data-nimg="1"
-                                                            class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                            style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-efe9c731-6b72-4ca2-bd5b-5c0fbe303857.png&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-efe9c731-6b72-4ca2-bd5b-5c0fbe303857.png&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-efe9c731-6b72-4ca2-bd5b-5c0fbe303857.png&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jqbq8184n_1jhggnmybp">
-                                                                <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">«بايت دانس»
-                                                                    تستحوذ على نفسها</h4>
-                                                                <div
-                                                                    class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    هذه ليست المرة الأولى التي تشتري فيها «بايت
-                                                                    دانس» أسهم شركتها سواء من موظفيها أو
-                                                                    المستثمرين فيها، ففي العام الماضي اشترت حصة
-                                                                    أسهم بقيمة 3 مليار دولار.</div>
-                                                            </a></div>
-                                                        <div class="ant-space-item">
-                                                            <div class=" mb-2">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/emanasaad"><span
-                                                                                class="flex items-center gap-2 font-bold undefined"><img
-                                                                                    alt="" loading="lazy"
-                                                                                    decoding="async"
-                                                                                    data-nimg="1"
-                                                                                    class="rounded-full"
-                                                                                    style="color:transparent"
-                                                                                    srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.amazonaws.com%2Fpublic%2Fprofile%2Fnib5ntJndcPwLMtTLHJH72mmgkN2.jpg&amp;w=32&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.amazonaws.com%2Fpublic%2Fprofile%2Fnib5ntJndcPwLMtTLHJH72mmgkN2.jpg&amp;w=48&amp;q=75 2x"
-                                                                                    src="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.amazonaws.com%2Fpublic%2Fprofile%2Fnib5ntJndcPwLMtTLHJH72mmgkN2.jpg&amp;w=48&amp;q=75"
-                                                                                    width="18" height="18">إيمان
-                                                                                أسعد</span></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/p/assouq">نشرة السوق</a>
-                                                            <!-- -->من<!-- --> <a class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
-                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
-                                                            title="11 ديسمبر 2023"><i
-                                                                class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>11
-                                                            ديسمبر 2023</span></div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
-                                        <article class="relative">
-                                            <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                style="margin-left:-8px;margin-right:-8px;row-gap:16px">
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jq8ed9nww_1jhggnmybp"><img
-                                                            alt="مقاطعة الأجنبي فرصة ذهبية لدعم المحلي"
-                                                            loading="lazy" decoding="async" data-nimg="1"
-                                                            class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                            style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c714fcdb-9cf1-4092-8638-90e7d55e8556.png&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c714fcdb-9cf1-4092-8638-90e7d55e8556.png&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c714fcdb-9cf1-4092-8638-90e7d55e8556.png&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jq8ed9nww_1jhggnmybp">
-                                                                <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">مقاطعة
-                                                                    الأجنبي فرصة ذهبية لدعم المحلي</h4>
-                                                                <div
-                                                                    class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    إذا استثمرت الشركات المحليَّة في ثقة
-                                                                    المستهلك المحلي بشكل صحيح فقد نشهد انتعاشًا
-                                                                    اقتصاديًا محليًا وافرًا سيُسهم في تفضيل
-                                                                    المنتج المحلي على المنتج الأجنبي في قائمة
-                                                                    مشترياتنا للأبد.</div>
-                                                            </a></div>
-                                                        <div class="ant-space-item">
-                                                            <div class=" mb-2">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/saharalhashimi"><span
-                                                                                class="flex items-center gap-2 font-bold undefined">سحر
-                                                                                الهاشمي</span></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold" href="/p/aha">نشرة
-                                                                أها!</a> <!-- -->من<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
-                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
-                                                            title="10 ديسمبر 2023"><i
-                                                                class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>10
-                                                            ديسمبر 2023</span></div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
-                                        <article class="relative">
-                                            <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                style="margin-left:-8px;margin-right:-8px;row-gap:16px">
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jq3wq3mzk_1jhggnmybp"><img
-                                                            alt="06: كيف أحدد الاتجاه؟" loading="lazy"
-                                                            decoding="async" data-nimg="1"
-                                                            class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                            style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-ab0c74c1-3faa-494b-8fef-647107fa8f74.png&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-ab0c74c1-3faa-494b-8fef-647107fa8f74.png&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-ab0c74c1-3faa-494b-8fef-647107fa8f74.png&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jq3wq3mzk_1jhggnmybp">
-                                                                <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">06: كيف أحدد
-                                                                    الاتجاه؟</h4>
-                                                                <div
-                                                                    class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    بناء بوصلتك يتطلب حدًا أدنى من معرفة نفسك
-                                                                    ومعرفة قيمك وفلسفتك تجاه الحياة. ما نظرتك
-                                                                    نحو الأمور المهمة في حياتك من صحة وعمل
-                                                                    وعلاقات ولعب.</div>
-                                                            </a></div>
-                                                        <div class="ant-space-item">
-                                                            <div class=" mb-2">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/1jmjjmmp0b"><span
-                                                                                class="flex items-center gap-2 font-bold undefined"><img
-                                                                                    alt="" loading="lazy"
-                                                                                    decoding="async"
-                                                                                    data-nimg="1"
-                                                                                    class="rounded-full"
-                                                                                    style="color:transparent"
-                                                                                    srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Ftenant%2F1jmjjmmp0b%2Fc4edacf6-2237-4f70-aded-4498af919d1f.png&amp;w=32&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Ftenant%2F1jmjjmmp0b%2Fc4edacf6-2237-4f70-aded-4498af919d1f.png&amp;w=48&amp;q=75 2x"
-                                                                                    src="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Ftenant%2F1jmjjmmp0b%2Fc4edacf6-2237-4f70-aded-4498af919d1f.png&amp;w=48&amp;q=75"
-                                                                                    width="18"
-                                                                                    height="18">البراء
-                                                                                العوهلي</span></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/p/namat">نشرة نمط</a> <!-- -->من<!-- -->
-                                                            <a class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
-                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
-                                                            title="9 ديسمبر 2023"><i
-                                                                class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>9
-                                                            ديسمبر 2023</span></div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
-                                        <article class="relative">
-                                            <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                style="margin-left:-8px;margin-right:-8px;row-gap:16px">
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jq0qr5da5_1jhggnmybp"><img
-                                                            alt="هل «ناقة» الفلم السعودي المنتظر؟"
-                                                            loading="lazy" decoding="async" data-nimg="1"
-                                                            class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                            style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-e1104b63-ad93-479e-ac3f-c4455f316758.jpeg&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-e1104b63-ad93-479e-ac3f-c4455f316758.jpeg&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-e1104b63-ad93-479e-ac3f-c4455f316758.jpeg&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jq0qr5da5_1jhggnmybp">
-                                                                <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">هل «ناقة»
-                                                                    الفلم السعودي المنتظر؟</h4>
-                                                                <div
-                                                                    class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    فلم «ناقة» يعطيك تجربة رحلة البر المخيفة،
-                                                                    التي تجعل أعصابك مشدودة من بدايتها إلى
-                                                                    نهايتها مع بعض العشوائية في الإخراج والتصوير
-                                                                    والصوتيات.</div>
-                                                            </a></div>
-                                                        <div class="ant-space-item">
-                                                            <div class=" mb-2">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/riyadhalgadhi"><span
-                                                                                class="flex items-center gap-2 font-bold undefined"><img
-                                                                                    alt="" loading="lazy"
-                                                                                    decoding="async"
-                                                                                    data-nimg="1"
-                                                                                    class="rounded-full"
-                                                                                    style="color:transparent"
-                                                                                    srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.amazonaws.com%2Fpublic%2Fprofile%2Ftyg1kbs4dOhDWEIaomH3HKSYPYd2.jpg&amp;w=32&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.amazonaws.com%2Fpublic%2Fprofile%2Ftyg1kbs4dOhDWEIaomH3HKSYPYd2.jpg&amp;w=48&amp;q=75 2x"
-                                                                                    src="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.amazonaws.com%2Fpublic%2Fprofile%2Ftyg1kbs4dOhDWEIaomH3HKSYPYd2.jpg&amp;w=48&amp;q=75"
-                                                                                    width="18" height="18">رياض
-                                                                                القدهي</span></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/p/cinema">النشرة السينمائية</a>
-                                                            <!-- -->من<!-- --> <a class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
-                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
-                                                            title="7 ديسمبر 2023"><i
-                                                                class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>7
-                                                            ديسمبر 2023</span></div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
-                                        <article class="relative">
-                                            <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                style="margin-left:-8px;margin-right:-8px;row-gap:16px">
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jq0sbz654_1jhggnmybp"><img
-                                                            alt="لا تنجر إلى إدمان مديرك على الإنتاجيَّة"
-                                                            loading="lazy" decoding="async" data-nimg="1"
-                                                            class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                            style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c94afb46-2d50-49ea-9364-1fbf90ae2fe2.png&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c94afb46-2d50-49ea-9364-1fbf90ae2fe2.png&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c94afb46-2d50-49ea-9364-1fbf90ae2fe2.png&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jq0sbz654_1jhggnmybp">
-                                                                <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">لا تنجر إلى
-                                                                    إدمان مديرك على الإنتاجيَّة</h4>
-                                                                <div
-                                                                    class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    المدير المدمن على الإنتاجية غالبًا يتوقع
-                                                                    استعداد موظفيه العمل في أيام العطلات وبعد
-                                                                    انتهاء ساعات العمل مثله، مما يضاعف شعورهم
-                                                                    بالإحباط والذنب.</div>
-                                                            </a></div>
-                                                        <div class="ant-space-item">
-                                                            <div class=" mb-2">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/yasminabd"><span
-                                                                                class="flex items-center gap-2 font-bold undefined">ياسمين
-                                                                                عبدالله</span></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold" href="/p/aha">نشرة
-                                                                أها!</a> <!-- -->من<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
-                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
-                                                            title="7 ديسمبر 2023"><i
-                                                                class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>7
-                                                            ديسمبر 2023</span></div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
-                                    <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                            
-                            
-                                ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
-                                        <article class="relative">
-                                            <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
-                                                style="margin-left:-8px;margin-right:-8px;row-gap:16px">
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-8 css-t2ij9r">
-                                                    <a href="/post/1jpy0e6rw3_1jhggnmybp"><img
-                                                            alt="كيف تبحث في «قوقل»؟" loading="lazy"
-                                                            decoding="async" data-nimg="1"
-                                                            class="rounded-lg max-w-full h-auto aspect-[180/150]"
-                                                            style="color:transparent;object-fit:cover"
-                                                            srcset="/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c3882132-a964-46c2-bc0b-18a0d098ee06.png&amp;w=640&amp;q=75 1x, /_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c3882132-a964-46c2-bc0b-18a0d098ee06.png&amp;w=1200&amp;q=75 2x"
-                                                            src="https://thmanyah.com/_next/image?url=https%3A%2F%2Fprod842022-kiet-v2-storage-uploadsbucketc4b27cc7-115kl3obdhv7w.s3.eu-central-1.amazonaws.com%2Fassets%2Fpost%2Fnew-story%2Fpost-c3882132-a964-46c2-bc0b-18a0d098ee06.png&amp;w=1200&amp;q=75"
-                                                            width="600" height="300"></a></div>
-                                                <div style="padding-left:8px;padding-right:8px"
-                                                    class="ant-col ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-16 css-t2ij9r">
-                                                    <div
-                                                        class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                        <div class="ant-space-item"><a
-                                                                href="/post/1jpy0e6rw3_1jhggnmybp">
-                                                                <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                    style="-webkit-line-clamp: 2;">كيف تبحث في
-                                                                    «قوقل»؟</h4>
-                                                                <div
-                                                                    class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
-                                                                    نبحث جميعًا عن معلومات عبر الإنترنت، لكن
-                                                                    النتائج التي نصل إليها ليست ذاتها؛ لأن هناك
-                                                                    من يبحث بشكل وهناك من يبحث بشكل سطحي فلا يصل
-                                                                    إلا إلى قشور المعلومات.</div>
-                                                            </a></div>
-                                                        <div class="ant-space-item">
-                                                            <div class=" mb-2">
-                                                                <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center w-full"
-                                                                    style="column-gap:16px;row-gap:16px">
-                                                                    <div
-                                                                        class="ant-space-item last-of-type:flex-1 ">
-                                                                        <a class="font-bold text-sm"
-                                                                            href="/author/mahmoudessam"><span
-                                                                                class="flex items-center gap-2 font-bold undefined">محمود
-                                                                                عصام</span></a></div>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                    <div class="text-sm mb-2"><span>في<!-- --> <a
-                                                                class="text-black font-bold" href="/p/aha">نشرة
-                                                                أها!</a> <!-- -->من<!-- --> <a
-                                                                class="text-black font-bold"
-                                                                href="/company/thmanyah">ثمانية</a></span><span
-                                                            class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
-                                                            title="6 ديسمبر 2023"><i
-                                                                class="inline-block h-1 w-1 rounded-full bg-[#B2B2B2] mx-1 align-middle"></i>6
-                                                            ديسمبر 2023</span></div>
-                                                </div>
-                                            </div>
-                                        </article>
-                                    </div>
                                 </div>
                             </div>
                         </div>
-                        <div class="ant-space-item">
+                        <div class="ant-space-item" v-if="isMore">
                             <div class="text-center undefined"><button id="load-more-button" type="button"
-                                    class="ant-btn css-t2ij9r ant-btn-default ant-btn-rtl"><span>المزيد</span></button>
+                                    class="ant-btn css-t2ij9r ant-btn-default ant-btn-rtl">
+                                    <span style="display: flex;flex-direction: column;gap: 20px;align-items: center;">المزيد 
+                                        <div style="width: calc(67px);display: flex;justify-content: center;">
+                                            <div class="dots" style="display: none"></div>
+                                        </div>
+                                    </span>
+                                    </button>
                             </div>
                         </div>
                     </div><!--/$-->
-                </div> --}}
+                </div>
+                <div style="width: calc(67px);display: flex;justify-content: center;margin: auto">
+                    <div class="loader dots"></div>
+                </div>
             </div>
             <script
                 type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"Organization","@id":"https://thmanyah.com/#organization","name":"ثمانية","url":"https://thmanyah.com/","sameAs":["https://www.facebook.com/Thmanyah","https://www.instagram.com/thmanyah/","https://www.linkedin.com/company/thmanyah","https://www.youtube.com/channel/UCQPalfEYxVLs8nEB4LutApQ","https://twitter.com/thmanyah"]},{"@type":"WebSite","@id":"https://thmanyah.com/#website","url":"https://thmanyah.com/","name":"ثمانية","description":"نصنع الوثائقيات وننشر المقالات ونصدح عبر البودكاست، لنغيّر ثقافة الصحافة العربية.","publisher":{"@id":"https://thmanyah.com/#organization"},"potentialAction":[{"@type":"SearchAction","target":"https://thmanyah.com/search/?q={search_term_string}","query-input":"required name=search_term_string"}],"inLanguage":"ar"}]}</script>
         </div>
     </main>
 </div>
+@endsection
+
+@section('scripts')
+<script>
+const { createApp, ref } = Vue
+
+createApp({
+    data() {
+        return {
+            latest_articles: null,
+            num: 10,
+            isMore: false
+        }
+    },
+    methods: {
+        async getArticles(num) {
+            try {
+                const response = await axios.post(`{{ route('articles.latest') }}`, {
+                    num: num,
+                },
+                );
+                if (response.data.status === true) {
+                    this.latest_articles = response.data.data.articles
+                    this.isMore = response.data.data.isMore
+                } else {
+                    document.getElementById('errors').innerHTML = ''
+                    $.each(response.data.errors, function (key, value) {
+                        let error = document.createElement('div')
+                        error.classList = 'error'
+                        error.innerHTML = value
+                        document.getElementById('errors').append(error)
+                    });
+                    $('#errors').fadeIn('slow')
+                    setTimeout(() => {
+                        $('input').css('outline', 'none')
+                        $('#errors').fadeOut('slow')
+                    }, 5000);
+                }
+
+            } catch (error) {
+                document.getElementById('errors').innerHTML = ''
+                let err = document.createElement('div')
+                err.classList = 'error'
+                err.innerHTML = 'server error try again later'
+                document.getElementById('errors').append(err)
+                $('#errors').fadeIn('slow')
+                $('.loader').fadeOut()
+                this.languages_data = false
+                setTimeout(() => {
+                    $('#errors').fadeOut('slow')
+                }, 3500);
+
+                console.error(error);
+            }
+        },
+        handleScroll() {
+        // Check if the user has scrolled to the bottom of the page
+            if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+                if (this.isMore) {
+                    $("#load-more-button .dots").fadeIn().css('diplay', 'flex')
+                    this.getArticles(this.num + 2).then(() => {
+                        $("#load-more-button").fadeOut()
+                    })
+                }
+            }
+        },
+    },
+    created() {
+        this.getArticles(2).then(() => {
+            $('.loader').fadeOut()
+        })
+        window.addEventListener('scroll', this.handleScroll);
+    },
+    destroyed() {
+        // Remove the scroll event listener when the component is destroyed to prevent memory leaks
+        window.removeEventListener('scroll', this.handleScroll);
+    },
+}).mount('#home_wrapper')
+</script>
 @endsection

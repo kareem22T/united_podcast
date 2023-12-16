@@ -170,4 +170,10 @@ class ArticlesController extends Controller
             return $this->jsonData(true, $request->file_name . 'تم حف المنشور بنجاح', [], []);
     }
 
+    public function latest(Request $request) {
+        $Articles = Article::with(["author", "channel"])->latest()->take($request->num ? $request->num : 10)->get();
+        if ($Articles)
+            return $this->jsonData(true, '', [], ["articles" => $Articles, "isMore" => Article::all()->count() > ($request->num ? $request->num : 10)]);
+    }
+
 }
