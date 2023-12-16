@@ -11,6 +11,7 @@ class Channel extends Model
     protected $fillable = [
         "title",
         "description",
+        "type",
         "thumbnail_path",
         "created_at",
     ];
