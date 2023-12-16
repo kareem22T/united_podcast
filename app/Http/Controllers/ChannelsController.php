@@ -140,6 +140,7 @@ class ChannelsController extends Controller
         }
 
         $Channel = Channel::find($request->channel_id);
+        $Channel->articles()->delete();
         $Channel->delete();
 
         if ($Channel)

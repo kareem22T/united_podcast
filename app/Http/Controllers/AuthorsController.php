@@ -126,7 +126,8 @@ class AuthorsController extends Controller
             return $this->jsondata(false, 'delete failed', [$validator->errors()->first()], []);
         }
 
-        $Author = Author::find($request->author_id);
+        $Author = Author::with('articles')->find($request->author_id);
+        $Author->articles()->delete();
         $Author->delete();
 
         if ($Author)
