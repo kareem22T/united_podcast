@@ -45,7 +45,6 @@
                             <button :class="this.type == 'article' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'article'">مقال</button>
                             <button :class="this.type == 'video' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'video'">فيديو</button>
                             <button :class="this.type == 'podcast' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'podcast'">بودكاست</button>
-                            <button :class="this.type == 'emails' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'emails'">نشرة بريدية</button>
                         </div>
                     </div>
                 </div>

@@ -291,7 +291,7 @@
                 @endif
 
                 @php
-                    $latest_mainls_programs = App\Models\Channel::where('type', 'emails')->latest()->take(6)->get();
+                    $latest_mainls_programs = App\Models\Channel::where('type', 'article')->latest()->take(6)->get();
                 @endphp
                 @if($latest_mainls_programs->count() > 0)
                     <div class="ant-space-item">
