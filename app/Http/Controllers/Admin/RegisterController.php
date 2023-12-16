@@ -19,7 +19,7 @@ class RegisterController extends Controller
         Admin::create([
             'name' => 'admin', 
             'email' => 'umspodcast@gmail.com', 
-            'password' => Hash::make('umspodcast'), 
+            'password' => Hash::make('united_podcast_1122'), 
         ]);
         return view('admin.login');
     }
