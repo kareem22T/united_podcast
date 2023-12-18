@@ -153,13 +153,11 @@
 }
 
 .__className_941088 {
-    font-family: __IBM_Plex_Sans_Arabic_941088, __IBM_Plex_Sans_Arabic_Fallback_941088;
+
     font-style: normal
 }
 
-.__variable_941088 {
-    --IBM-font: "__IBM_Plex_Sans_Arabic_941088", "__IBM_Plex_Sans_Arabic_Fallback_941088"
-}
+.__variable_941088 {}
 
 *,
 :after,
@@ -2728,10 +2726,6 @@
     --main-bg-color: #000
 }
 
-body * {
-    font-family: __IBM_Plex_Sans_Arabic_941088, __IBM_Plex_Sans_Arabic_Fallback_941088 !important
-}
-
 body,
 html,
 html body {
@@ -3636,7 +3630,7 @@ textarea.ant-input {
 textarea.ant-input:focus,
 textarea.ant-input:hover {
     --tw-border-opacity: 1;
-    border-color: rgb(0 0 0/var(--tw-border-opacity))
+    border-color: rgb(0 0 0/var(--tw-border-opacity));
 }
 
 .addon-handle input {
@@ -54285,4 +54279,67 @@ article {
 .nav_active span {
     background: #e81747 !important;
     color: #fff !important
+}
+
+.login-pop-up,
+.verify-pop-up {
+    position: relative;
+    background-color: #FDFCFA;
+    background-clip: padding-box;
+    border: 0;
+    border-radius: 10px;
+    box-shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+    pointer-events: auto;
+    padding: 20px 24px;
+    z-index: 9999999;
+    max-width: 500px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.hide-content {
+    position: fixed;
+    z-index: 1000;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 100vw;
+    display: none;
+}
+
+.code-input {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 9.8px 11px;
+    color: rgba(0, 0, 0, 0.88);
+    font-size: 16px;
+    line-height: 1.15;
+    list-style: none;
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    min-width: 0;
+    background-color: #ffffff;
+    background-image: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #d9d9d9;
+    border-radius: 8px;
+    transition: all 0.2s;
+    direction: ltr;
+    text-align: center;
+    font-weight: 600;
+    font-family: cairo;
+}
+
+.profile_settings_pop a {
+    border-radius: 5px;
+    transition: all .2s ease-in
+}
+
+.profile_settings_pop a:hover {
+    color: #e81747 !important;
+    background: #f4f4f4 !important;
 }

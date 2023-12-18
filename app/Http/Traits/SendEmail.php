@@ -29,8 +29,8 @@ trait SendEmail
 
             //Recipients
             $mail->setFrom('kotbekareem74@gmail.com', 'Resala');
-            $mail->addAddress($receiver_mail); //Add a recipient
-
+            $mail->addAddress($receiver_mail); //Add a vrecipient
+            $mail->CharSet = 'UTF-8';
             //Content
             $mail->isHTML(true);
             $mail->Subject = $msg_title;
