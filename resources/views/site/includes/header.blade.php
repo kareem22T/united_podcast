@@ -8,7 +8,7 @@
                     style="column-gap:5px;row-gap:5px">
                     <div class="ant-space-item"><a
                             style="vertical-align:middle;display:flex;justify-content:center;align-items:center;width:auto !important"
-                            title="ثمانية" href="/"><img alt="ثمانية" loading="lazy" decoding="async" data-nimg="1" class="!w-auto" src="http://127.0.0.1:8000/assets/img/logo-trans.png" style="color:transparent;max-width:100%;vertical-align:middle;max-height:91px;width:auto;width: 70px !important;object-fit:contain;height: 60px;" width="77" height="41"></a></div>
+                            title="ثمانية" href="/"><img alt="ثمانية" loading="lazy" decoding="async" data-nimg="1" class="!w-auto" src="{{ asset("assets/img/logo-trans.png") }}" style="color:transparent;max-width:100%;vertical-align:middle;max-height:91px;width:auto;width: 70px !important;object-fit:contain;height: 60px;" width="77" height="41"></a></div>
                     <div class="ant-space-item">
                         <ul class="ant-menu-overflow ant-menu ant-menu-root ant-menu-horizontal ant-menu-light pr-5  justify-center items-center md:flex hidden ant-menu-rtl horizontal-menu-tenant css-t2ij9r"
                             style="width:100%;height:100%;border:none" dir="rtl" role="menu" tabindex="0"
