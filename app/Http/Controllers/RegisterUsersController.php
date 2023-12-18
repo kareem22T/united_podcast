@@ -55,7 +55,7 @@ class RegisterUsersController extends Controller
                                         </div>
                                         <div style="background-color:#f7f7f7;text-align:center;padding:1.2rem 1rem;margin-bottom:2rem">
                                             <div class="adM">
-                                            </div><img alt="thmanyah" style="width:190px;height:86.92px;max-width:100%;object-fit: contain;" class="CToWUd" data-bit="iit" src="https://umspodcast.com/assets/img/logo_trans.png">
+                                            </div><img alt="thmanyah" style="width:190px;height:86.92px;max-width:100%;object-fit: contain;" class="CToWUd" data-bit="iit" src="https://umspodcast.com/assets/img/logo-trans.png">
                                             <div>
                                             </div>
                                         </div>
@@ -76,7 +76,7 @@ class RegisterUsersController extends Controller
                                                     <p style="font-size:16px;font-style:normal;font-weight:400;line-height:27px;margin:0px">
                                                         أو اضغط هذا الرابط:
                                                     </p>
-                                                    <a href="https://umspodcast.com/login?email=' . $request->email .'&password=' . $pass .'" style="background-color:#e81747;color:#fff;display:block;text-decoration:none;text-align:center;padding:10px;border-radius:8px;margin-bottom:32px;margin-top:12px" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://account.thmanyah.com/__/auth/action?apiKey%3DAIzaSyAKur55wB0VWPTyW2ncDFCUcfo7cLX7Uho%26mode%3DsignIn%26oobCode%3DsF4qit8hegWsy8iZE0z-SDbcyZNuWZJRxBSpAHOmrawAAAGMfGrHaQ%26continueUrl%3Dhttps://thmanyah.com/valid/url/kotbekareem74@gmail.com?%26lang%3Den&amp;source=gmail&amp;ust=1702980833840000&amp;usg=AOvVaw0DW20Taf1Cv7F62gTO37NY" jslog="32272; 1:WyIjdGhyZWFkLWY6MTc4NTYxNDIyMjgzODcxNjk5OSJd; 4:WyIjbXNnLWY6MTc4NTYxNDIyMjgzODcxNjk5OSJd">
+                                                    <a href="https://umspodcast.com/login?email=' . $request->email .'&password=' . $pass .'" style="background-color:#030386;color:#fff;display:block;text-decoration:none;text-align:center;padding:10px;border-radius:8px;margin-bottom:32px;margin-top:12px" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://account.thmanyah.com/__/auth/action?apiKey%3DAIzaSyAKur55wB0VWPTyW2ncDFCUcfo7cLX7Uho%26mode%3DsignIn%26oobCode%3DsF4qit8hegWsy8iZE0z-SDbcyZNuWZJRxBSpAHOmrawAAAGMfGrHaQ%26continueUrl%3Dhttps://thmanyah.com/valid/url/kotbekareem74@gmail.com?%26lang%3Den&amp;source=gmail&amp;ust=1702980833840000&amp;usg=AOvVaw0DW20Taf1Cv7F62gTO37NY" jslog="32272; 1:WyIjdGhyZWFkLWY6MTc4NTYxNDIyMjgzODcxNjk5OSJd; 4:WyIjbXNnLWY6MTc4NTYxNDIyMjgzODcxNjk5OSJd">
                                                         دخّلني الموقع
                                                         <img src="https://ci3.googleusercontent.com/meips/ADKq_NYhfmh4QajXsXlOLKdgwjW1QYKHl60ON5E22R8AkmL1asX99hYJl68-N52i_Ec5CGRBNfqRvVB1izHs42AUFM321j98Mcg7ucNuoQIs93OvHeU=s0-d-e1-ft#https://cdn.webapp.kaitdev.com/public/assets/icons/email.png" alt="Link" style="width:17px;height:16px;vertical-align:middle" class="CToWUd" data-bit="iit">
                                                     </a>
@@ -89,7 +89,7 @@ class RegisterUsersController extends Controller
                                                 </p>
                                             </div>
                                             <div style="padding:1rem;background-color:#f7f7f7;border-radius:8px;margin-top:20px;text-align:center">
-                                                <img alt="thmanyah" style="width:100px;height:76.92px;max-width:100%;object-fit: contain;" class="CToWUd" data-bit="iit" src="https://umspodcast.com/assets/img/logo_trans.png">
+                                                <img alt="thmanyah" style="width:100px;height:76.92px;max-width:100%;object-fit: contain;" class="CToWUd" data-bit="iit" src="https://umspodcast.com/assets/img/logo-trans.png">
                                                 <p style="color:#b2b2b2;font-size:0.9rem;margin:0.1rem">جميع الحقوق محفوظة United Podcast 2023 ©
                                                 </p>
                                                 <div class="yj6qo"></div>
@@ -140,7 +140,7 @@ class RegisterUsersController extends Controller
                                         </div>
                                         <div style="background-color:#f7f7f7;text-align:center;padding:1.2rem 1rem;margin-bottom:2rem">
                                             <div class="adM">
-                                            </div><img alt="thmanyah" style="width:190px;height:86.92px;max-width:100%;object-fit: contain;" class="CToWUd" data-bit="iit" src="https://umspodcast.com/assets/img/logo_trans.png">
+                                            </div><img alt="thmanyah" style="width:190px;height:86.92px;max-width:100%;object-fit: contain;" class="CToWUd" data-bit="iit" src="https://umspodcast.com/assets/img/logo-trans.png">
                                             <div>
                                             </div>
                                         </div>
@@ -161,7 +161,7 @@ class RegisterUsersController extends Controller
                                                     <p style="font-size:16px;font-style:normal;font-weight:400;line-height:27px;margin:0px">
                                                         أو اضغط هذا الرابط:
                                                     </p>
-                                                    <a href="https://umspodcast.com/login?email=' . $request->email .'&password=' . $pass .'" style="background-color:#e81747;color:#fff;display:block;text-decoration:none;text-align:center;padding:10px;border-radius:8px;margin-bottom:32px;margin-top:12px" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://account.thmanyah.com/__/auth/action?apiKey%3DAIzaSyAKur55wB0VWPTyW2ncDFCUcfo7cLX7Uho%26mode%3DsignIn%26oobCode%3DsF4qit8hegWsy8iZE0z-SDbcyZNuWZJRxBSpAHOmrawAAAGMfGrHaQ%26continueUrl%3Dhttps://thmanyah.com/valid/url/kotbekareem74@gmail.com?%26lang%3Den&amp;source=gmail&amp;ust=1702980833840000&amp;usg=AOvVaw0DW20Taf1Cv7F62gTO37NY" jslog="32272; 1:WyIjdGhyZWFkLWY6MTc4NTYxNDIyMjgzODcxNjk5OSJd; 4:WyIjbXNnLWY6MTc4NTYxNDIyMjgzODcxNjk5OSJd">
+                                                    <a href="https://umspodcast.com/login?email=' . $request->email .'&password=' . $pass .'" style="background-color:#030386;color:#fff;display:block;text-decoration:none;text-align:center;padding:10px;border-radius:8px;margin-bottom:32px;margin-top:12px" target="_blank" data-saferedirecturl="https://www.google.com/url?q=https://account.thmanyah.com/__/auth/action?apiKey%3DAIzaSyAKur55wB0VWPTyW2ncDFCUcfo7cLX7Uho%26mode%3DsignIn%26oobCode%3DsF4qit8hegWsy8iZE0z-SDbcyZNuWZJRxBSpAHOmrawAAAGMfGrHaQ%26continueUrl%3Dhttps://thmanyah.com/valid/url/kotbekareem74@gmail.com?%26lang%3Den&amp;source=gmail&amp;ust=1702980833840000&amp;usg=AOvVaw0DW20Taf1Cv7F62gTO37NY" jslog="32272; 1:WyIjdGhyZWFkLWY6MTc4NTYxNDIyMjgzODcxNjk5OSJd; 4:WyIjbXNnLWY6MTc4NTYxNDIyMjgzODcxNjk5OSJd">
                                                         دخّلني الموقع
                                                         <img src="https://ci3.googleusercontent.com/meips/ADKq_NYhfmh4QajXsXlOLKdgwjW1QYKHl60ON5E22R8AkmL1asX99hYJl68-N52i_Ec5CGRBNfqRvVB1izHs42AUFM321j98Mcg7ucNuoQIs93OvHeU=s0-d-e1-ft#https://cdn.webapp.kaitdev.com/public/assets/icons/email.png" alt="Link" style="width:17px;height:16px;vertical-align:middle" class="CToWUd" data-bit="iit">
                                                     </a>
@@ -174,7 +174,7 @@ class RegisterUsersController extends Controller
                                                 </p>
                                             </div>
                                             <div style="padding:1rem;background-color:#f7f7f7;border-radius:8px;margin-top:20px;text-align:center">
-                                                <img alt="thmanyah" style="width:100px;height:76.92px;max-width:100%;object-fit: contain;" class="CToWUd" data-bit="iit" src="https://umspodcast.com/assets/img/logo_trans.png">
+                                                <img alt="thmanyah" style="width:100px;height:76.92px;max-width:100%;object-fit: contain;" class="CToWUd" data-bit="iit" src="https://umspodcast.com/assets/img/logo-trans.png">
                                                 <p style="color:#b2b2b2;font-size:0.9rem;margin:0.1rem">جميع الحقوق محفوظة United Podcast 2023 ©
                                                 </p>
                                                 <div class="yj6qo"></div>

@@ -236,6 +236,6 @@
 @endsection
 @else
 @section('content')
-    <h1 style="font-size: 50px; margin: auto; color: #e81747;">404 | غير متوفر</h1>
+    <h1 style="font-size: 50px; margin: auto; color: #030386;">404 | غير متوفر</h1>
 @endsection
 @endif

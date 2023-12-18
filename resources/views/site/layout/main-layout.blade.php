@@ -7,13 +7,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="shortcut icon" href="{{ asset('assets/img/logo.png') }}" type="image/x-icon">
+    <link rel="shortcut icon" href="{{ asset('assets/img/logo.jpg') }}" type="image/x-icon">
     <style>
         .dots {
         width: 13.4px;
         height: 13.4px;
-        background: #e81747;
-        color: #e81747;
+        background: #030386;
+        color: #030386;
         border-radius: 50%;
         box-shadow: 22.4px 0,-22.4px 0;
         animation: dots-u8fzftmd 1s infinite linear alternate;

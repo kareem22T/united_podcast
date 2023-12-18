@@ -1823,7 +1823,7 @@
 }
 
 .fill-accentColor {
-    fill: #e81747 !important
+    fill: #030386 !important
 }
 
 .fill-white {
@@ -2729,7 +2729,7 @@
 body,
 html,
 html body {
-    background-color: #f9f7f2
+    background-color: #F9F9F9
 }
 
 html body {
@@ -2845,12 +2845,12 @@ body.waiting * {
 }
 
 .ant-layout-header .ant-menu-overflow-item.ant-menu-item span.active {
-    background-color: #e81747 !important;
+    background-color: #030386 !important;
     color: #fff !important
 }
 
 .ant-layout-header ul:not(.text-menu) .ant-menu-overflow-item.ant-menu-item:hover span:not(.active) {
-    background-color: #e81747 !important;
+    background-color: #030386 !important;
     color: #fff !important
 }
 
@@ -3016,7 +3016,7 @@ svg:not(.anticon svg) {
 }
 
 .article-editor-content a {
-    color: #e81747;
+    color: #030386;
     text-decoration: underline
 }
 
@@ -3529,12 +3529,12 @@ img[alt=loading-copy-img] {
 }
 
 .ant-slider-track {
-    background-color: #e81747 !important
+    background-color: #030386 !important
 }
 
 .ant-slider .ant-slider-handle:after {
-    box-shadow: 0 0 0 2px #e81747 !important;
-    background-color: #e81747 !important
+    box-shadow: 0 0 0 2px #030386 !important;
+    background-color: #030386 !important
 }
 
 .start-slider.ant-slider .ant-slider-handle {
@@ -3668,7 +3668,7 @@ textarea.ant-input:hover {
 }
 
 .ant-drawer-header {
-    background-color: #f9f7f2
+    background-color: #F9F9F9
 }
 
 .ant-segmented-group .ant-segmented-item-selected,
@@ -3808,7 +3808,7 @@ textarea.ant-input:hover {
 }
 
 a.active {
-    color: #e81747 !important
+    color: #030386 !important
 }
 
 .ant-tabs-top .m-child-0 .ant-tabs-nav {
@@ -3892,7 +3892,7 @@ a.bctt-ctt-btn {
 
 a[href^="https://twitter.com/intent/tweet?url="] {
     color: #000 !important;
-    text-decoration-color: #e81747
+    text-decoration-color: #030386
 }
 
 a[href^="https://twitter.com/intent/tweet?url="]:hover {
@@ -4968,7 +4968,7 @@ mark {
 }
 
 :where(.css-t2ij9r) a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     background-color: transparent;
     outline: none;
@@ -5038,7 +5038,7 @@ mark {
     flex: auto;
     flex-direction: column;
     min-height: 0;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout,
@@ -5090,7 +5090,7 @@ mark {
     bottom: 0;
     z-index: 1;
     height: 58px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     line-height: 58px;
     text-align: center;
     background: #002140;
@@ -5109,7 +5109,7 @@ mark {
     z-index: 1;
     width: 50px;
     height: 50px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -5155,7 +5155,7 @@ mark {
 :where(.css-t2ij9r).ant-layout .ant-layout-sider-light .ant-layout-sider-zero-width-trigger {
     color: rgba(0, 0, 0, 0.88);
     background: #ffffff;
-    border: 1px solid #F9F7F2;
+    border: 1px solid #F9F9F9;
     border-inline-start: 0;
 }
 
@@ -5179,7 +5179,7 @@ mark {
     padding: 30px 62.5px;
     color: rgba(0, 0, 0, 0.88);
     font-size: 16px;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout-content {
@@ -10343,7 +10343,7 @@ mark {
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a,
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed .ant-menu-item-group-title {
@@ -10617,7 +10617,7 @@ mark {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-disabled,
@@ -10631,7 +10631,7 @@ mark {
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,
@@ -10678,12 +10678,12 @@ mark {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected a,
@@ -10777,14 +10777,14 @@ mark {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-open::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-open::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -10800,7 +10800,7 @@ mark {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-root.ant-menu-inline,
@@ -10825,7 +10825,7 @@ mark {
     position: absolute;
     inset-block: 0;
     inset-inline-end: 0;
-    border-inline-end: 0px solid #F9F7F2;
+    border-inline-end: 0px solid #F9F9F9;
     transform: scaleY(0.0001);
     opacity: 0;
     transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -10834,7 +10834,7 @@ mark {
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after {
-    border-inline-end-color: #F9F7F2;
+    border-inline-end-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,
@@ -11108,7 +11108,7 @@ mark {
     min-width: 40px;
     min-height: 40px;
     padding: 6px 8px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     text-align: start;
     text-decoration: none;
     word-wrap: break-word;
@@ -11758,7 +11758,7 @@ mark {
 }
 
 :where(.css-t2ij9r).ant-btn-primary {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
     box-shadow: 0 2px 0 rgba(95, 75, 25, 0.1);
 }
@@ -11773,12 +11773,12 @@ mark {
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #0d0d0d;
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -11810,7 +11810,7 @@ mark {
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous {
     background-color: #cf1322;
     box-shadow: 0 2px 0 rgba(255, 25, 5, 0.1);
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous:not(:disabled):not(.ant-btn-disabled):hover {
@@ -11949,7 +11949,7 @@ mark {
 }
 
 :where(.css-t2ij9r).ant-btn-link {
-    color: #e81747;
+    color: #030386;
 }
 
 :where(.css-t2ij9r).ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
@@ -12746,7 +12746,7 @@ div:where(.css-t2ij9r).ant-typography-h5>textarea,
 
 a:where(.css-t2ij9r).ant-typography,
 :where(.css-t2ij9r).ant-typography a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -12801,7 +12801,7 @@ a:where(.css-t2ij9r).ant-typography.ant-typography-disabled:active,
 :where(.css-t2ij9r).ant-typography .ant-typography-expand,
 :where(.css-t2ij9r).ant-typography .ant-typography-edit,
 :where(.css-t2ij9r).ant-typography .ant-typography-copy {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -13186,7 +13186,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 #nprogress .bar {
-    background: #e81747;
+    background: #030386;
     position: fixed;
     z-index: 1600;
     top: 0;
@@ -13221,8 +13221,8 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     height: 18px;
     box-sizing: border-box;
     border: 2px solid transparent;
-    border-top-color: #e81747;
-    border-left-color: #e81747;
+    border-top-color: #030386;
+    border-left-color: #030386;
     border-radius: 50%;
     -webkit-animation: nprogress-spinner 400ms linear infinite;
     animation: nprogress-spinner 400ms linear infinite
@@ -13259,7 +13259,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r) a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     background-color: transparent;
     outline: none;
@@ -13329,7 +13329,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     flex: auto;
     flex-direction: column;
     min-height: 0;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout,
@@ -13381,7 +13381,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     bottom: 0;
     z-index: 1;
     height: 58px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     line-height: 58px;
     text-align: center;
     background: #002140;
@@ -13400,7 +13400,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     z-index: 1;
     width: 50px;
     height: 50px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -13446,7 +13446,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-layout .ant-layout-sider-light .ant-layout-sider-zero-width-trigger {
     color: rgba(0, 0, 0, 0.88);
     background: #ffffff;
-    border: 1px solid #F9F7F2;
+    border: 1px solid #F9F9F9;
     border-inline-start: 0;
 }
 
@@ -13470,7 +13470,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     padding: 30px 62.5px;
     color: rgba(0, 0, 0, 0.88);
     font-size: 16px;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout-content {
@@ -18634,7 +18634,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a,
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed .ant-menu-item-group-title {
@@ -18908,7 +18908,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-disabled,
@@ -18922,7 +18922,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,
@@ -18969,12 +18969,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected a,
@@ -19068,14 +19068,14 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-open::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-open::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -19091,7 +19091,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-root.ant-menu-inline,
@@ -19116,7 +19116,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     position: absolute;
     inset-block: 0;
     inset-inline-end: 0;
-    border-inline-end: 0px solid #F9F7F2;
+    border-inline-end: 0px solid #F9F9F9;
     transform: scaleY(0.0001);
     opacity: 0;
     transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -19125,7 +19125,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after {
-    border-inline-end-color: #F9F7F2;
+    border-inline-end-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,
@@ -19399,7 +19399,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     min-width: 40px;
     min-height: 40px;
     padding: 6px 8px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     text-align: start;
     text-decoration: none;
     word-wrap: break-word;
@@ -20049,7 +20049,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
     box-shadow: 0 2px 0 rgba(95, 75, 25, 0.1);
 }
@@ -20064,12 +20064,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #0d0d0d;
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -20101,7 +20101,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous {
     background-color: #cf1322;
     box-shadow: 0 2px 0 rgba(255, 25, 5, 0.1);
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous:not(:disabled):not(.ant-btn-disabled):hover {
@@ -20240,7 +20240,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-link {
-    color: #e81747;
+    color: #030386;
 }
 
 :where(.css-t2ij9r).ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
@@ -21037,7 +21037,7 @@ div:where(.css-t2ij9r).ant-typography-h5>textarea,
 
 a:where(.css-t2ij9r).ant-typography,
 :where(.css-t2ij9r).ant-typography a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -21092,7 +21092,7 @@ a:where(.css-t2ij9r).ant-typography.ant-typography-disabled:active,
 :where(.css-t2ij9r).ant-typography .ant-typography-expand,
 :where(.css-t2ij9r).ant-typography .ant-typography-edit,
 :where(.css-t2ij9r).ant-typography .ant-typography-copy {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -21458,7 +21458,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r) a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     background-color: transparent;
     outline: none;
@@ -21528,7 +21528,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     flex: auto;
     flex-direction: column;
     min-height: 0;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout,
@@ -21580,7 +21580,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     bottom: 0;
     z-index: 1;
     height: 58px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     line-height: 58px;
     text-align: center;
     background: #002140;
@@ -21599,7 +21599,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     z-index: 1;
     width: 50px;
     height: 50px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -21645,7 +21645,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-layout .ant-layout-sider-light .ant-layout-sider-zero-width-trigger {
     color: rgba(0, 0, 0, 0.88);
     background: #ffffff;
-    border: 1px solid #F9F7F2;
+    border: 1px solid #F9F9F9;
     border-inline-start: 0;
 }
 
@@ -21669,7 +21669,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     padding: 30px 62.5px;
     color: rgba(0, 0, 0, 0.88);
     font-size: 16px;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout-content {
@@ -26833,7 +26833,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a,
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed .ant-menu-item-group-title {
@@ -27107,7 +27107,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-disabled,
@@ -27121,7 +27121,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,
@@ -27168,12 +27168,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected a,
@@ -27267,14 +27267,14 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-open::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-open::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -27290,7 +27290,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-root.ant-menu-inline,
@@ -27315,7 +27315,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     position: absolute;
     inset-block: 0;
     inset-inline-end: 0;
-    border-inline-end: 0px solid #F9F7F2;
+    border-inline-end: 0px solid #F9F9F9;
     transform: scaleY(0.0001);
     opacity: 0;
     transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -27324,7 +27324,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after {
-    border-inline-end-color: #F9F7F2;
+    border-inline-end-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,
@@ -27598,7 +27598,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     min-width: 40px;
     min-height: 40px;
     padding: 6px 8px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     text-align: start;
     text-decoration: none;
     word-wrap: break-word;
@@ -28248,7 +28248,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
     box-shadow: 0 2px 0 rgba(95, 75, 25, 0.1);
 }
@@ -28263,12 +28263,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #0d0d0d;
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -28300,7 +28300,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous {
     background-color: #cf1322;
     box-shadow: 0 2px 0 rgba(255, 25, 5, 0.1);
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous:not(:disabled):not(.ant-btn-disabled):hover {
@@ -28439,7 +28439,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-link {
-    color: #e81747;
+    color: #030386;
 }
 
 :where(.css-t2ij9r).ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
@@ -29236,7 +29236,7 @@ div:where(.css-t2ij9r).ant-typography-h5>textarea,
 
 a:where(.css-t2ij9r).ant-typography,
 :where(.css-t2ij9r).ant-typography a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -29291,7 +29291,7 @@ a:where(.css-t2ij9r).ant-typography.ant-typography-disabled:active,
 :where(.css-t2ij9r).ant-typography .ant-typography-expand,
 :where(.css-t2ij9r).ant-typography .ant-typography-edit,
 :where(.css-t2ij9r).ant-typography .ant-typography-copy {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -29657,7 +29657,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r) a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     background-color: transparent;
     outline: none;
@@ -29727,7 +29727,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     flex: auto;
     flex-direction: column;
     min-height: 0;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout,
@@ -29779,7 +29779,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     bottom: 0;
     z-index: 1;
     height: 58px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     line-height: 58px;
     text-align: center;
     background: #002140;
@@ -29798,7 +29798,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     z-index: 1;
     width: 50px;
     height: 50px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -29844,7 +29844,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-layout .ant-layout-sider-light .ant-layout-sider-zero-width-trigger {
     color: rgba(0, 0, 0, 0.88);
     background: #ffffff;
-    border: 1px solid #F9F7F2;
+    border: 1px solid #F9F9F9;
     border-inline-start: 0;
 }
 
@@ -29868,7 +29868,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     padding: 30px 62.5px;
     color: rgba(0, 0, 0, 0.88);
     font-size: 16px;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout-content {
@@ -35032,7 +35032,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a,
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed .ant-menu-item-group-title {
@@ -35306,7 +35306,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-disabled,
@@ -35320,7 +35320,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,
@@ -35367,12 +35367,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected a,
@@ -35466,14 +35466,14 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-open::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-open::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -35489,7 +35489,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-root.ant-menu-inline,
@@ -35514,7 +35514,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     position: absolute;
     inset-block: 0;
     inset-inline-end: 0;
-    border-inline-end: 0px solid #F9F7F2;
+    border-inline-end: 0px solid #F9F9F9;
     transform: scaleY(0.0001);
     opacity: 0;
     transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -35523,7 +35523,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after {
-    border-inline-end-color: #F9F7F2;
+    border-inline-end-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,
@@ -35797,7 +35797,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     min-width: 40px;
     min-height: 40px;
     padding: 6px 8px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     text-align: start;
     text-decoration: none;
     word-wrap: break-word;
@@ -36447,8 +36447,8 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary {
-    color: #F9F7F2;
-    background-color: #e81747;
+    color: #F9F9F9;
+    background-color: #030386;
     box-shadow: 0 2px 0 rgba(95, 75, 25, 0.1);
 }
 
@@ -36462,12 +36462,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #0d0d0d;
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -36499,7 +36499,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous {
     background-color: #cf1322;
     box-shadow: 0 2px 0 rgba(255, 25, 5, 0.1);
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous:not(:disabled):not(.ant-btn-disabled):hover {
@@ -36638,7 +36638,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-link {
-    color: #e81747;
+    color: #030386;
 }
 
 :where(.css-t2ij9r).ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
@@ -37435,7 +37435,7 @@ div:where(.css-t2ij9r).ant-typography-h5>textarea,
 
 a:where(.css-t2ij9r).ant-typography,
 :where(.css-t2ij9r).ant-typography a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -37490,7 +37490,7 @@ a:where(.css-t2ij9r).ant-typography.ant-typography-disabled:active,
 :where(.css-t2ij9r).ant-typography .ant-typography-expand,
 :where(.css-t2ij9r).ant-typography .ant-typography-edit,
 :where(.css-t2ij9r).ant-typography .ant-typography-copy {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -37856,7 +37856,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r) a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     background-color: transparent;
     outline: none;
@@ -37926,7 +37926,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     flex: auto;
     flex-direction: column;
     min-height: 0;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout,
@@ -37978,7 +37978,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     bottom: 0;
     z-index: 1;
     height: 58px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     line-height: 58px;
     text-align: center;
     background: #002140;
@@ -37997,7 +37997,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     z-index: 1;
     width: 50px;
     height: 50px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -38043,7 +38043,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-layout .ant-layout-sider-light .ant-layout-sider-zero-width-trigger {
     color: rgba(0, 0, 0, 0.88);
     background: #ffffff;
-    border: 1px solid #F9F7F2;
+    border: 1px solid #F9F9F9;
     border-inline-start: 0;
 }
 
@@ -38067,7 +38067,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     padding: 30px 62.5px;
     color: rgba(0, 0, 0, 0.88);
     font-size: 16px;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout-content {
@@ -43231,7 +43231,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a,
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed .ant-menu-item-group-title {
@@ -43505,7 +43505,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-disabled,
@@ -43519,7 +43519,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,
@@ -43566,12 +43566,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected a,
@@ -43665,14 +43665,14 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-open::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-open::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -43688,7 +43688,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-root.ant-menu-inline,
@@ -43713,7 +43713,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     position: absolute;
     inset-block: 0;
     inset-inline-end: 0;
-    border-inline-end: 0px solid #F9F7F2;
+    border-inline-end: 0px solid #F9F9F9;
     transform: scaleY(0.0001);
     opacity: 0;
     transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -43722,7 +43722,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after {
-    border-inline-end-color: #F9F7F2;
+    border-inline-end-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,
@@ -43996,7 +43996,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     min-width: 40px;
     min-height: 40px;
     padding: 6px 8px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     text-align: start;
     text-decoration: none;
     word-wrap: break-word;
@@ -44646,7 +44646,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
     box-shadow: 0 2px 0 rgba(95, 75, 25, 0.1);
 }
@@ -44661,12 +44661,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #0d0d0d;
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -44698,7 +44698,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous {
     background-color: #cf1322;
     box-shadow: 0 2px 0 rgba(255, 25, 5, 0.1);
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous:not(:disabled):not(.ant-btn-disabled):hover {
@@ -44837,7 +44837,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-link {
-    color: #e81747;
+    color: #030386;
 }
 
 :where(.css-t2ij9r).ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
@@ -45634,7 +45634,7 @@ div:where(.css-t2ij9r).ant-typography-h5>textarea,
 
 a:where(.css-t2ij9r).ant-typography,
 :where(.css-t2ij9r).ant-typography a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -45689,7 +45689,7 @@ a:where(.css-t2ij9r).ant-typography.ant-typography-disabled:active,
 :where(.css-t2ij9r).ant-typography .ant-typography-expand,
 :where(.css-t2ij9r).ant-typography .ant-typography-edit,
 :where(.css-t2ij9r).ant-typography .ant-typography-copy {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -46055,7 +46055,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r) a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     background-color: transparent;
     outline: none;
@@ -46125,7 +46125,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     flex: auto;
     flex-direction: column;
     min-height: 0;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout,
@@ -46177,7 +46177,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     bottom: 0;
     z-index: 1;
     height: 58px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     line-height: 58px;
     text-align: center;
     background: #002140;
@@ -46196,7 +46196,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     z-index: 1;
     width: 50px;
     height: 50px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     font-size: 22px;
     display: flex;
     align-items: center;
@@ -46242,7 +46242,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-layout .ant-layout-sider-light .ant-layout-sider-zero-width-trigger {
     color: rgba(0, 0, 0, 0.88);
     background: #ffffff;
-    border: 1px solid #F9F7F2;
+    border: 1px solid #F9F9F9;
     border-inline-start: 0;
 }
 
@@ -46266,7 +46266,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     padding: 30px 62.5px;
     color: rgba(0, 0, 0, 0.88);
     font-size: 16px;
-    background: #F9F7F2;
+    background: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-layout-content {
@@ -50885,7 +50885,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    color: #e81747 !important;
+    color: #030386 !important;
 }
 
 :where(.css-t2ij9r).ant-menu .ant-menu-item .ant-menu-item-icon>*,
@@ -51431,7 +51431,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a,
 :where(.css-t2ij9r).ant-menu-inline-collapsed-tooltip a:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-inline-collapsed .ant-menu-item-group-title {
@@ -51705,7 +51705,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-submenu-selected>.ant-menu-submenu-title,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-submenu-selected>.ant-menu-submenu-title {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-disabled,
@@ -51719,7 +51719,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected):hover,
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item:not(.ant-menu-item-selected):not(.ant-menu-submenu-selected)>.ant-menu-submenu-title:hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover,
@@ -51766,12 +51766,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected.ant-menu-item-danger,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu .ant-menu-item-selected.ant-menu-item-danger {
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark .ant-menu-item-selected a,
@@ -51865,14 +51865,14 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-open::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-open::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-item-selected,
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -51888,7 +51888,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-horizontal>.ant-menu-submenu-selected::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-horizontal>.ant-menu-submenu-selected::after {
     border-bottom-width: 0;
-    border-bottom-color: #F9F7F2;
+    border-bottom-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-root.ant-menu-inline,
@@ -51913,7 +51913,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     position: absolute;
     inset-block: 0;
     inset-inline-end: 0;
-    border-inline-end: 0px solid #F9F7F2;
+    border-inline-end: 0px solid #F9F9F9;
     transform: scaleY(0.0001);
     opacity: 0;
     transition: transform 0.2s cubic-bezier(0.215, 0.61, 0.355, 1), opacity 0.2s cubic-bezier(0.215, 0.61, 0.355, 1);
@@ -51922,7 +51922,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after,
 :where(.css-t2ij9r).ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item.ant-menu-item-danger::after {
-    border-inline-end-color: #F9F7F2;
+    border-inline-end-color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-menu-dark.ant-menu-inline .ant-menu-selected::after,
@@ -52196,7 +52196,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
     min-width: 40px;
     min-height: 40px;
     padding: 6px 8px;
-    color: #F9F7F2;
+    color: #F9F9F9;
     text-align: start;
     text-decoration: none;
     word-wrap: break-word;
@@ -52846,8 +52846,8 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary {
-    color: #F9F7F2;
-    background-color: #e81747;
+    color: #F9F9F9;
+    background-color: #030386;
     box-shadow: 0 2px 0 rgba(95, 75, 25, 0.1);
 }
 
@@ -52861,12 +52861,12 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):hover {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #0d0d0d;
 }
 
 :where(.css-t2ij9r).ant-btn-primary:not(:disabled):not(.ant-btn-disabled):active {
-    color: #F9F7F2;
+    color: #F9F9F9;
     background-color: #000000;
 }
 
@@ -52898,7 +52898,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous {
     background-color: #cf1322;
     box-shadow: 0 2px 0 rgba(255, 25, 5, 0.1);
-    color: #F9F7F2;
+    color: #F9F9F9;
 }
 
 :where(.css-t2ij9r).ant-btn-primary.ant-btn-dangerous:not(:disabled):not(.ant-btn-disabled):hover {
@@ -53037,7 +53037,7 @@ span:where(.css-t2ij9r).ant-typography-ellipsis-single-line {
 }
 
 :where(.css-t2ij9r).ant-btn-link {
-    color: #e81747;
+    color: #030386;
 }
 
 :where(.css-t2ij9r).ant-btn-link:not(:disabled):not(.ant-btn-disabled):hover {
@@ -53839,7 +53839,7 @@ div:where(.css-t2ij9r).ant-typography-h5>textarea,
 
 a:where(.css-t2ij9r).ant-typography,
 :where(.css-t2ij9r).ant-typography a {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -53894,7 +53894,7 @@ a:where(.css-t2ij9r).ant-typography.ant-typography-disabled:active,
 :where(.css-t2ij9r).ant-typography .ant-typography-expand,
 :where(.css-t2ij9r).ant-typography .ant-typography-edit,
 :where(.css-t2ij9r).ant-typography .ant-typography-copy {
-    color: #e81747;
+    color: #030386;
     text-decoration: none;
     outline: none;
     cursor: pointer;
@@ -54277,7 +54277,7 @@ article {
 }
 
 .nav_active span {
-    background: #e81747 !important;
+    background: #030386 !important;
     color: #fff !important
 }
 
@@ -54340,6 +54340,6 @@ article {
 }
 
 .profile_settings_pop a:hover {
-    color: #e81747 !important;
+    color: #030386 !important;
     background: #f4f4f4 !important;
 }
