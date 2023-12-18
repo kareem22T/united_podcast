@@ -269,7 +269,7 @@
                                                 @foreach ($latest_programs as $program)
                                                     <div style="padding-left: 8px; padding-right: 8px;"
                                                         class="ant-col ant-col-xs-12 ant-col-rtl ant-col-sm-12 ant-col-md-12 ant-col-lg-8 ant-col-xl-8 css-t2ij9r">
-                                                        <div class="relative rounded-lg  shadow-custom "><a href="/channel/{{ $program->channel->id }}"><img alt="مربع"
+                                                        <div class="relative rounded-lg  shadow-custom "><a href="/channel/{{ $program->id }}"><img alt="مربع"
                                                                     loading="lazy" decoding="async" data-nimg="1"
                                                                     class="w-full h-auto aspect-square bg-colorFillContentHover rounded-lg object-cover"
                                                                     style="color: transparent;"
