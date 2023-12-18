@@ -1752,7 +1752,7 @@
 
 .bg-drawerBg {
     --tw-bg-opacity: 1 !important;
-    background-color: rgb(249 247 242/var(--tw-bg-opacity)) !important
+    background-color: #f9f9f9
 }
 
 .bg-errorOutline {
@@ -1770,7 +1770,7 @@
 }
 
 .bg-heroText {
-    background-color: rgb(249 247 242/var(--tw-bg-opacity)) !important
+    background-color: #f9f9f9
 }
 
 .bg-inputBg,
