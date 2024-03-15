@@ -8,6 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="shortcut icon" href="{{ asset('assets/img/logo.jpg') }}" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
     <style>
         .dots {
         width: 13.4px;
@@ -97,6 +99,34 @@
         #errors .success {
             background: #12c99b;
         }
+        .swiper-button-next::after, .swiper-button-prev::after {
+            font-size: 22px !important
+        }
+        .swiper-pagination-bullet {
+            background: #030388 !important;
+        }
+        @media (max-width: 575.98px) {
+            .main-slider {
+                padding-bottom: 1rem !important
+            }
+            .main-slider .swiper-button-next, .main-slider .swiper-button-prev{
+                display: none !important
+            }
+            .main-slider .swiper-slide {
+                padding: 0 !important
+            }
+            .swiper-wrapper-latest {
+                padding: 0 !important
+                
+            }
+            .swiper-wrapper-latest .swiper {
+                padding-bottom: 3rem !important
+            }
+            .swiper-wrapper-latest .swiper-button-next, .swiper-wrapper-latest .swiper-button-prev {
+                bottom: 0;
+                top: auto;
+            }
+        }
     </style>
     <title>@yield('title')</title>
 </head>
@@ -120,5 +150,62 @@
     <script src="{{ asset('assets/js/login.js') }}"></script>
 
     @yield('scripts')
+      <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            loop: true, // Enable infinite loop
+            autoplay: {
+                delay: 5000, // Set delay between slides (in milliseconds)
+                disableOnInteraction: false, // Continue autoplay even when user interacts with the slider
+            },
+            // Add other configuration options as needed
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+        function setLatestSwipper() {
+
+            var swiper = new Swiper(".latestSwiper", {
+                slidesPerView: 2,
+                spaceBetween: 0,
+                breakpoints: {
+                    992: {
+                        slidesPerView: 3
+                    },
+                    1199: {
+                        slidesPerView: 4
+                    }
+                },
+                // Add other configuration options as needed
+                pagination: {
+                    el: '.swiper-pagination',
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: '.swiper-button-next',
+                    prevEl: '.swiper-button-prev',
+                },
+            });
+        }
+    </script>
+    <script>
+        $(".contact_link").on("click", function (e) {
+            e.preventDefault()
+            $(".contact-pop-up").fadeIn()
+            $(".contact_hide_contact").fadeIn()
+        })
+        $(".contact_hide_contact, .contact-pop-up .ant-modal-close-x").on("click", function() {
+            $(".contact-pop-up").fadeOut()
+            $(".contact-pop-up").prev().fadeOut()
+        })
+    </script>
 </body>
 </html>

@@ -54282,7 +54282,8 @@ article {
 }
 
 .login-pop-up,
-.verify-pop-up {
+.verify-pop-up,
+.contact-pop-up {
     position: relative;
     background-color: #FDFCFA;
     background-clip: padding-box;
@@ -54307,6 +54308,8 @@ article {
     background-color: rgba(0, 0, 0, 0.45);
     width: 100vw;
     display: none;
+    left: 0;
+    top: 0;
 }
 
 .code-input {

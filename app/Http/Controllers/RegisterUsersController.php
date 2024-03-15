@@ -62,7 +62,7 @@ class RegisterUsersController extends Controller
                                         <div style="padding:0 2rem;">
                                             <div style="padding:1rem 1.5rem;background-color:#f7f7f7;border-radius:8px">
                                                 <h1 style="font-size:20px;margin-bottom:32px">
-                                                    الدخول إلى حسابك في ثمانية
+                                                    الدخول إلى حسابك في United Podcast
                                                 </h1>
                                                 <p style="font-size:16px;font-style:normal;font-weight:400;line-height:27px;margin:0px">
                                                     حيّاك الله،
@@ -147,7 +147,7 @@ class RegisterUsersController extends Controller
                                         <div style="padding:0 2rem;">
                                             <div style="padding:1rem 1.5rem;background-color:#f7f7f7;border-radius:8px">
                                                 <h1 style="font-size:20px;margin-bottom:32px">
-                                                    الدخول إلى حسابك في ثمانية
+                                                    الدخول إلى حسابك في United Podcast
                                                 </h1>
                                                 <p style="font-size:16px;font-style:normal;font-weight:400;line-height:27px;margin:0px">
                                                     حيّاك الله،

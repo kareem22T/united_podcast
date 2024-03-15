@@ -24,6 +24,9 @@ Route::get('/', function () {
 Route::get('/articles', function () {
     return view('site.pages.articles');
 });
+Route::get('/contact-us', function () {
+    return view('site.pages.contact');
+});
 
 Route::get('/videos', function () {
     return view('site.pages.videos');
