@@ -172,10 +172,10 @@ class ArticlesController extends Controller
 
     public function latest(Request $request) {
         $Articles = Article::where("type", $request->type)->with(["author", "channel"])->latest()->take($request->num ? $request->num : 10)->get();
-        if ($request->not_latest_five)
-            $Articles = Article::where("type", $request->type)->with(["author", "channel"])->latest()->skip(5)->take($request->num ? $request->num : 10)->get();
-        if ($Articles)
-            return $this->jsonData(true, '', [], ["articles" => $Articles, "isMore" => Article::all()->count() > ($request->num ? $request->num : 10)]);
+        $podcasts = Article::where("type", "podcast")->with(["author", "channel"])->latest()->take($request->num ? $request->num : 10)->get();
+        $latest_programs = Channel::where('type', 'podcast')->latest()->get();
+
+        return $this->jsonData(true, '', [], ["articles" => $Articles, "poscasts" => $podcasts, "programs" => $latest_programs]);
     }
 
     public function channelArticles(Request $request) {

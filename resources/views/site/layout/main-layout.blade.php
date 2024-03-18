@@ -126,6 +126,16 @@
                 bottom: 0;
                 top: auto;
             }
+            .channels_wrapper {
+                grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)) !important;
+            }
+            .channels_wrapper >a {
+                font-size: 15px !important;
+            }
+            .channels_wrapper >a .img {
+                height: 130px !important;
+            }
+
         }
     </style>
     <title>@yield('title')</title>
