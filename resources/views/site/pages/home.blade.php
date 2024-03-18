@@ -351,7 +351,7 @@
                                 <div class="channels_wrapper" style="display: grid;grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));gap: 16px">
                                     <a :href="`/channel/${channel.id}`" v-for="channel in channels.slice(0, numToShow)" :key="channel.id" style="width: 100%;font-size: 18px;font-weight: 600;color: #000;line-height: 40px;text-align: center;">
                                         <div class="img" style="width: 100%;height: 160px;border-radius: 10px; overflow:hidden">
-                                            <img :src="channel.thumbnail_path" alt=""  style="width: 100%;height: 100%; objict-fit: cover">
+                                            <img :src="channel.thumbnail_path" alt=""  style="width: 100%;height: 100%;object-fit: cover;">
                                         </div>
                                         @{{channel.title}}
                                     </a>
