@@ -349,8 +349,8 @@
                             </div>
                             <div class="ant-space-item" v-if="channels && channels.length">
                                 <div class="channels_wrapper" style="display: grid;grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));gap: 16px">
-                                    <a :href="`/channel/${channel.id}`" v-for="channel in channels.slice(0, numToShow)" :key="channel.id" style="width: 100%;font-size: 18px;font-weight: 600;color: #000;line-height: 40px;text-align: center;">
-                                        <div class="img" style="width: 100%;height: auto;border-radius: 10px; overflow:hidden">
+                                    <a :href="`/channel/${channel.id}`" v-for="channel in channels.slice(0, numToShow)" :key="channel.id" style="width: 100%;font-size: 18px;font-weight: 600;color: #000;text-align: center;  line-height: 24px;">
+                                        <div class="img" style="width: 100%;height: auto;border-radius: 10px; overflow:hidden;margin-bottom: 10px;">
                                             <img :src="channel.thumbnail_path" alt=""  style="width: 100%;height: 100%;object-fit: cover;">
                                         </div>
                                         @{{channel.title}}
