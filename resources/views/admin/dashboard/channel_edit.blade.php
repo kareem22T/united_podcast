@@ -51,7 +51,7 @@
                 <br>
                 <div class="w-25">
                     <label for="" class="mb-2">الصورة المصغرة</label>
-                    <div @click="this.showImages = true; this.current_article_id = null" class="w-100 h-100 p-3 d-flex justify-content-center align-items-center form-control" style="height: 170px;">
+                    <div @click="handleOpenImages()" class="w-100 h-100 p-3 d-flex justify-content-center align-items-center form-control" style="height: 170px;">
                         <img :src="preview_img ? preview_img : '{{ asset('dashboard/images/add_image.svg') }}'" id="preview" alt="img logo" style="width: 100%; max-width: 100%;object-fit: contain;height: 100%;">                                                
                     </div>
                 </div>
@@ -83,7 +83,7 @@
         </div>
         <h1 v-if="images && !images.length && !search">There is not any image yet! (upload now)</h1>
         <div class="foot" style="display: flex;width: 100%;justify-content: space-between;gap: 1rem;">
-            <button class="btn btn-primary" @click="this.showUploadPopUp = true">Upload Image</button>
+            <button class="btn btn-primary" @click="handleUploadImage">Upload Image</button>
             <div class="hide-content" v-if="showUploadPopUp"></div>
             <div class="pop-up card p-3" v-if="showUploadPopUp">
                 <label for="image" class="mb-2">Choose Image File</label>
@@ -529,6 +529,16 @@ createApp({
     },
     chooseImage(imagePath) {
         this.choosed_img = '/dashboard/images/uploads/' + imagePath;
+    },
+    handleUploadImage() {
+        this.showImages = false;
+        window.open(`{{ route("add.imagetab") }}`, '_blank').focus();
+    },
+    handleOpenImages() {
+        this.getImages().then(() => {
+            this.showImages = true; 
+            this.current_article_id = null
+        })
     },
     setValuesToNull () {
         this.chooseImage = null

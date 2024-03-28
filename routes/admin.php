@@ -19,6 +19,9 @@ Route::middleware(['admin_guest'])->group(function () {
 
 Route::middleware('auth:admin')->group(function () {
     Route::get('/', [ArticlesController::class, "index"])->name('admin.home');
+    Route::get("/add-image", function() {
+        return view("admin.dashboard.imageCropper");
+    })->name("add.imagetab");
     Route::post('/add-img-slider', [AdminHomeController::class, 'addImageToSlider'])->name('home.slider.add');
     Route::post('/add-img-events', [AdminHomeController::class, 'addImageToEvents'])->name('home.events.add');
     Route::post('/delete-img-slider', [AdminHomeController::class, 'deleteImgFromSlider'])->name('home.slider.delete');

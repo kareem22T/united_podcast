@@ -69,7 +69,7 @@
                                                             <div class="ant-space-item"><a
                                                                     href="{{ route("post.show", ["id" => $article->id]) }}">
                                                                     <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[24px] mb-3 leading-[35px] css-t2ij9r"
-                                                                        style="-webkit-line-clamp: 2;">{{ $article->title }}</h4>
+                                                                        >{{ $article->title }}</h4>
                                                                     <div
                                                                         class="ant-typography ant-typography-rtl  text-lg line-clamp-3 mb-3 css-t2ij9r">
                                                                             {{ $article->intro }}
@@ -174,7 +174,7 @@
                                                               <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
                                                                   <div class="ant-space-item"><a :href="`/post/${article.id}`">
                                                                           <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                              style="-webkit-line-clamp: 2;">@{{ article.title }}</h4>
+                                                                              >@{{ article.title }}</h4>
                                                                           <div
                                                                               class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
                                                                               @{{ article.intro }}
@@ -276,7 +276,7 @@
                                                                   <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
                                                                       <div class="ant-space-item"><a :href="`/post/${article.id}`">
                                                                               <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
-                                                                                  style="-webkit-line-clamp: 2;">@{{ article.title }}</h4>
+                                                                                  >@{{ article.title }}</h4>
                                                                               {{-- <div
                                                                                   class="ant-typography ant-typography-rtl  text-sm line-clamp-1 lg:line-clamp-2 mb-2 css-t2ij9r">
                                                                                   @{{ article.intro }}
@@ -321,7 +321,7 @@
                                 <div class="ant-divider css-t2ij9r ant-divider-horizontal ant-divider-rtl  m-0" role="separator"></div>
                             </div>
     
-                            <div class="ant-space-item">
+                            <div class="ant-space-item"  id="our_programs">
                                 <div
                                     class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full justify-between -mb-2 ">
                                     <div class="ant-space-item">
@@ -349,17 +349,13 @@
                             </div>
                             <div class="ant-space-item" v-if="channels && channels.length">
                                 <div class="channels_wrapper" style="display: grid;grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));gap: 16px">
-                                    <a :href="`/channel/${channel.id}`" v-for="channel in channels.slice(0, numToShow)" :key="channel.id" style="width: 100%;font-size: 18px;font-weight: 600;color: #000;text-align: center;  line-height: 24px;">
+                                    <a :href="`/channel/${channel.id}`" v-for="channel in channels" :key="channel.id" style="width: 100%;font-size: 18px;font-weight: 600;color: #000;text-align: center;  line-height: 24px;">
                                         <div class="img" style="width: 100%;height: auto;border-radius: 10px; overflow:hidden;margin-bottom: 10px;">
                                             <img :src="channel.thumbnail_path" alt=""  style="width: 100%;height: 100%;object-fit: cover;">
                                         </div>
                                         @{{channel.title}}
                                     </a>
                                 </div>
-                                <a href="" @click.prevent="numToShow = channels.length" v-if="channels && channels.length > numToShow" style="display: block;margin: auto;text-align: center;color: #030386;margin-top: 2rem;">عرض الكل <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-chevron-down" width="20" height="20" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
-                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
-                                    <path d="M6 9l6 6l6 -6" />
-                                  </svg></a>
                             </div>
                         </div>
                     </div>
@@ -383,8 +379,6 @@ createApp({
             latest_podcasts: null,
             channels: [],
             num: 10,
-            numToShow: 6,
-            isMore: false
         }
     },
     methods: {

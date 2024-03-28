@@ -23,8 +23,26 @@
                                                 d="M10.1641 1.94531C10.1641 3.39708 10.1641 5.40133 10.1641 5.90538C10.1641 6.40942 10.1641 7.34538 10.1641 7.34538C10.1641 7.34538 11.074 7.34538 11.5641 7.34538C11.5641 7.34538 14.0026 7.34538 15.4141 7.34538M10.1641 1.94531C10.1641 1.94531 9.06642 1.94531 8.42437 1.94531H5.61406C4.14392 1.94531 1.41406 1.94531 1.41406 1.94531V2.01991C1.41406 2.01991 1.41406 4.75317 1.41406 6.26531V15.6253C1.41406 17.1375 1.41406 19.9453 1.41406 19.9453C1.41406 19.9453 4.14392 19.9453 5.61406 19.9453H11.2141C12.6842 19.9453 15.3415 19.9453 15.3415 19.9453C15.3415 19.9453 15.4141 17.1375 15.4141 15.6253V9.13471C15.4141 8.47432 15.4141 7.34538 15.4141 7.34538M10.1641 1.94531C10.1641 1.94531 10.9402 2.74364 11.3942 3.21061L14.1839 6.08001C14.6379 6.54699 15.4141 7.34538 15.4141 7.34538M10.9141 15.4453H7.41406M10.9141 11.8453H5.91406"
                                                 stroke="currentColor" stroke-width="2" stroke-linecap="square">
                                             </path>
-                                        </svg> المقالات</span></a><span class="ant-menu-title-content"><span
-                                        class="md:hidden inline-block m-0">المقالات</span></span></li>
+                                        </svg>اخبارنا</span></a><span class="ant-menu-title-content"><span
+                                        class="md:hidden inline-block m-0">اخبارنا</span></span></li>
+                                        
+                            <style>
+                                .our_por_link:hover svg {
+                                    stroke: white !important
+                                }
+                                html {
+                                    scroll-behavior: smooth !important
+                                }
+                            </style>
+                            <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:2"
+                            title="الوثائقيات" role="menuitem" tabindex="-1"
+                            data-menu-id="rc-menu-uuid-70638-1-Video"><a title=""
+                                class="ant-menu-item-icon our_por_link" href="/podcasts"><span
+                                    class="anticon ant-menu-item-icon  false @yield('videos_active')"  style="padding-left: 10px">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google-podcasts" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#212194" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3v2"></path><path d="M12 19v2"></path><path d="M12 8v8"></path><path d="M8 17v2"></path><path d="M4 11v2"></path><path d="M20 11v2"></path><path d="M8 5v8"></path><path d="M16 7v-2"></path><path d="M16 19v-8"></path></svg>
+                                    برامجنا</span></a><span class="ant-menu-title-content"><span
+                                    class="md:hidden inline-block m-0">برامجنا</span></span></li>
+        
                             <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:1"
                                 title="الإذاعة" role="menuitem" tabindex="-1"
                                 data-menu-id="rc-menu-uuid-70638-1-Podcast"><a title="الإذاعة"
@@ -36,37 +54,37 @@
                                                 d="M15.4141 12.6667V8C15.4141 4.13401 12.2801 1 8.41406 1C4.54807 1 1.41406 4.13401 1.41406 8V12.6667M3.35851 15H1.41406V11.5C1.41406 10.4261 1.41406 9.75 1.41406 9.75H5.35156V15H3.35851ZM15.4141 15H11.5252V11.5C11.5252 10.9941 11.5252 9.55556 11.5252 9.55556H15.4141C15.4141 9.55556 15.4141 10.4261 15.4141 11.5V13.0556C15.4141 14.1294 15.4141 15 15.4141 15Z"
                                                 stroke="currentColor" stroke-width="2" stroke-linecap="square">
                                             </path>
-                                        </svg>الاذاعة</span></a><span class="ant-menu-title-content"><span
-                                        class="md:hidden inline-block m-0">الإذاعة</span></span></li>
+                                        </svg>الحلقات الجديدة</span></a><span class="ant-menu-title-content"><span
+                                        class="md:hidden inline-block m-0">الحلقات الجديدة</span></span></li>
                             <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:2"
                                 title="الوثائقيات" role="menuitem" tabindex="-1"
-                                data-menu-id="rc-menu-uuid-70638-1-Video"><a title="الوثائقيات"
-                                    class="ant-menu-item-icon" href="/videos"><span
-                                        class="anticon ant-menu-item-icon  false @yield('videos_active')"  style="padding-left: 10px"><svg width="25" height="21"
-                                            viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                            <path
-                                                d="M17.4141 12.0001L22.2435 7.9304L23.4141 7V8.339V15.6613V17L22.2435 16.0699L17.4141 12.0001Z"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                                stroke-linejoin="bevel"></path>
-                                            <path
-                                                d="M12.2541 6H7.57406H3.41406V10.1143V13.8857V18H7.57406H12.2541H16.4141V13.8857V10.1143V6H12.2541Z"
-                                                stroke="currentColor" stroke-width="2" stroke-linecap="round">
-                                            </path>
-                                        </svg>الوثائقيات</span></a><span class="ant-menu-title-content"><span
-                                        class="md:hidden inline-block m-0">الوثائقيات</span></span></li>
-                            <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:3"
-                                role="menuitem" tabindex="-1" data-menu-id="rc-menu-uuid-70638-1-search-btn">
-                                <span class="anticon ant-menu-item-icon ant-menu-item-icon" title="البحثƒ"><svg
-                                        width="19" height="21" viewBox="0 0 19 19" fill="none"
-                                        xmlns="http://www.w3.org/2000/svg">
-                                        <path
-                                            d="M17.4141 17L13.5474 13.1333M15.6363 8.11111C15.6363 12.0385 12.4526 15.2222 8.52517 15.2222C4.59781 15.2222 1.41406 12.0385 1.41406 8.11111C1.41406 4.18375 4.59781 1 8.52517 1C12.4526 1 15.6363 4.18375 15.6363 8.11111Z"
-                                            stroke="currentColor" stroke-width="2" stroke-linecap="square">
-                                        </path>
-                                    </svg></span><span class="ant-menu-title-content">
-                                    <p class="md:hidden inline-block m-0">البحث</p>
-                                </span></li>
-                            <li class="ant-menu-overflow-item ant-menu-overflow-item-rest ant-menu-submenu ant-menu-submenu-horizontal ant-menu-submenu-disabled"
+                                data-menu-id="rc-menu-uuid-70638-1-Video"><a title=""
+                                    class="ant-menu-item-icon our_por_link" href="/podcasts"><span
+                                        class="anticon ant-menu-item-icon  false @yield('about_active')"  style="padding-left: 10px">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-square" width="23" height="23" viewBox="0 0 24 24" stroke-width="2" stroke="#212194" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M12 9h.01" />
+                                            <path d="M3 5a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v14a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-14z" />
+                                            <path d="M11 12h1v4h1" />
+                                            </svg>
+                                        من نحن</span></a><span class="ant-menu-title-content"><span
+                                        class="md:hidden inline-block m-0">من نحن</span></span></li>
+            
+                            <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:2"
+                                title="الوثائقيات" role="menuitem" tabindex="-1"
+                                data-menu-id="rc-menu-uuid-70638-1-Video"><a title=""
+                                    class="ant-menu-item-icon our_por_link" href="/podcasts"><span
+                                        class="anticon ant-menu-item-icon  false @yield('about_active')"  style="padding-left: 10px">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#212194" fill="none" stroke-linecap="round" stroke-linejoin="round">
+                                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                            <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
+                                            <path d="M15 7a2 2 0 0 1 2 2" />
+                                            <path d="M15 3a6 6 0 0 1 6 6" />
+                                          </svg>
+                                        اتصل بنا</span></a><span class="ant-menu-title-content"><span
+                                        class="md:hidden inline-block m-0">اتصل بنا</span></span></li>
+                                        
+                                <li class="ant-menu-overflow-item ant-menu-overflow-item-rest ant-menu-submenu ant-menu-submenu-horizontal ant-menu-submenu-disabled"
                                 style="opacity:0;height:0;overflow-y:hidden;order:9007199254740991;pointer-events:none;position:absolute"
                                 aria-hidden="true" role="none">
                                 <div role="menuitem" class="ant-menu-submenu-title" aria-expanded="false"
@@ -81,6 +99,7 @@
                                             </path>
                                         </svg></span><i class="ant-menu-submenu-arrow"></i></div>
                             </li>
+                            
                         </ul>
                         <div style="display:none" aria-hidden="true"></div>
                     </div>
