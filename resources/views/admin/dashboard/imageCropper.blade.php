@@ -193,9 +193,6 @@
 
               success: function () {
                 $alert.show().addClass('alert-success').text('Upload success');
-                setTimeout(() => {
-                    window.location.reload()
-                }, 2000);
               },
 
               error: function () {
