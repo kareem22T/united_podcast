@@ -9,10 +9,36 @@
                     <div class="ant-space-item"><a
                             style="vertical-align:middle;display:flex;justify-content:center;align-items:center;width:auto !important"
                             title="United Podcast" href="/"><img alt="United Podcast" loading="lazy" decoding="async" data-nimg="1" class="!w-auto" src="{{ asset("assets/img/PodCast.png") }}" style="color:transparent;vertical-align:middle;max-height:101px;width:auto;width: 140px !important;object-fit:contain;height: 80px;" width="77" height="41"></a></div>
+                    <style>
+                        @media (max-width: 767.98px) {
+                            .ant-menu  {
+                                background: white !important;
+                                z-index: 9999999999999999999999 !important;
+                                height: auto !important;
+                                top: 0 !important;
+                                right: 0 !important;
+                                position: fixed !important;
+                                padding: 1rem !important;
+                                height: 100vh !important;
+                                border-left: 2px solid #071495 !important;
+                                width: 230px !important;
+                            }
+                            .ant-menu .before {
+                                width: 100%;
+                                height: 100%;
+                                position: absolute;
+                                top: 0;
+                                right: 100%;
+                                background: black;
+                                opacity: 0.4;
+                            }
+                        }
+                    </style>
                     <div class="ant-space-item">
                         <ul class="ant-menu-overflow ant-menu ant-menu-root ant-menu-horizontal ant-menu-light pr-5  justify-center items-center md:flex hidden ant-menu-rtl horizontal-menu-tenant css-t2ij9r"
                             style="width:100%;height:100%;border:none" dir="rtl" role="menu" tabindex="0"
                             data-menu-list="true">
+                            <div class="before"></div>
                             <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:0"
                                 title="المقالات" role="menuitem" tabindex="-1"
                                 data-menu-id="rc-menu-uuid-70638-1-Articles"><a title="المقالات"
@@ -151,7 +177,7 @@
         <h4 style="font-weight: 700;">ما هو حسابك؟</h4>
         <p>لتنشئ حسابًا أو تدخل بحسابك المسجل </p>
         <div class="form-group" style="margin: 20px 0 16px;width: 100%;">
-            <input type="text" name="email" id="email" class="form-control" placeholder="Marhbaa@bk.com" style="box-sizing: border-box;margin: 0;padding: 9.8px 11px;color: rgba(0, 0, 0, 0.88);font-size: 16px;line-height: 1.15;list-style: none;position: relative;display: inline-block;width: 100%;min-width: 0;background-color: #ffffff;background-image: none;border-width: 1px;border-style: solid;border-color: #d9d9d9;border-radius: 8px;transition: all 0.2s;direction: ltr;">
+            <input type="text" name="email" id="email" class="form-control" placeholder="Marhbaa@umspodcast.com" style="box-sizing: border-box;margin: 0;padding: 9.8px 11px;color: rgba(0, 0, 0, 0.88);font-size: 16px;line-height: 1.15;list-style: none;position: relative;display: inline-block;width: 100%;min-width: 0;background-color: #ffffff;background-image: none;border-width: 1px;border-style: solid;border-color: #d9d9d9;border-radius: 8px;transition: all 0.2s;direction: ltr;">
         </div>
         <button id="login_with_email" style="outline: none;position: relative;display: inline-block;font-weight: 400;white-space: nowrap;text-align: center;background-image: none;background-color: #030386;border: 1px solid transparent;cursor: pointer;transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);user-select: none;touch-action: manipulation;line-height: 1.15;color: #fff;padding: 10px 3rem;width: 100%;border-radius: 10px;">التالي</button>
     </div>

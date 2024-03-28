@@ -216,6 +216,12 @@
             $(".contact-pop-up").fadeOut()
             $(".contact-pop-up").prev().fadeOut()
         })
+        $(".ant-btn-icon").on("click", function() {
+            $(".ant-menu").css("display", "block").attr('style', 'display: block !important');
+        });
+        $(".ant-menu .before").on("click", function () {
+            $(".ant-menu").css("display", "none")
+        })
     </script>
 </body>
 </html>

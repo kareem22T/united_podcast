@@ -55,6 +55,8 @@ class SettingsController extends Controller
             $contact->tiktok = $request->tiktok ? $request->tiktok : null;
             $contact->youtube = $request->youtube ? $request->youtube : null;
             $contact->x = $request->x ? $request->x : null;
+            $contact->spotify = $request->spotify ? $request->spotify : null;
+            $contact->anghami = $request->anghami ? $request->anghami : null;
             $contact->save();
         } else {
             $contact = Contact::create([
@@ -65,6 +67,8 @@ class SettingsController extends Controller
                 "tiktok" => $request->tiktok ? $request->tiktok : null,
                 "youtube" => $request->youtube ? $request->youtube : null,
                 "x" => $request->x ? $request->x : null,
+                "spotify" => $request->spotify ? $request->spotify : null,
+                "anghami" => $request->anghami ? $request->anghami : null,
             ]);
         }
 

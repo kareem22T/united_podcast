@@ -17,6 +17,8 @@ class Contact extends Model
         "tiktok",
         "youtube",
         "x",
+        "spotify",
+        "anghami",
     ];
 
     protected $table = 'contact';

@@ -173,7 +173,7 @@
                                             style="margin-left: -8px; margin-right: -8px; row-gap: 16px;">
                                             <div style="padding-left: 8px; padding-right: 8px;"
                                                 class="ant-col  p-0  ant-col-xs-8 ant-col-rtl ant-col-md-7 ant-col-xl-6 css-t2ij9r">
-                                                <a href="/post/1jq3wq3mzk_1jhggnmybp"><img alt="{{$channel_article->title}}"
+                                                <a href="/post/{{$channel_article->id}}"><img alt="{{$channel_article->title}}"
                                                         loading="lazy" decoding="async" data-nimg="1"
                                                         class="rounded-lg max-w-full h-auto aspect-[180/160]"
                                                         style="color: transparent; object-fit: cover;"
@@ -182,7 +182,7 @@
                                             <div style="padding-left: 8px; padding-right: 8px;"
                                                 class="ant-col  pr-4  ant-col-xs-16 ant-col-rtl ant-col-md-17 ant-col-xl-18 css-t2ij9r">
                                                 <div class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl">
-                                                    <div class="ant-space-item"><a href="/post/1jq3wq3mzk_1jhggnmybp">
+                                                    <div class="ant-space-item"><a href="/post/{{$channel_article->id}}">
                                                             <h4 class="ant-typography ant-typography-rtl ant-typography-ellipsis ant-typography-ellipsis-multiple-line  !text-[18px] mb-2 leading-[30px] css-t2ij9r"
                                                                 style="-webkit-line-clamp: 2;">{{$channel_article->title}}</h4>
                                                             <div

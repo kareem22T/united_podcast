@@ -69,6 +69,21 @@
                         <input type="text" class="form-control" id="x" v-model="x">
                     </div>
                 </div>
+                <div class="w-100">
+                    <div>
+                        <label for="spotify" class="form-label">رابط اسبوتيفاي </label>
+                        <input type="text" class="form-control" id="spotify" v-model="spotify">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100 mb-4 gap-2" style="display: grid; grid-template-columns: 1fr 1fr;">
+                <div class="w-100">
+                    <div>
+                        <label for="anghami" class="form-label">رابط انغامي </label>
+                        <input type="text" class="form-control" id="anghami" v-model="anghami">
+                    </div>
+                </div>
             </div>
 
             <div class="mb-3 w-100">
@@ -100,6 +115,8 @@ createApp({
         tiktok: null,
         youtube: null,
         x: null,
+        spotify: null,
+        anghami: null,
     }
   },
   methods: {
@@ -127,6 +144,8 @@ createApp({
                 tiktok: this.tiktok,
                 youtube: this.youtube,
                 x: this.x,
+                spotify: this.spotify,
+                anghami: this.anghami,
             },
             {
                 headers: {
@@ -190,6 +209,8 @@ createApp({
                 this.tiktok = response.data.data.contact ? response.data.data.contact.tiktok : null
                 this.youtube = response.data.data.contact ? response.data.data.contact.youtube : null
                 this.x = response.data.data.contact ? response.data.data.contact.x : null
+                this.spotify = response.data.data.contact ? response.data.data.contact.spotify : null
+                this.anghami = response.data.data.contact ? response.data.data.contact.anghami : null
             } else {
             }
 
