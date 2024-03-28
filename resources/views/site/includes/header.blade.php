@@ -27,7 +27,7 @@
                                         class="md:hidden inline-block m-0">اخبارنا</span></span></li>
                                         
                             <style>
-                                .our_por_link:hover svg {
+                                .our_por_link:hover svg, .our_por_link .active svg {
                                     stroke: white !important
                                 }
                                 html {
@@ -59,7 +59,7 @@
                             <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:2"
                                 title="الوثائقيات" role="menuitem" tabindex="-1"
                                 data-menu-id="rc-menu-uuid-70638-1-Video"><a title=""
-                                    class="ant-menu-item-icon our_por_link" href="/podcasts"><span
+                                    class="ant-menu-item-icon our_por_link" href="/about-us"><span
                                         class="anticon ant-menu-item-icon  false @yield('about_active')"  style="padding-left: 10px">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-info-square" width="23" height="23" viewBox="0 0 24 24" stroke-width="2" stroke="#212194" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
@@ -73,8 +73,8 @@
                             <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:2"
                                 title="الوثائقيات" role="menuitem" tabindex="-1"
                                 data-menu-id="rc-menu-uuid-70638-1-Video"><a title=""
-                                    class="ant-menu-item-icon our_por_link" href="/podcasts"><span
-                                        class="anticon ant-menu-item-icon  false @yield('about_active')"  style="padding-left: 10px">
+                                    class="ant-menu-item-icon our_por_link" href="/contact-us"><span
+                                        class="anticon ant-menu-item-icon  false @yield('contact_active')"  style="padding-left: 10px">
                                         <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-phone-call" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#212194" fill="none" stroke-linecap="round" stroke-linejoin="round">
                                             <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
                                             <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />

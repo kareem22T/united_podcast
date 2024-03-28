@@ -189,6 +189,26 @@
                 <span class="hide-menu">اضافة</span>
               </a>
             </li>
+            <li class="nav-small-cap">
+              <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
+              <span class="hide-menu">الاعدادات</span>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link @yield('about_update_active')" href="{{ route('update.about') }}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-info-circle"></i>
+                </span>
+                <span class="hide-menu">من نحن</span>
+              </a>
+            </li>
+            <li class="sidebar-item">
+              <a class="sidebar-link @yield('contact_update_active')" href="{{ route('update.contact') }}" aria-expanded="false">
+                <span>
+                  <i class="ti ti-address-book"></i>
+                </span>
+                <span class="hide-menu">اتصل بنا</span>
+              </a>
+            </li>
           </ul>
         </nav>
         <!-- End Sidebar navigation -->

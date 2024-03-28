@@ -88,7 +88,7 @@
                             role="separator"></div>
                         <div style="padding-left: 12px; padding-right: 12px;"
                             class="ant-col gutter-row w-full flex justify-center p-0 ant-col-xs-24 ant-col-rtl ant-col-md-24 ant-col-lg-24 ant-col-xl-24 css-t2ij9r">
-                            <form id="subscribe" autocomplete="off"
+                            <form id="subscribe" style="display: flex;margin-top: 1rem;flex-direction: column;justify-content: center;align-items: center;gap: 13px;" autocomplete="off"
                                 class="ant-form ant-form-inline ant-form-rtl css-t2ij9r subscribe-form">
                                 <div
                                     class="ant-form-item md:w-[300px] w-full md:h-[71px] h-auto md:ml-2 md:mb-0 mb-[6px] css-t2ij9r">
@@ -100,13 +100,13 @@
                                             <div class="ant-form-item-control-input">
                                                 <div class="ant-form-item-control-input-content"><input
                                                         placeholder="hala@feek.com" id="subscribe_email"
-                                                        class="ant-input ant-input-rtl css-t2ij9r h-10" type="email"
+                                                        class="ant-input ant-input-rtl css-t2ij9r h-10"  style="box-sizing: border-box;margin: 0;padding: 9.8px 11px;color: rgba(0, 0, 0, 0.88);font-size: 16px;line-height: 1.15;list-style: none;position: relative;display: inline-block;width: 100%;min-width: 0;background-color: #ffffff;background-image: none;border-width: 1px;border-style: solid;border-color: #d9d9d9;border-radius: 8px;transition: all 0.2s;direction: ltr;" type="email"
                                                         value=""></div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
-                                <div
+                                <div style="width: 100% !important;min-width: 100%;"
                                     class="ant-form-item md:max-w-[171px] w-full md:h-[71px] ml-2 h-auto css-t2ij9r">
                                     <div class="ant-row ant-row-rtl ant-form-item-row css-t2ij9r">
                                         <div class="ant-col ant-form-item-label ant-col-rtl css-t2ij9r"><label
@@ -115,7 +115,7 @@
                                                 title="اسمك الأول، بالعربية">اسمك الأول، بالعربية</label></div>
                                         <div class="ant-col ant-form-item-control ant-col-rtl css-t2ij9r">
                                             <div class="ant-form-item-control-input">
-                                                <div class="ant-form-item-control-input-content"><input
+                                                <div class="ant-form-item-control-input-content"><input  style="box-sizing: border-box;margin: 0;padding: 9.8px 11px;color: rgba(0, 0, 0, 0.88);font-size: 16px;line-height: 1.15;list-style: none;position: relative;display: inline-block;width: 100%;min-width: 0;background-color: #ffffff;background-image: none;border-width: 1px;border-style: solid;border-color: #d9d9d9;border-radius: 8px;transition: all 0.2s;direction: ltr;"
                                                         placeholder="عائشة" id="subscribe_name" aria-required="true"
                                                         class="ant-input ant-input-rtl css-t2ij9r h-10 leading-10"
                                                         type="text" value=""></div>

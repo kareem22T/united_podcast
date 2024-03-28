@@ -11,6 +11,7 @@ use App\Http\Controllers\ImagesController;
 use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\ChannelsController;
 use App\Http\Controllers\AuthorsController;
+use App\Http\Controllers\Admin\SettingsController;
 
 Route::middleware(['admin_guest'])->group(function () {
     Route::get('/login', [RegisterController::class, 'getLoginIndex']);
@@ -22,7 +23,17 @@ Route::middleware('auth:admin')->group(function () {
     Route::get("/add-image", function() {
         return view("admin.dashboard.imageCropper");
     })->name("add.imagetab");
+    Route::get('/update-about', function() {
+        return view('admin.dashboard.update_about');
+    })->name('update.about');
+    Route::get('/update-contact', function() {
+        return view('admin.dashboard.update_contact');
+    })->name('update.contact');
     Route::post('/add-img-slider', [AdminHomeController::class, 'addImageToSlider'])->name('home.slider.add');
+    Route::post('/add-about', [SettingsController::class, 'addAbout'])->name('about.put');
+    Route::post('/add-contact', [SettingsController::class, 'addContact'])->name('contact.put');
+    Route::get('/get-about', [SettingsController::class, 'getAbout'])->name('about.get');
+    Route::get('/get-contact', [SettingsController::class, 'getContact'])->name('contact.get');
     Route::post('/add-img-events', [AdminHomeController::class, 'addImageToEvents'])->name('home.events.add');
     Route::post('/delete-img-slider', [AdminHomeController::class, 'deleteImgFromSlider'])->name('home.slider.delete');
     Route::post('/delete-img-events', [AdminHomeController::class, 'deleteImgFromEvents'])->name('home.events.delete');

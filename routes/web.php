@@ -39,6 +39,9 @@ Route::get('/podcasts', function () {
 Route::get('/my-profile', function () {
     return view('site.pages.profile');
 });
+Route::get('/about-us', function () {
+    return view('site.pages.about');
+});
 
 Route::post('/latest-articles-per-num', [ArticlesController::class, "latest"])->name('articles.latest');
 Route::post('/channel-articles', [ArticlesController::class, "channelArticles"])->name('channel.articles');
