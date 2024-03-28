@@ -96,6 +96,7 @@
     var $alert = $('.alert');
     var $modal = $('#modal');
     var cropper;
+    var fileName;
     window.addEventListener('DOMContentLoaded', function () {
 
       $('[data-toggle="tooltip"]').tooltip();
@@ -111,10 +112,9 @@
         var reader;
         var file;
         var url;
-
         if (files && files.length > 0) {
           file = files[0];
-
+          
           if (URL) {
             done(URL.createObjectURL(file));
           } else if (FileReader) {
@@ -125,6 +125,9 @@
             reader.readAsDataURL(file);
           }
         }
+         fileName = file.name;
+            // Access the original filename
+            
       });
 
       $modal.on('shown.bs.modal', function () {
@@ -167,7 +170,7 @@
           canvas.toBlob(function (blob) {
             var formData = new FormData();
 
-            formData.append('img', blob, 'avatar.jpg');
+            formData.append('img', blob, fileName);
             $.ajax(`{{ route('lib.image.uploade') }}`, {
               method: 'POST',
               data: formData,
