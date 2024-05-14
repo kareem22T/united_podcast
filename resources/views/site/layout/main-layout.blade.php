@@ -443,6 +443,9 @@
         .author_name:hover {
             color: #000 !important
         }
+        :where(.css-t2ij9r).ant-menu .ant-menu-item .ant-menu-item-icon, :where(.css-t2ij9r).ant-menu .ant-menu-submenu-title .ant-menu-item-icon {
+            font-weight: 700 !important;
+        }
     </style>
     <title>@yield('title')</title>
 </head>
