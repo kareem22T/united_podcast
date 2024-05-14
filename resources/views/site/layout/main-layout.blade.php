@@ -270,6 +270,9 @@
             }
         }
         @media (max-width: 575.98px) {
+            .latest_programs_wrapper .card:not(:first-child) .text .date {
+                font-size: 10px !important;
+            }
             .latest_programs_wrapper {
                 display: grid;
                 grid-template-columns: 1fr 1fr;
@@ -307,7 +310,7 @@
                 font-weight: 700;
                 line-height: 25px;
                 margin-bottom: 4px;
-                height: 70px;
+                height: 50px;
                 overflow: hidden !important;
                 text-overflow: ellipsis;
             }
