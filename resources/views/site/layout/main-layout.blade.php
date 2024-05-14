@@ -58,7 +58,7 @@
             height: 4px;
             border-radius: 50%;
             color: #ff3100;
-            box-shadow: 
+            box-shadow:
                 calc(1*var(--d))      calc(0*var(--d))     0 0,
                 calc(0.707*var(--d))  calc(0.707*var(--d)) 0 1px,
                 calc(0*var(--d))      calc(1*var(--d))     0 2px,
@@ -117,7 +117,7 @@
             }
             .swiper-wrapper-latest {
                 padding: 0 !important
-                
+
             }
             .swiper-wrapper-latest .swiper {
                 padding-bottom: 3rem !important
@@ -136,6 +136,294 @@
                 height: 130px !important;
             }
 
+        }
+        .mySwiper .swiper-slide:last-child {
+            margin-left: 16px
+        }
+        @media (max-width: 992px) {
+            .mySwiper .swiper-slide {
+                width: 240px !important;
+                min-width: 240px !important;
+                height: 240px !important;
+            }
+            .mySwiper {
+                padding: 32px 16px !important;
+            }
+        }
+        .latest_programs_wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            gap: 16px;
+            width: 100%
+        }
+
+        .latest_programs_wrapper .card:first-child .text {
+            position: absolute;
+            bottom: 16px;
+            z-index: 3;
+            color: white;
+            display: flex;
+            flex-direction: column-reverse;
+            width: 100%;
+            padding: 0 16px;
+            gap: 8px;
+        }
+        .latest_programs_wrapper .card:first-child .text p {
+            display: none;
+        }
+        .card:first-child::after {
+            content: "";
+            background: rgb(0,0,0);
+            background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0, 0, 0, 0.87) 100%);
+            width: 100%;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 2;
+        }
+        .latest_programs_wrapper .card:first-child .text .date span:first-child {
+            font-weight: 700
+        }
+        .latest_programs_wrapper .card:first-child .text .date {
+            display: flex;
+            justify-content: start;
+            align-items: center;
+            gap: 8px;
+            font-size: 15px;
+        }
+        .latest_programs_wrapper .card:first-child .text h2 {
+            font-size: 19px;
+            width: 100%;
+            color: #fff;
+            font-weight: 700;
+        }
+        .latest_programs_wrapper .card:first-child {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            grid-row: span 2;
+            height: 0;
+            min-height: 100%;
+        }
+
+        .latest_programs_wrapper .card:first-child .img {
+            width: 100%;
+            height: 100%;
+        }
+
+        .latest_programs_wrapper img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top
+        }
+        .latest_programs_wrapper .card:not(:first-child) {
+            display: flex;
+            gap: 16px;
+            align-items: center;
+        }
+        .latest_programs_wrapper .card:not(:first-child) .img {
+            min-width: 180px;
+            height: 140px;
+            border-radius: 8px;
+            overflow: hidden;
+            width: 190px;
+        }
+        .latest_programs_wrapper .card:not(:first-child) .text {
+            width: 100%;
+        }
+        .latest_programs_wrapper .card:not(:first-child) .text h2 {
+            font-size: 16px;
+            width: 100%;
+            color: #000;
+            font-weight: 700;
+            line-height: 25px;
+            margin-bottom: 4px;
+        }
+
+        .latest_programs_wrapper .card:not(:first-child) .text p {
+            color: gray;
+            font-size: 13px;
+            line-height: 20px;
+            max-height: 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .latest_programs_wrapper .card:not(:first-child) .text .date {
+            font-size: 13px;
+            display: flex;
+            gap: 8px;
+            color: #000
+        }
+        .latest_programs_wrapper .card:not(:first-child) .text .date *:first-child {
+            font-weight: 700
+        }
+        @media (max-width: 992.98px) {
+            .latest_programs_wrapper {
+                display: grid;
+                grid-template-columns: 1fr;
+                grid-template-rows: 1fr 1fr 1fr 1fr;
+                gap: 16px;
+                width: 100%;
+            }
+        }
+        @media (max-width: 575.98px) {
+            .latest_programs_wrapper {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                grid-template-rows: auto 1fr;
+                gap: 16px;
+                width: 100%;
+            }
+            .latest_programs_wrapper .card:first-child {
+                position: relative;
+                border-radius: 8px;
+                overflow: hidden;
+                grid-column: span 2;
+                grid-row: span 1;
+                height: 220px;
+                min-height: 220px;
+            }
+
+            .latest_programs_wrapper .card:not(:first-child) {
+                display: flex;
+                gap: 16px;
+                align-items: center;
+                flex-direction: column;
+            }
+            .latest_programs_wrapper .card:not(:first-child) .img {
+                min-width: 100%;
+                height: 140px;
+                border-radius: 8px;
+                overflow: hidden;
+                width: 100%;
+            }
+            .latest_programs_wrapper .card:not(:first-child) .text h2 {
+                font-size: 13px;
+                width: 100%;
+                color: #000;
+                font-weight: 700;
+                line-height: 25px;
+                margin-bottom: 4px;
+                height: 70px;
+                overflow: hidden !important;
+                text-overflow: ellipsis;
+            }
+        }
+        .mostViewsSwipr {
+            position: static !important
+        }
+        .mostViewsSwipr .title:hover {
+            color: #cd2900 !important
+        }
+        .mostViewsSwipr .swiper-slide .img {
+            width: 100%;
+  height: 160px;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 8px;
+  position: relative;
+  display: block
+        }
+        .mostViewsSwipr img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top
+        }
+        .mostViewsSwipr .img .channel_name {
+            position: absolute;
+  bottom: 8px;
+  right: 8px;
+  font-size: 14px;
+  color: #fff;
+  font-weight: 700;
+  z-index: 3;
+        }
+        .mostViewsSwipr .text {
+            padding: 0 8px
+        }
+        .mostViewsSwipr .text .title {
+            font-size: 14px;
+            color: #000;
+            line-height: 22px;
+            font-weight: 700;
+            height: 50px;
+  display: block;
+  transition: all .3s ease-in;
+  overflow: hidden;
+  text-overflow: ellipsis;
+        }
+        .mostViewsSwipr .date {
+            font-size: 13px;
+            color: #000;
+            line-height: 22px;
+        }
+        .mostViewsSwipr .date *:first-child {
+            font-weight: 700;
+        }
+        .most_views_wrapper .head h2 {
+            padding: 0 0 8px;
+            font-weight: 700;
+        }
+        .most_views_wrapper {
+            position: relative;
+            margin-top: 8px
+        }
+        .mostViewsSwipr .swiper-button-next::after {
+            content: "";
+
+        }
+        .mostViewsSwipr .swiper-button-next {
+            left: 0 !important;
+            top: 0;
+            display: block;
+            width: max-content;
+            height: max-content;
+            transform: none;
+            margin: 0;
+        }
+        .mostViewsSwipr .swiper-button-next svg {
+            width: 35px;
+            height: 35px;
+        }
+        .mostViewsSwipr .swiper-button-prev::after {
+            content: "";
+
+        }
+        .mostViewsSwipr .swiper-button-prev {
+            left: 35px !important;
+            top: 0;
+            right: auto;
+            display: block;
+            width: max-content;
+            height: max-content;
+            transform: none;
+            margin: 0;
+        }
+        .mostViewsSwipr .swiper-button-prev svg {
+            width: 35px;
+            height: 35px;
+        }
+        @media (max-width: 575.98px) {
+            .mostViewsSwipr .date {
+                font-size: 12px;
+            }
+        }
+        .latest_programs_wrapper_2 .mostViewsSwipr {
+            margin: 0
+        }
+        .latest_programs_wrapper_2 {
+            width: 100vw;
+            padding: 56px 16px;
+            background: #F0F0F0;
+            margin: 24px 0 40px;
+        }
+
+        .author_name:hover {
+            color: #000 !important
         }
     </style>
     <title>@yield('title')</title>
@@ -166,22 +454,35 @@
     <!-- Initialize Swiper -->
     <script>
         var swiper = new Swiper(".mySwiper", {
-            loop: true, // Enable infinite loop
-            autoplay: {
-                delay: 5000, // Set delay between slides (in milliseconds)
-                disableOnInteraction: false, // Continue autoplay even when user interacts with the slider
-            },
-            // Add other configuration options as needed
-            pagination: {
-                el: '.swiper-pagination',
-                clickable: true,
-            },
-            navigation: {
-                nextEl: '.swiper-button-next',
-                prevEl: '.swiper-button-prev',
-            },
+        slidesPerView: 'auto',
+        spaceBetween: 24,
+        freeMode: true,
+        pagination: {
+            el: ".swiper-pagination",
+            clickable: true,
+        },
         });
+
+
         function setLatestSwipper() {
+            var swiper = new Swiper(".mostViewsSwipr", {
+                slidesPerView: 2,
+                spaceBetween: 16,
+                    breakpoints: {
+                        992: {
+                            slidesPerView: 3
+                        },
+                        1199: {
+                            slidesPerView: 4
+                        }
+                    },
+                    // Add other configuration options as needed
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+
 
             var swiper = new Swiper(".latestSwiper", {
                 slidesPerView: 2,

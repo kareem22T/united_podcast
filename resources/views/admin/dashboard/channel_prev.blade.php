@@ -34,6 +34,9 @@
                     <h6 class="fw-semibold mb-0 d-inline-flex align-items-center">العنوان</h6>
                 </th>
                 <th class="border-bottom-0">
+                    <h6 class="fw-semibold mb-0 d-inline-flex align-items-center">المقدم</h6>
+                </th>
+                <th class="border-bottom-0">
                     <h6 class="fw-semibold mb-0 d-inline-flex align-items-center">الوصف</h6>
                 </th>
                 <th class="border-bottom-0">
@@ -45,12 +48,19 @@
             <tr v-for="(channel, index) in channels_data" :key="index">
                 <td class="border-bottom-0"><h6 class="fw-semibold mb-0">@{{channel.id}}</h6></td>
                 <td class="border-bottom-0"><h6 class="fw-semibold mb-0">@{{channel.title}}</h6></td>
+                <td class="border-bottom-0"><h6 class="fw-semibold mb-0">@{{channel.broadcaster}}</h6></td>
                 <td class="border-bottom-0"><h6 class="fw-semibold mb-0">@{{channel.description.split(' ').length > 4 ? channel.description.split(' ').slice(0, 4).join(' ') + ' ...' : channel.description }}</h6></td>
                 <td class="border-bottom-0">
                     <div class="d-flex gap-2">
                         <a :href="`/admin/channels/channel/${channel.id}`" target="_blanck" class="btn btn-success p-2"><h4 class="ti ti-eye text-light m-0 fw-semibold"></h4></a>
                         <a :href="`/admin/channels/edit/${channel.id}`" class="btn btn-secondary p-2"><h4 class="ti ti-edit text-light m-0 fw-semibold"></h4></a>
                         <button class="btn btn-danger p-2" @click="this.delete_pop_up = true; getValues(channel.id, channel.id)"><h4 class="ti ti-trash text-light m-0 fw-semibold"></h4></button>
+                        <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-home-heart" width="35" height="35" viewBox="0 0 24 24" stroke-width="2" :stroke="channel.isInHero ? '#13DEB9' : '#FA896B'" fill="none" stroke-linecap="round" stroke-linejoin="round"  style="cursor: pointer;height: 40px;object-fit: contain;object-position: center;margin-right: 8px;" @click="toggleIsInHero(channel.id)">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M21 12l-9 -9l-9 9h2v7a2 2 0 0 0 2 2h6" />
+                            <path d="M9 21v-6a2 2 0 0 1 2 -2h2c.39 0 .754 .112 1.061 .304" />
+                            <path d="M19 21.5l2.518 -2.58a1.74 1.74 0 0 0 0 -2.413a1.627 1.627 0 0 0 -2.346 0l-.168 .172l-.168 -.172a1.627 1.627 0 0 0 -2.346 0a1.74 1.74 0 0 0 0 2.412l2.51 2.59z" />
+                          </svg>
                     </div>
                 </td>
             </tr>
@@ -190,6 +200,51 @@ createApp({
                 $('#errors').fadeIn('slow')
                 $('.loader').fadeOut()
                 this.languages_data = false
+                setTimeout(() => {
+                    $('#errors').fadeOut('slow')
+                }, 3500);
+
+                console.error(error);
+            }
+        },
+        async toggleIsInHero(channel_id) {
+            $('.loader').fadeIn().css('display', 'flex')
+            try {
+                const response = await axios.get(`/admin/channels/add-remove-to-hero/${channel_id}`
+                );
+                this.getchannels()
+                if (response.data.status === true) {
+                    document.getElementById('errors').innerHTML = ''
+                    let error = document.createElement('div')
+                    error.classList = 'success'
+                    error.innerHTML = response.data.message
+                    document.getElementById('errors').append(error)
+                    $('#errors').fadeIn('slow')
+                } else {
+                    $('.loader').fadeOut()
+                    document.getElementById('errors').innerHTML = ''
+                    $.each(response.data.errors, function (key, value) {
+                        let error = document.createElement('div')
+                        error.classList = 'error'
+                        error.innerHTML = value
+                        document.getElementById('errors').append(error)
+                    });
+                    $('#errors').fadeIn('slow')
+                    setTimeout(() => {
+                        $('input').css('outline', 'none')
+                        $('#errors').fadeOut('slow')
+                    }, 5000);
+                }
+
+            } catch (error) {
+                document.getElementById('errors').innerHTML = ''
+                let err = document.createElement('div')
+                err.classList = 'error'
+                err.innerHTML = 'server error try again later'
+                document.getElementById('errors').append(err)
+                $('#errors').fadeIn('slow')
+                $('.loader').fadeOut()
+
                 setTimeout(() => {
                     $('#errors').fadeOut('slow')
                 }, 3500);

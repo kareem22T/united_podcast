@@ -66,6 +66,7 @@ Route::middleware('auth:admin')->group(function () {
         Route::get('/', [ChannelsController::class, "index"])->name('channel.prev');
         Route::get('/add', [ChannelsController::class, "addIndex"])->name('channels.add');
         Route::get('/edit/{id}', [ChannelsController::class, "edit"])->name('channels.edit');
+        Route::get('/add-remove-to-hero/{id}', [ChannelsController::class, "toggleIsInHero"])->name('channels.toggleIsInHero');
         Route::get('/channel/{id}', [ChannelsController::class, "previewChannel"])->name('channel.show');
         Route::post('/update', [ChannelsController::class, "update"])->name('channel.update');
         Route::post('/get', [ChannelsController::class, "getChannels"])->name('channels.get');

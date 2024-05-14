@@ -17,7 +17,6 @@ return new class extends Migration
             $table->string('email', 150)->nullable();
             $table->string('facebook', 150)->nullable();
             $table->string('instagram', 150)->nullable();
-            $table->string('tiktok', 150)->nullable();
             $table->string('youtube', 150)->nullable();
             $table->string('x', 150)->nullable();
             $table->timestamps();

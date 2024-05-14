@@ -13,12 +13,13 @@ class Article extends Model
         "channel_id",
         "title",
         "intro",
+        "views",
         "content",
         "type",
         "thumbnail_path",
         "created_at",
     ];
-    
+
     // relationships
     public function author()
     {

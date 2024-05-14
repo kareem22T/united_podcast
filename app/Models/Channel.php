@@ -12,6 +12,12 @@ class Channel extends Model
         "title",
         "description",
         "type",
+        "isInHero",
+        "isInHero_created_at",
+        "broadcaster",
+        "youtube_link",
+        "anghami_link",
+        "spotify_link",
         "thumbnail_path",
         "created_at",
     ];

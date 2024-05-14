@@ -46,7 +46,7 @@ class ArticlesController extends Controller
 
     public function getArticles() {
         $Articles = Article::orderBy(\DB::raw('ABS(TIMESTAMPDIFF(SECOND, created_at, NOW()))'))->paginate(10);
-        
+
         return $this->jsonData(true, '', [], $Articles);
     }
 
@@ -56,7 +56,7 @@ class ArticlesController extends Controller
         $byTypes = Article::orderBy(\DB::raw('ABS(TIMESTAMPDIFF(SECOND, created_at, NOW()))'))->where('type', 'like', '%'.$request->search_words.'%')->paginate(10);
 
         $contents = Article::orderBy(\DB::raw('ABS(TIMESTAMPDIFF(SECOND, created_at, NOW()))'))->where('content', 'like', '%'.$request->search_words.'%')->paginate(10);
-        
+
         return $this->jsonData(true, '', [], !$byTitles->isEmpty() ? $byTitles : (!$byTypes->isEmpty() ? $byTypes : $contents));
 
     }
@@ -139,7 +139,7 @@ class ArticlesController extends Controller
             return $this->jsondata(false, 'update failed', [$validator->errors()->first()], []);
         }
 
-        $article = Article::find($request->id); 
+        $article = Article::find($request->id);
         $article->title = $request->title;
         $article->intro = $request->intro;
         $article->content = $request->content;
@@ -192,6 +192,10 @@ class ArticlesController extends Controller
 
     public function postIndex($id) {
         $article = Article::find($id);
+        if ($article) {
+            $article->views = (int) $article->views + 1;
+            $article->save();
+        }
 
         return view('site.pages.article')->with(compact('article'));
     }

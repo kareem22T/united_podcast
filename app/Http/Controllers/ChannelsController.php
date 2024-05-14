@@ -48,7 +48,7 @@ class ChannelsController extends Controller
 
     public function getChannels() {
         $Channels = Channel::orderBy(\DB::raw('ABS(TIMESTAMPDIFF(SECOND, created_at, NOW()))'))->paginate(10);
-        
+
         return $this->jsonData(true, '', [], $Channels);
     }
 
@@ -58,7 +58,7 @@ class ChannelsController extends Controller
         $byTypes = Channel::orderBy(\DB::raw('ABS(TIMESTAMPDIFF(SECOND, created_at, NOW()))'))->where('type', 'like', '%'.$request->search_words.'%')->paginate(10);
 
         $descriptions = Channel::orderBy(\DB::raw('ABS(TIMESTAMPDIFF(SECOND, created_at, NOW()))'))->where('description', 'like', '%'.$request->search_words.'%')->paginate(10);
-        
+
         return $this->jsonData(true, '', [], !$byTitles->isEmpty() ? $byTitles : (!$byTypes->isEmpty() ? $byTypes : $descriptions));
 
     }
@@ -89,6 +89,10 @@ class ChannelsController extends Controller
             'title' => $request->title,
             'description' => $request->description,
             'thumbnail_path' => $request->thumbnail_path,
+            "broadcaster" => $request->broadcaster ? $request->broadcaster : null,
+            "youtube_link" => $request->youtube_link ? $request->youtube_link : null,
+            "anghami_link" => $request->anghami_link ? $request->anghami_link : null,
+            "spotify_link" => $request->spotify_link ? $request->spotify_link : null,
             'type' => $request->type,
         ]);
 
@@ -119,11 +123,19 @@ class ChannelsController extends Controller
             return $this->jsondata(false, 'update failed', [$validator->errors()->first()], []);
         }
 
-        $Channel = Channel::find($request->id); 
+        $Channel = Channel::find($request->id);
         $Channel->title = $request->title;
         $Channel->description = $request->description;
         $Channel->thumbnail_path = $request->thumbnail_path;
         $Channel->type = $request->type;
+        if ($request->broadcaster)
+            $Channel->broadcaster = $request->broadcaster;
+        if ($request->youtube_link)
+            $Channel->youtube_link = $request->youtube_link;
+        if ($request->anghami_link)
+            $Channel->anghami_link = $request->anghami_link;
+        if ($request->spotify_link)
+            $Channel->spotify_link = $request->spotify_link;
         $Channel->save();
 
         if ($Channel)
@@ -151,6 +163,16 @@ class ChannelsController extends Controller
         $channel = Channel::find($id);
 
         return view('site.pages.channel')->with(compact('channel'));
+    }
+
+    public function toggleIsInHero($id) {
+        $channel = Channel::find($id);
+
+        if ($channel) {
+            $channel->isInHero = !$channel->isInHero;
+            $channel->isInHero_created_at = now();
+            $channel->save();
+        }
     }
 
 }

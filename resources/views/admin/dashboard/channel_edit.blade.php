@@ -22,9 +22,36 @@
         <div>
             <div class="w-100 mb-4 gap-2" style="display: grid; grid-template-columns: 1fr 1fr;">
                 <div class="w-100">
-                    <div>
+                    <div class="form-group">
                         <label for="term_title" class="form-label">عنوان البرنامج *</label>
                         <input type="text" class="form-control" id="term_title" v-model="title">
+                    </div>
+                </div>
+                <div class="w-100">
+                    <div class="form-group">
+                        <label for="broadcaster" class="form-label">اسم المقدم *</label>
+                        <input type="text" class="form-control" id="broadcaster" v-model="broadcaster">
+                    </div>
+                </div>
+            </div>
+
+            <div class="w-100 mb-4 gap-2" style="display: grid; grid-template-columns: 1fr 1fr;">
+                <div class="w-100">
+                    <div class="form-group">
+                        <label for="youtube_link" class="form-label"> لينك اليوتيوب</label>
+                        <input type="text" class="form-control" id="youtube_link" v-model="youtube_link">
+                    </div>
+                </div>
+                <div class="w-100">
+                    <div class="form-group">
+                        <label for="anghami_link" class="form-label">لينك انغامي </label>
+                        <input type="text" class="form-control" id="anghami_link" v-model="anghami_link">
+                    </div>
+                </div>
+                <div class="w-100">
+                    <div class="form-group">
+                        <label for="spotify_link" class="form-label">لينك سبوتيفاي</label>
+                        <input type="text" class="form-control" id="spotify_link" v-model="spotify_link">
                     </div>
                 </div>
             </div>
@@ -52,7 +79,7 @@
                 <div class="w-25">
                     <label for="" class="mb-2">الصورة المصغرة</label>
                     <div @click="handleOpenImages()" class="w-100 h-100 p-3 d-flex justify-content-center align-items-center form-control" style="height: 170px;">
-                        <img :src="preview_img ? preview_img : '{{ asset('dashboard/images/add_image.svg') }}'" id="preview" alt="img logo" style="width: 100%; max-width: 100%;object-fit: contain;height: 100%;">                                                
+                        <img :src="preview_img ? preview_img : '{{ asset('dashboard/images/add_image.svg') }}'" id="preview" alt="img logo" style="width: 100%; max-width: 100%;object-fit: contain;height: 100%;">
                     </div>
                 </div>
                 <br>
@@ -65,7 +92,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="hide-content" v-if="showImages || showSliderPopUp || showCodePopUp || showAlbumPopUp"></div>
 
     <div class="pop-up show-images-pop-up card" v-if="showImages" style="min-width: 90vw;height: 90vh;padding: 20px;display: flex;flex-direction: column;justify-content: space-between;gap: 1rem;">
@@ -130,6 +157,10 @@ createApp({
       showUploadPopUp: false,
       image: null,
       choosed_img: null,
+      broadcaster: '{{ $Channel->broadcaster }}',
+      youtube_link: '{{ $Channel->youtube_link }}',
+      anghami_link: '{{ $Channel->anghami_link }}',
+      spotify_link: '{{ $Channel->spotify_link }}',
       current_article_id: null,
       search_tags: null,
       preview_img:  '{{ $Channel->thumbnail_path }}',
@@ -168,6 +199,11 @@ createApp({
                 title: this.title,
                 description: this.description,
                 type: this.type,
+                thumbnail_path: this.preview_img,
+                broadcaster: this.broadcaster,
+                youtube_link: this.youtube_link,
+                anghami_link: this.anghami_link,
+                spotify_link: this.spotify_link,
                 thumbnail_path: this.preview_img,
                 id: '{{ $Channel->id }}'
             },
@@ -230,7 +266,7 @@ createApp({
             if (response.data.status === true) {
                 if (search_words != '')
                     this.search_tags = response.data.data.data
-                else 
+                else
                     this.search_tags = []
             } else {
                 document.getElementById('errors').innerHTML = ''
@@ -418,7 +454,7 @@ createApp({
         if (this.slider_imgs.length > 3) {
             // Get the target element where you want to insert the content
             var targetElement = document.getElementById(element);
-            
+
             // Get the content from the 'slider' element
             var sliderContent = document.getElementById('slider').innerHTML;
             document.getElementById(element).focus();
@@ -443,7 +479,7 @@ createApp({
         if (this.album_imgs.length > 2) {
             // Get the target element where you want to insert the content
             var targetElement = document.getElementById(element);
-            
+
             // Get the content from the 'slider' element
             var sliderContent = document.getElementById('album').innerHTML;
             document.getElementById(element).focus();
@@ -536,7 +572,7 @@ createApp({
     },
     handleOpenImages() {
         this.getImages().then(() => {
-            this.showImages = true; 
+            this.showImages = true;
             this.current_article_id = null
         })
     },
@@ -577,7 +613,7 @@ createApp({
             this.chooseImage = null
             this.current_article_id = null
             this.showImages = null
-        } 
+        }
         else {
             this.previewThumbnail()
         }
