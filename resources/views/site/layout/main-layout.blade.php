@@ -412,7 +412,22 @@
         }
         @media (max-width: 575.98px) {
             .mostViewsSwipr .date {
+                font-size: 10px;
+            }
+            .mostViewsSwipr .text .title {
                 font-size: 12px;
+  color: #000;
+  line-height: 22px;
+  font-weight: 700;
+  height: 50px;
+  display: block;
+  transition: all .3s ease-in;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
             }
         }
         .latest_programs_wrapper_2 .mostViewsSwipr {
