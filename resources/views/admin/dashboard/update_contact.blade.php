@@ -97,7 +97,7 @@
             </div>
         </div>
     </div>
-    
+
 </div>
 @endsection
 
@@ -278,7 +278,7 @@ createApp({
     },
     handleOpenImages() {
         this.getImages().then(() => {
-            this.showImages = true; 
+            this.showImages = true;
             this.current_article_id = null
         })
     },
@@ -395,7 +395,7 @@ createApp({
         if (this.slider_imgs.length > 3) {
             // Get the target element where you want to insert the content
             var targetElement = document.getElementById(element);
-            
+
             // Get the content from the 'slider' element
             var sliderContent = document.getElementById('slider').innerHTML;
             document.getElementById(element).focus();
@@ -420,7 +420,7 @@ createApp({
         if (this.album_imgs.length > 2) {
             // Get the target element where you want to insert the content
             var targetElement = document.getElementById(element);
-            
+
             // Get the content from the 'slider' element
             var sliderContent = document.getElementById('album').innerHTML;
             document.getElementById(element).focus();
@@ -461,7 +461,7 @@ createApp({
             $(this).val(null);
             $("#preview").attr(
                 "src",
-                "/Moheb/dashboard/images/add_image.svg"
+                "/dashboard/images/add_image.svg"
             );
             $(".photo_group i").removeClass("fa-edit").addClass("fa-plus");
         } else {
@@ -544,7 +544,7 @@ createApp({
             this.chooseImage = null
             this.current_article_id = null
             this.showImages = null
-        } 
+        }
         else {
             this.previewThumbnail()
         }

@@ -41,7 +41,7 @@
                 <div class="w-25">
                     <label for="" class="mb-2 form-label">صورة الملف الشخصي</label>
                     <div @click="this.showImages = true; this.current_article_id = null" class="w-100 h-100 p-3 d-flex justify-content-center align-items-center form-control" style="height: 170px;">
-                        <img :src="preview_img ? preview_img : '{{ asset('dashboard/images/add_image.svg') }}'" id="preview" alt="img logo" style="width: 100%; max-width: 100%;object-fit: contain;height: 100%;">                                                
+                        <img :src="preview_img ? preview_img : '{{ asset('dashboard/images/add_image.svg') }}'" id="preview" alt="img logo" style="width: 100%; max-width: 100%;object-fit: contain;height: 100%;">
                     </div>
                 </div>
                 <br>
@@ -54,7 +54,7 @@
             </div>
         </div>
     </div>
-    
+
     <div class="hide-content" v-if="showImages || showSliderPopUp || showCodePopUp || showAlbumPopUp"></div>
 
     <div class="pop-up show-images-pop-up card" v-if="showImages" style="min-width: 90vw;height: 90vh;padding: 20px;display: flex;flex-direction: column;justify-content: space-between;gap: 1rem;">
@@ -210,14 +210,14 @@ createApp({
     },
     async getTagSearch(search_words) {
         try {
-            const response = await axios.post(`/Moheb/admin/tags/search`, {
+            const response = await axios.post(`/admin/tags/search`, {
                 search_words: search_words,
             },
             );
             if (response.data.status === true) {
                 if (search_words != '')
                     this.search_tags = response.data.data.data
-                else 
+                else
                     this.search_tags = []
             } else {
                 document.getElementById('errors').innerHTML = ''
@@ -405,7 +405,7 @@ createApp({
         if (this.slider_imgs.length > 3) {
             // Get the target element where you want to insert the content
             var targetElement = document.getElementById(element);
-            
+
             // Get the content from the 'slider' element
             var sliderContent = document.getElementById('slider').innerHTML;
             document.getElementById(element).focus();
@@ -430,7 +430,7 @@ createApp({
         if (this.album_imgs.length > 2) {
             // Get the target element where you want to insert the content
             var targetElement = document.getElementById(element);
-            
+
             // Get the content from the 'slider' element
             var sliderContent = document.getElementById('album').innerHTML;
             document.getElementById(element).focus();
@@ -471,7 +471,7 @@ createApp({
             $(this).val(null);
             $("#preview").attr(
                 "src",
-                "/Moheb/dashboard/images/add_image.svg"
+                "/dashboard/images/add_image.svg"
             );
             $(".photo_group i").removeClass("fa-edit").addClass("fa-plus");
         } else {
@@ -554,7 +554,7 @@ createApp({
             this.chooseImage = null
             this.current_article_id = null
             this.showImages = null
-        } 
+        }
         else {
             this.previewThumbnail()
         }

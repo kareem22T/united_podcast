@@ -256,7 +256,7 @@ createApp({
     },
     async getTagSearch(search_words) {
         try {
-            const response = await axios.post(`/Moheb/admin/tags/search`, {
+            const response = await axios.post(`/admin/tags/search`, {
                 search_words: search_words,
             },
             );
@@ -527,7 +527,7 @@ createApp({
             $(this).val(null);
             $("#preview").attr(
                 "src",
-                "/Moheb/dashboard/images/add_image.svg"
+                "/dashboard/images/add_image.svg"
             );
             $(".photo_group i").removeClass("fa-edit").addClass("fa-plus");
         } else {
