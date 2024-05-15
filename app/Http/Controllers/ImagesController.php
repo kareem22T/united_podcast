@@ -37,7 +37,7 @@ class ImagesController extends Controller
             return $this->jsondata(false, 'upload failed', [$validator->errors()->first()], []);
         }
 
-        return $image = $this->saveFile($request->img, 'dashboard/images/uploads/');
+        $image = $this->saveFile($request->img, 'dashboard/images/uploads/');
         if ($image)
             $upload_image = Image::create([
                 'path' => $image
