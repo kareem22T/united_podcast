@@ -23,8 +23,9 @@
                             <div>
                                 <h1
                                     class="ant-typography ant-typography-rtl text-[24px] !mb-0 md:hidden ps-5 css-t2ij9r">
-                                    {{ $channel->title }}<button type="button"
-                                        class="ant-btn css-t2ij9r ant-btn-primary ant-btn-sm ant-btn-rtl m-1 ms-2 align-middle"><span>اشترك</span></button>
+                                    {{ $channel->title }}
+                                    {{-- <button type="button"
+                                        class="ant-btn css-t2ij9r ant-btn-primary ant-btn-sm ant-btn-rtl m-1 ms-2 align-middle"><span>اشترك</span></button> --}}
                                 </h1><span
                                     class="ant-typography ant-typography-rtl  mb-4 block leading-6 ps-5 pt-[13px] md:hidden text-colorTextSecondary css-t2ij9r">نشرة
                                     {{ $channel->description }}</span>
@@ -35,8 +36,9 @@
                             <div
                                 class="ant-space css-t2ij9r ant-space-vertical ant-space-rtl ant-space-gap-row-small ant-space-gap-col-small w-full">
                                 <div class="ant-space-item">
-                                    <h1 class="ant-typography ant-typography-rtl hidden md:block css-t2ij9r">{{$channel->title}}<button type="button"
-                                            class="ant-btn css-t2ij9r ant-btn-primary ant-btn-sm ant-btn-rtl m-1 ms-2 align-middle"><span>اشترك</span></button>
+                                    <h1 class="ant-typography ant-typography-rtl hidden md:block css-t2ij9r">{{$channel->title}}
+                                        {{-- <button type="button"
+                                            class="ant-btn css-t2ij9r ant-btn-primary ant-btn-sm ant-btn-rtl m-1 ms-2 align-middle"><span>اشترك</span></button> --}}
                                     </h1>
                                 </div>
                                 <div class="ant-space-item"><span
@@ -194,7 +196,7 @@
                                         <div class="ant-spin-nested-loading css-t2ij9r">
                                             <div class="ant-spin-container">
                                                 <div class="ant-row ant-row-rtl css-t2ij9r" style="margin-left: -12px; margin-right: -12px;">
-                                                    @foreach ($authors as $author) 
+                                                    @foreach ($authors as $author)
                                                         <div style="width: 33.3333%; max-width: 33.3333%;">
                                                             <a href="{{ route("author.profile", ["id" => $author->id]) }}" style="color: #000" target="_blanck">
                                                                 <div style="padding-left: 12px; padding-right: 12px; flex: 1 1 auto;"
@@ -227,7 +229,7 @@
                                                                             role="separator"></div>
                                                                     </div>
                                                                 </div>
-                                                            </a>                                                       
+                                                            </a>
                                                         </div>
                                                     @endforeach
                                                 </div>

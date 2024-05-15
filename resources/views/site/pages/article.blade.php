@@ -25,7 +25,7 @@
                                     width="34" height="34">
                             @endif
                             <div class="text-start whitespace-nowrap"><a class="block text-base"
-                                    href="/author/{{$article->author->id}}">{{ $article->author->name }}</a><span class="font-normal text-sm">في 
+                                    href="/author/{{$article->author->id}}">{{ $article->author->name }}</a><span class="font-normal text-sm">في
                                     <a class="text-black font-bold" href="/channel/{{ $article->channel->id }}">{{ $article->channel->title }}</a><span
                                         class="ant-typography ant-typography-rtl text-colorTextSecondary sm:text-sm text-xs css-t2ij9r"
                                         title="16 ديسمبر 2023"><i
@@ -39,7 +39,7 @@
                 role="separator"></div>
             <div class="
                             md:w-auto min-w-[170px]
-                            
+
                                 hidden
                         ">
                 <div class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center  flex justify-between pt-4 pb-4 mb-8 border border-solid border-r-0 border-l-0 border-PalletTinted"
@@ -84,9 +84,9 @@
                             <div class="block text-center md:px-16"><span
                                     class="ant-typography ant-typography-rtl text-base font-normal text-colorTextSecondary leading-[27px] css-t2ij9r">{{ $article->channel->description }}</span></div>
                         </div>
-                        <div class="ant-divider css-t2ij9r ant-divider-horizontal ant-divider-rtl m-0 max-w-[592px] min-w-min"
-                            role="separator"></div>
-                        <div style="padding-left: 12px; padding-right: 12px;"
+                        {{-- <div class="ant-divider css-t2ij9r ant-divider-horizontal ant-divider-rtl m-0 max-w-[592px] min-w-min"
+                            role="separator"></div> --}}
+                        {{-- <div style="padding-left: 12px; padding-right: 12px;"
                             class="ant-col gutter-row w-full flex justify-center p-0 ant-col-xs-24 ant-col-rtl ant-col-md-24 ant-col-lg-24 ant-col-xl-24 css-t2ij9r">
                             <form id="subscribe" style="display: flex;margin-top: 1rem;flex-direction: column;justify-content: center;align-items: center;gap: 13px;" autocomplete="off"
                                 class="ant-form ant-form-inline ant-form-rtl css-t2ij9r subscribe-form">
@@ -137,7 +137,7 @@
                                     </div>
                                 </div>
                             </form>
-                        </div>
+                        </div> --}}
                     </div>
                 </div>
             </section>
@@ -163,9 +163,9 @@
                     <div>
                         <div class="ant-row ant-row-rtl css-t2ij9r"
                             style="margin-left: -8px; margin-right: -8px; row-gap: 34px;">
-                            @foreach ($channel_articles as $channel_article)                                
-                                <div style="padding-left: 8px; padding-right: 8px;" class="ant-col 
-                                        
+                            @foreach ($channel_articles as $channel_article)
+                                <div style="padding-left: 8px; padding-right: 8px;" class="ant-col
+
                                             p-0
                                             ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-24 css-t2ij9r">
                                     <article class="relative">
