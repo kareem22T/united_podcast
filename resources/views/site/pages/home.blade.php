@@ -335,7 +335,8 @@ $allPodcasts = App\Models\Channel::where("type", "podcast")->get();
             <div class="ant-space-item">
                 <div
                     class="ant-space css-t2ij9r ant-space-horizontal ant-space-rtl ant-space-align-center ant-space-gap-row-small ant-space-gap-col-small w-full">
-                    <div class="ant-space-item"><svg xmlns="http://www.w3.org/2000/svg"
+                    <div class="ant-space-item">
+                        <svg xmlns="http://www.w3.org/2000/svg"
                             class="icon icon-tabler icon-tabler-brand-google-podcasts" width="33" height="33"
                             viewBox="0 0 24 24" stroke-width="2.5" stroke="#000" fill="none" stroke-linecap="round"
                             stroke-linejoin="round">
@@ -349,7 +350,8 @@ $allPodcasts = App\Models\Channel::where("type", "podcast")->get();
                             <path d="M8 5v8"></path>
                             <path d="M16 7v-2"></path>
                             <path d="M16 19v-8"></path>
-                        </svg></div>
+                        </svg>
+                    </div>
                     <div class="ant-space-item">
                         <h3 class="ant-typography ant-typography-rtl !mb-0 css-t2ij9r"> البرامج</h3>
                     </div>

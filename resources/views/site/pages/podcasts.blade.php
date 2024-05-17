@@ -1,6 +1,6 @@
 @extends('site.layout.main-layout')
 
-@section('title', 'United Podcast | الإذاعة')
+@section('title', 'United Podcast | الحلقات الجديدة')
 @section('podcasts_active', 'active')
 
 @section('content')
@@ -41,7 +41,7 @@
                                             stroke="currentColor" stroke-width="2" stroke-linecap="square"></path>
                                     </svg></div>
                                 <div class="ant-space-item">
-                                    <h1 class="ant-typography ant-typography-rtl !mb-0 css-t2ij9r">الإذاعة</h1>
+                                    <h1 class="ant-typography ant-typography-rtl !mb-0 css-t2ij9r">الحلقات الجديدة</h1>
                                 </div>
                             </div>
                         </div>
@@ -117,9 +117,9 @@
                                             </article>
                                         </div>
                                     @else
-                                        <div style="padding-left:8px;padding-right:8px" class="ant-col 
-                                        
-                                        
+                                        <div style="padding-left:8px;padding-right:8px" class="ant-col
+
+
                                             ant-col-xs-24 ant-col-rtl ant-col-sm-24 ant-col-md-24 ant-col-lg-12 css-t2ij9r">
                                             <article class="relative">
                                                 <div class="ant-row ant-row-top ant-row-rtl css-t2ij9r"
@@ -289,7 +289,7 @@
                         <div class="ant-space-item" v-if="isMore">
                             <div class="text-center undefined"><button id="load-more-button" type="button"
                                     class="ant-btn css-t2ij9r ant-btn-default ant-btn-rtl">
-                                    <span style="display: flex;flex-direction: column;gap: 20px;align-items: center;">المزيد 
+                                    <span style="display: flex;flex-direction: column;gap: 20px;align-items: center;">المزيد
                                         <div style="width: calc(67px);display: flex;justify-content: center;">
                                             <div class="dots" style="display: none"></div>
                                         </div>

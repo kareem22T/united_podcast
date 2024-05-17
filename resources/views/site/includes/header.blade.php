@@ -51,7 +51,7 @@
                                             </path>
                                         </svg>اخبارنا</span></a><span class="ant-menu-title-content"><span
                                         class="md:hidden inline-block m-0">اخبارنا</span></span></li>
-                                        
+
                             <style>
                                 .our_por_link:hover svg, .our_por_link .active svg {
                                     stroke: white !important
@@ -63,12 +63,12 @@
                             <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:2"
                             title="الوثائقيات" role="menuitem" tabindex="-1"
                             data-menu-id="rc-menu-uuid-70638-1-Video"><a title=""
-                                class="ant-menu-item-icon our_por_link" href="/podcasts"><span
-                                    class="anticon ant-menu-item-icon  false @yield('videos_active')"  style="padding-left: 10px">
+                                class="ant-menu-item-icon our_por_link" href="/programs"><span
+                                    class="anticon ant-menu-item-icon  false @yield('programs_active')"  style="padding-left: 10px">
                                     <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-brand-google-podcasts" width="25" height="25" viewBox="0 0 24 24" stroke-width="2" stroke="#212194" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"></path><path d="M12 3v2"></path><path d="M12 19v2"></path><path d="M12 8v8"></path><path d="M8 17v2"></path><path d="M4 11v2"></path><path d="M20 11v2"></path><path d="M8 5v8"></path><path d="M16 7v-2"></path><path d="M16 19v-8"></path></svg>
                                     برامجنا</span></a><span class="ant-menu-title-content"><span
                                     class="md:hidden inline-block m-0">برامجنا</span></span></li>
-        
+
                             <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:1"
                                 title="الإذاعة" role="menuitem" tabindex="-1"
                                 data-menu-id="rc-menu-uuid-70638-1-Podcast"><a title="الإذاعة"
@@ -95,7 +95,7 @@
                                             </svg>
                                         من نحن</span></a><span class="ant-menu-title-content"><span
                                         class="md:hidden inline-block m-0">من نحن</span></span></li>
-            
+
                             <li class="ant-menu-overflow-item ant-menu-item" style="opacity:1;order:2"
                                 title="الوثائقيات" role="menuitem" tabindex="-1"
                                 data-menu-id="rc-menu-uuid-70638-1-Video"><a title=""
@@ -109,7 +109,7 @@
                                           </svg>
                                         اتصل بنا</span></a><span class="ant-menu-title-content"><span
                                         class="md:hidden inline-block m-0">اتصل بنا</span></span></li>
-                                        
+
                                 <li class="ant-menu-overflow-item ant-menu-overflow-item-rest ant-menu-submenu ant-menu-submenu-horizontal ant-menu-submenu-disabled"
                                 style="opacity:0;height:0;overflow-y:hidden;order:9007199254740991;pointer-events:none;position:absolute"
                                 aria-hidden="true" role="none">
@@ -125,7 +125,7 @@
                                             </path>
                                         </svg></span><i class="ant-menu-submenu-arrow"></i></div>
                             </li>
-                            
+
                         </ul>
                         <div style="display:none" aria-hidden="true"></div>
                     </div>
@@ -190,9 +190,9 @@
         <img alt="United Podcast" loading="lazy" decoding="async" data-nimg="1" class="!w-auto" style="color:transparent;vertical-align:middle;width:auto;margin-bottom: 30px;width: 160px !important;object-fit: contain;height: 100px !important;" src="{{ asset("assets/img/logo-trans.png") }}" width="90" height="50">
         <h4 style="text-align: center;line-height: 25px;font-weight: 600;">
             أدخل الرمز الذي وصلك على <br>
-            <span class="email-span"></span> لتنشئ حسابًا 
+            <span class="email-span"></span> لتنشئ حسابًا
         </h4>
-        
+
         <div class="form-group" style="margin: 20px 0 16px;width: 100%;display: grid;grid-template-columns: repeat(6, 1fr);gap: 10px;direction: ltr;">
             <input name="code" class="code-input" required="">
             <input name="code" class="code-input" required="">
