@@ -56,8 +56,8 @@
                 <td class="border-bottom-0"><h6 class="fw-semibold mb-0">@{{new Date(article.created_at).toISOString().split('T')[0]}}</h6></td>
                 <td class="border-bottom-0">
                     <div class="d-flex gap-2">
-                        <a :href="`/admin/articles/edit/${article.id}`" class="btn btn-secondary p-2"><h4 class="ti ti-edit text-light m-0 fw-semibold"></h4></a>
-                        <button class="btn btn-danger p-2" @click="this.delete_pop_up = true; getValues(article.id, article.id)"><h4 class="ti ti-trash text-light m-0 fw-semibold"></h4></button>
+                        <a :href="`/admin/articles/edit/${article.id}`" class="btn btn-secondary p-2">تعديل</a>
+                        <button class="btn btn-danger p-2" @click="this.delete_pop_up = true; getValues(article.id, article.id)">حذف</button>
                     </div>
                 </td>
             </tr>

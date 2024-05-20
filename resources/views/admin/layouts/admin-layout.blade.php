@@ -103,6 +103,7 @@
     .show {
       display: block !important;
     }
+
   </style>
 </head>
 
@@ -131,14 +132,14 @@
           <ul id="sidebarnav">
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">المقالات</span>
+              <span class="hide-menu">الاخبار</span>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link @yield('articles_preview_active')" href="{{ route('article.prev') }}" aria-expanded="false">
                 <span>
                   <i class="ti ti-file-text"></i>
                 </span>
-                <span class="hide-menu">عرض</span>
+                <span class="hide-menu">عرض جميع الاخبار</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -146,7 +147,7 @@
                 <span>
                   <i class="ti ti-file-plus"></i>
                 </span>
-                <span class="hide-menu">اضافة</span>
+                <span class="hide-menu">اضافة خبر</span>
               </a>
             </li>
             <li class="nav-small-cap">
@@ -158,7 +159,7 @@
                 <span>
                   <i class="ti ti-category"></i>
                 </span>
-                <span class="hide-menu">عرض</span>
+                <span class="hide-menu">عرض جميع البرامج</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -166,19 +167,19 @@
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-category-plus" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M4 4h6v6h-6zm10 0h6v6h-6zm-10 10h6v6h-6zm10 3h6m-3 -3v6" /></svg>
                 </span>
-                <span class="hide-menu">اضافة</span>
+                <span class="hide-menu">اضافة برنامج</span>
               </a>
             </li>
             <li class="nav-small-cap">
               <i class="ti ti-dots nav-small-cap-icon fs-4"></i>
-              <span class="hide-menu">الناشرين</span>
+              <span class="hide-menu">المزيعين</span>
             </li>
             <li class="sidebar-item">
               <a class="sidebar-link @yield('authors_preview_active')" href="{{ route('author.prev') }}" aria-expanded="false">
                 <span>
                   <i class="ti ti-users"></i>
                 </span>
-                <span class="hide-menu">عرض</span>
+                <span class="hide-menu">عرض جميع المزيعين</span>
               </a>
             </li>
             <li class="sidebar-item">
@@ -186,7 +187,7 @@
                 <span>
                   <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-users-plus" width="22" height="22" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round"><path stroke="none" d="M0 0h24v24H0z" fill="none"/><path d="M5 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" /><path d="M3 21v-2a4 4 0 0 1 4 -4h4c.96 0 1.84 .338 2.53 .901" /><path d="M16 3.13a4 4 0 0 1 0 7.75" /><path d="M16 19h6" /><path d="M19 16v6" /></svg>
                 </span>
-                <span class="hide-menu">اضافة</span>
+                <span class="hide-menu">اضافة مزيع</span>
               </a>
             </li>
             <li class="nav-small-cap">

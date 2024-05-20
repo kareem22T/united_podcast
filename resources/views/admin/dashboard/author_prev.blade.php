@@ -48,9 +48,9 @@
                 <td class="border-bottom-0"><h6 v-if="author.brief" class="fw-semibold mb-0">@{{author.brief.split(' ').length > 4 ? author.brief.split(' ').slice(0, 4).join(' ') + ' ...' : author.brief }}</h6></td>
                 <td class="border-bottom-0">
                     <div class="d-flex gap-2">
-                        <a :href="`/admin/authors/author/${author.id}`" target="_blanck" class="btn btn-success p-2"><h4 class="ti ti-eye text-light m-0 fw-semibold"></h4></a>
-                        <a :href="`/admin/authors/edit/${author.id}`" class="btn btn-secondary p-2"><h4 class="ti ti-edit text-light m-0 fw-semibold"></h4></a>
-                        <button class="btn btn-danger p-2" @click="this.delete_pop_up = true; getValues(author.id, author.id)"><h4 class="ti ti-trash text-light m-0 fw-semibold"></h4></button>
+                        <a :href="`/admin/authors/author/${author.id}`" target="_blanck" class="btn btn-success p-2">عرض</a>
+                        <a :href="`/admin/authors/edit/${author.id}`" class="btn btn-secondary p-2">تعديل</a>
+                        <button class="btn btn-danger p-2" @click="this.delete_pop_up = true; getValues(author.id, author.id)">حذف</button>
                     </div>
                 </td>
             </tr>

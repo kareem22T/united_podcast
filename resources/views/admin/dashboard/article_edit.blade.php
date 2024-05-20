@@ -19,6 +19,14 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/js/standalone/selectize.min.js" integrity="sha256-+C0A5Ilqmu4QcSPxrlGpaZxJ04VjsRjKu+G82kl5UJk=" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/selectize.js/0.12.6/css/selectize.bootstrap3.min.css" integrity="sha256-ze/OEYGcFbPRmvCnrSeKbRTtjG4vGLHXgOqsyLFTRjg=" crossorigin="anonymous" />
     <div class="card-body" >
+        <div class="form-group w-25 mb-3">
+            <label for="date" class="mb-2">نوع المنشور </label>
+            <div class="btns d-flex gap-2 justify-content-between w-100">
+                <button :class="this.type == 'article' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'article'">خبر</button>
+                <button :class="this.type == 'video' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'video'">فيديو</button>
+                <button :class="this.type == 'podcast' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'podcast'">بودكاست</button>
+            </div>
+        </div>
         <div>
             <div class="w-100 mb-4 pb-5 gap-2" style="display: grid; grid-template-columns: 1fr">
                 <div class="w-100">
@@ -77,7 +85,7 @@
                     </div>
                 </div>
                 <br>
-                <div class="d-flex gap-2 justify-content-between mb-3">
+                <div class="d-flex gap-2 justify-content-start mb-3">
                     <div class="form-group w-25">
                         <label for="date" class="mb-2">الناشر </label>
                         <select id="select-state" name="author" id="text" class="form-control w-100" v-model="author_id" placeholder="author name ...">
@@ -101,14 +109,6 @@
                                 <option value="">لا يوجد برامج مضافة</option>
                             @endif
                         </select>
-                    </div>
-                    <div class="form-group">
-                        <label for="date" class="mb-2">نوع المنشور </label>
-                        <div class="btns d-flex gap-2 justify-content-between w-100">
-                            <button :class="this.type == 'article' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'article'">مقال</button>
-                            <button :class="this.type == 'video' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'video'">فيديو</button>
-                            <button :class="this.type == 'podcast' ? 'btn btn-primary' : 'btn btn-outline-primary'" @click="this.type = 'podcast'">بودكاست</button>
-                        </div>
                     </div>
                 </div>
                 <div class="w-25">
