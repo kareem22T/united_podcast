@@ -157,6 +157,9 @@
             gap: 16px;
             width: 100%
         }
+        .tttt {
+            display: grid !important;
+        }
 
         .latest_programs_wrapper .card:first-child .text {
             position: absolute;
