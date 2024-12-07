@@ -162,7 +162,7 @@ $latest_programs = App\Models\Channel::where('type', 'podcast')->latest()->take(
                                 </div>
                             </div>
                         </div>
-                        <div class="latest_programs_wrapper">
+                        <div class="latest_programs_wrapper" style="display: grid; !important">
                             @foreach ($latestthreearticles as $item)
                             <a href="/post/{{$item->id}}" class="card">
                                 <div class="img"><img src="{{$item->thumbnail_path}}" alt="{{$item->title}}"></div>
