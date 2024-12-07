@@ -151,7 +151,7 @@
             }
         }
         .latest_programs_wrapper {
-            display: grid !important;
+            display: grid;
             grid-template-columns: 1fr 1fr;
             grid-template-rows: 1fr 1fr;
             gap: 16px;
